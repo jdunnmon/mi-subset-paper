@@ -43,27 +43,30 @@
 % \AND instead of \And before the third author name.
 
 \author{%
-  Luke Oakden-Rayner,\thanks{Equal Contribution} $ $ Gustavo Carneiro\\
-  %\thanks{Use footnote for providing further information
-    %about author (webpage, alternative address)---\emph{not} for acknowledging
-    %funding agencies.} \\
-  Australian Institute for Machine Learning\\
-  University of Adelaide\\
-  Adelaide, SA 5000 \\
-  \texttt{\{luke.oakden-rayner,gustavo.carneiro\}} \\
-  \texttt{@adelaide.edu.au} \\
-  \And
+Anonymous Authors
+}
 %\author{%
-    Jared Dunnmon,$^*$ Christopher R\'{e}\\
+  %Luke Oakden-Rayner,\thanks{Equal Contribution} $ $ Gustavo Carneiro\\
   %\thanks{Use footnote for providing further information
     %about author (webpage, alternative address)---\emph{not} for acknowledging
     %funding agencies.} \\
-  Department of Computer Science\\
-  Stanford University\\
-  Stanford, CA 94305 \\
-  \texttt{\{jdunnmon,chrismre\}} \\
-  \texttt{@stanford.edu} 
-  }
+ % Australian Institute for Machine Learning\\
+  %University of Adelaide\\
+ % Adelaide, SA 5000 \\
+  %\texttt{\{luke.oakden-rayner,gustavo.carneiro\}} \\
+  %\texttt{@adelaide.edu.au} \\
+  %\And
+%\author{%
+  %  Jared Dunnmon,$^*$ Christopher R\'{e}\\
+  %\thanks{Use footnote for providing further information
+    %about author (webpage, alternative address)---\emph{not} for acknowledging
+    %funding agencies.} \\
+ % Department of Computer Science\\
+ % Stanford University\\
+  %Stanford, CA 94305 \\
+  %\texttt{\{jdunnmon,chrismre\}} \\
+  %\texttt{@stanford.edu} 
+  %}
   %\And
   %Christopher R\'{e}\\
   %\thanks{Use footnote for providing further information
@@ -144,8 +147,24 @@ Drawing from the existing machine learning literature, we hypothesise that there
 the ``easy'' subset.  
 Finally, if one subset contains a feature that is correlated with the true label, but not causal, models often perform poorly on the subset without the spurious correlate.
 
-%While the effects of hidden stratification have been known in the machine learning community for some time, they remain difficult to measure [CITE?]. 
-While technical methods that reliably address hidden stratification remain underdeveloped, we argue that measurement of hidden stratification effects should become a critical component of machine learning deployments in medicine.  
+In this article, we demonstrate that hidden stratification is a fundamental technical problem for medical imaging analysis. 
+We illustrate that hidden stratification is present both in standard computer vision models trained on the CIFAR-100 benchmark dataset and in three different machine learning applications in projection radiography. 
+We examine the clinical implications of these findings, discuss the mechanisms by which hidden stratification could be effectively measured within clinical workflows, and argue that
+measurement and reporting of hidden stratification effects should become a critical component of machine learning deployments in medicine.
+
+%ORIGINAL INTRO
+%While technical methods that reliably address hidden stratification remain underdeveloped, we argue that measurement of hidden stratification effects should become a critical component of machine learning deployments in medicine.  
+
+%We illustrate that hidden stratification is present both in standard computer vision models trained on the CIFAR-100 benchmark dataset and in three different machine learning applications in projection radiography.  
+%We demonstrate the utility of two different techniques for measuring hidden stratification effects -- schema completion and error auditing -- and observe that hidden stratification results in performance differences of up to 20\% on clinically important subsets.  
+%We find evidence that hidden stratification occurs in subsets characterized by low prevalence, low label quality, subtle discriminative features, or spurious correlates.
+%We further propose an unsupervised clustering approach that can assist practitioners in identifying when hidden stratification may substantially impact model performance, and assess its utility on these datasets.
+%We examine the clinical implications of these findings, and discuss mechanisms by which hidden stratification could be effectively measured within clinical workflows.
+
+%In this article, we demonstrate that hidden stratification is a fundamental technical problem for medical imaging analysis. 
+%We illustrate that hidden stratification is present both in standard computer vision models trained on the CIFAR-100 benchmark dataset and in three different machine learning applications in projection radiography.
+% We examine the clinical implications of these findings, discuss mechanisms by which hidden stratification could be effectively measured within clinical workflows, and argue that measurement and reporting of hidden stratification effects should become a critical component of machine learning deployments in medicine.
+
 % One methodologically straightforward measurement approach is what we call \textit{schema completion}.  
 % Schema completion entails prospective delineation of a label schema that reflects the full range of meaningful variations in a population.  
  %In practice, schema completion is difficult in medical imaging not only because it requires a great deal of both annotation effort and clinical insight, but also because artifacts routinely appear in clinical practice that can invalidate existing schemas (e.g. chest tubes, hardware artifacts, visual effects of new treatments, new pathology subclasses, etc.).  
@@ -153,23 +172,14 @@ While technical methods that reliably address hidden stratification remain under
 % While error auditing is useful, the expertise and attentiveness of the auditor is crucial to audit efficacy.  
 % A third possible measurement approach involves unsupervised measurement techniques, where algorithmic interrogation of the model can indicate the presence of hidden stratification effects.  Unfortunately, this class of techniques remains relatively underdeveloped.
 %In this article, we demonstrate that hidden stratification is a fundamental technical problem that should be considered when applying machine learning algorithms to medical imaging analysis.  
-We illustrate that hidden stratification is present both in standard computer vision models trained on the CIFAR-100 benchmark dataset and in three different machine learning applications in projection radiography.  
-We demonstrate the utility of two different techniques for measuring hidden stratification effects -- schema completion and error auditing -- and observe that hidden stratification results in performance differences of up to 20\% on clinically important subsets.  
-We find evidence that hidden stratification occurs in subsets characterized by low prevalence, low label quality, subtle discriminative features, or spurious correlates.
-We further propose an unsupervised clustering approach that can assist practitioners in identifying when hidden stratification may substantially impact model performance, and assess its utility on these datasets.
-We examine the clinical implications of these findings, and discuss mechanisms by which hidden stratification could be effectively measured within clinical workflows.
-
-%In this article, we demonstrate that hidden stratification is a fundamental technical problem for medical imaging analysis. 
-%We illustrate that hidden stratification is present both in standard computer vision models trained on the CIFAR-100 benchmark dataset and in three different machine learning applications in projection radiography.
-% We examine the clinical implications of these findings, discuss mechanisms by which hidden stratification could be effectively measured within clinical workflows, and argue that measurement and reporting of hidden stratification effects should become a critical component of machine learning deployments in medicine.
-
 \section{Related Work}
 
 The difficulty of this hidden stratification problem is fundamentally related to the challenge of obtaining labelled training data.  
 Were fine-grained labels available for every variant of clinical importance, it would be feasible to train and evaluate models using this information.  
 Typical approaches to observed stratification and dataset imbalance in medical machine learning often center on gathering as much data as possible on underperforming subsets, either via additional labelling, selective data augmentation, or oversampling\citep{Mazurowski2008-cq}.  
 However, the cost of manual labelling is often prohibitive, appropriate augmentation transforms can be difficult to define, and oversampling an underperforming subset can cause degradation on others \citep{Fries2019-ze, Ratner2017-td, Buda2018-ab, Zech2018-xq}.  
-As a result, rather than exhaustively labelling all possible findings and variations in medical images, teams have begun to perform either semi-automated labelling \citep{Wang2017-vm, Fries2019-ze, Irvin2019-ho, Dunnmon2019-zw, Fries2019-ze}  or have applied human expertise to produce a narrow or incomplete set of visual labels \citep{Rajpurkar2017-rc}, which often exhibit reduced accuracy \citep{Oakden-Rayner2019-yi}.  
+As a result, rather than exhaustively labelling all possible findings and variations in medical images, teams have begun to perform either semi-automated labelling \citep{Wang2017-vm, Fries2019-ze, Irvin2019-ho, Dunnmon2019-zw, Fries2019-ze}  or have applied human expertise to produce a narrow or incomplete set of visual labels \citep{Rajpurkar2017-rc}; both
+of these approaches can yield reduced accuracy \citep{Oakden-Rayner2019-yi}.  
 While such approaches have shown promise, techniques that reliably increase performance on critical imaging subsets without degrading performance on others have yet to be demonstrated.
  
 Methods that directly address hidden stratification, where the subclasses are obscure, have not been widely explored in medical imaging analysis.  However, it is clear from the recent literature that this issue has been widely (but not universally) recognised.  
@@ -179,9 +189,9 @@ Chilamkurthy et al. \citep{Chilamkurthy2018-op}  present a subset analysis for d
  These workers, do, however, evaluate the performance of models on cases with multiple findings, and observe substantial variation in model performance within different strata; for instance, subarachnoid bleed detection performance appears to degrade substantially in the presence of an epidural hemorrhage.  
 Wang et al. \citep{Wang2019-jr} perform an excellent subset analysis of a colonscopy polyp detector, with comparative performance analysis presented by polyp size, location, shape, and underlying pathology (e.g. adenoma versus hyperplastic).  
  Similarly, Dunnmon et al. \citep{Dunnmon2019-rr} report the performance of their chest radiograph triage system by pathology subtype, finding that models trained on binary triage labels achieved substantially lower performance on fracture than on other diseases.   
-Non-causal confounding features such as hospital process quantities can also contribute substantially to high model performance on data subsets heavily associated with these confounding variables \citep{Winkler2019-fw, Badgeley2019-zi, Agniel2018-qp, Zech2018-xq}.
+Non-causal confounding features such as healthcare process quantities can also contribute substantially to high model performance on data subsets heavily associated with these confounding variables \citep{Winkler2019-fw, Badgeley2019-zi, Agniel2018-qp, Zech2018-xq}.
 Mahajan et al. \citep{Mahajan2019-yi}, on the other hand, describe methods for performing algorithmic audits, where detailed examinations of model errors can lead to model improvements.
- Other recent studies perform error audits, and identify specific failure modes such as small volume cancers and disease mimics \citep{Campanella2019-qs}; such analyses may be helpful in identifying obvious error modes via human review, but do not characterize the full space of subset performance \citep{Selbst2017-gz}.  
+ Several recent studies perform error audits, where specific failure modes such as small volume cancers, disease mimics, and treatment-related features are observed \citep{Campanella2019-qs, Wang2019-jr}; such analyses may be helpful in identifying obvious error modes via human review, but do not characterize the full space of subset performance \citep{Selbst2017-gz}.  
  Of course, there also exist multiple studies that do not directly address the effects of hidden stratification \citep{Haenssle2018-vw, Bien2018-ae}. 
  Esteva et al. \citep{Esteva2017-if} is particularly notable, as this study does present findings for carcinoma and melanoma subclasses, and dermatoscopic images vs photographs, but does not report subclass performance for any of the more than 2,000 diagnostic labels they define in their schema. 
  Analysis of these effects would improve the community's ability to assess the real-world clinical utility of these models. 
@@ -299,8 +309,8 @@ Such stratification of label quality by pathology is highly likely to occur in m
 \textbf{Adelaide Hip Fracture} Schema completion also indicates hidden stratification on the large, high quality pelvic x-ray dataset produced at the Royal Adelaide Hospital \citep{Gale_W_Oakden-Rayner_L_Carneiro_G_Bradley_AP_Palmer_LJ2017-tl}.
  A Densenet model previously trained on this dataset to identify hip fractures achieved extremely high performance (AUC = 0.994) \citep{Gale_W_Oakden-Rayner_L_Carneiro_G_Bradley_AP_Palmer_LJ2017-tl}. 
  %This previously trained binary hip fracture detection model predicted the presence or absence of a fracture on the validation and test sets, using the threshold defined in Gale et al. \citep{Gale_W_Oakden-Rayner_L_Carneiro_G_Bradley_AP_Palmer_LJ2017-tl}.  
- The distribution of the location and description subclasses is shown in Table 6, with subclass labels produced by a board-certified radiologist.  
- We hypothesize that reduced subclass performance will occur even in models with very high overall superclass performance, particularly in subclasses characterised by subtle visual features.  
+ The distribution of the location and description subclasses is shown in Table \ref{tab:hip1}, with subclass labels produced by a board-certified radiologist (XXX).  
+ We hypothesize that reduced subclass performance will occur even in models with very high overall superclass performance, particularly in subclasses characterised by subtle visual features or low subclass prevalence.  
  Again, because this particular diagnostic is clinically well-characterized, we use schema completion to measure the effects of hidden stratification.  
  %We assess sensitivity values for the model on each subclass and in aggregate as a proxy for model performance at detecting fractures.  
  We find that sensitivity on subclasses such as cervical, subtrochanteric, and subtle fractures is significantly lower than that of the overall superclass.  
@@ -323,7 +333,7 @@ Such stratification of label quality by pathology is highly likely to occur in m
  Commuted & 0.26 (169) & 1.000 \\ 
  \hline
 \end{tabular}
-\caption{Superclass and subclass performance for hip fracture detection from frontal pelvic x-rays. \textcolor{red}{Bolded subclasses show significantly worse performance than the most visually similar class(es)}.}
+\caption{Superclass and subclass performance for hip fracture detection from frontal pelvic x-rays. Bolded subclasses show significantly worse performance than the most visually similar class(es).}
 \label{tab:hip1}
 \vspace{-6mm}
 \end{table}
@@ -354,13 +364,14 @@ For MURA, we hypothesize that the label quality for the degenerative disease sub
  We train a DenseNet-169 on the normal/abnormal labels, with 13,942 cases used for training and 714 cases held-out for testing \citep{Rajpurkar2017-rc}.  
  The distribution of these subclasses and model sensitivity on each are shown in Table \ref{tab:mura2}.
  We further assess ROC-AUC values on each subclass and in aggregate; results are presented below in Figure \ref{fig:rocs}(a).  
- We find that overall AUC for the easy-to-detect hardware subclass (0.96) is higher than aggregate AUC (0.88), while performance on clinically important fracture and degenerative  disease subsets are substantially lower.  
+ We find that overall AUC for the easy-to-detect hardware subclass (0.98) is higher than aggregate AUC (0.91), while performance on clinically important fracture and degenerative  disease subsets are substantially lower (0.86 and 0.76, respectively).  
 % In this case, we measure hidden stratification using schema completion, as radiologists have a good understanding of what important subsets may exist in extremity radiographs.
 
  \begin{figure}[htb!]%
+ \vspace{-3mm}
 \centering
-\subfloat[]{\includegraphics[width=3in]{MURA-ROC.png}}%
-\subfloat[]{\includegraphics[width=3in]{Pneumo-ROC.eps}}
+\subfloat[]{\includegraphics[trim={0 0 1cm 1.5cm}, clip, width=2.5in]{MURA-ROC.png}}%
+\subfloat[]{\includegraphics[trim={0 0 1cm 1.5cm}, clip, width=2.5in]{Pneumo-ROC.eps}}
 \caption{ROC curves for model performance different subclasses of the (a) abnormal MURA superclass and (b) the pneumothorax CXR-14 superclass.}
 \label{fig:rocs}
 \end{figure}
@@ -372,12 +383,13 @@ We next use error auditing to show that the clinical utility of a common model f
 
 \textbf{CXR-14}: The CXR-14 dataset is a large-scale dataset for pathology detection in chest radiographs \citep{Wang2017-vm}. 
 This dataset was released in 2017 and updated later the same year, containing 112,120 frontal chest films from 30,805 unique patients. 
-The dataset is drawn from a single tertiary medical centre and appears to include films from multiple clinical settings, including intensive care unit (ICU) and non-ICU patients.  
+%The dataset is drawn from a single tertiary medical centre and appears to include films from multiple clinical settings, including intensive care unit (ICU) and non-ICU patients.  
 Each image was labeled for one of 14 different thoracic pathologies.  
 In our analysis, we leverage a pretrained Densenet-121 model provided by Zech \citep{Zech_undated-cw} which reproduces the procedure and results of Rajpurkar et al. \citep{Rajpurkar2018-gc} on this dataset.  
 
-During error auditing of pretrained model results, it was observed that the model was performing particularly well on examples within the pneumothorax class that contained chest drains. 
- As a result, pneumothorax subclass labels for ``chest drain'' and ``no chest drain'' were provided by a board-certified radiologist (LOR) for each element of the test set.  
+During error auditing, where examples of false positive and false negative predictions from the pretrained model were visually reviewed by a board certified radiologist (XXX),
+it was observed that pneumothorax cases without chest drains (a visual finding in \textit{treated} pneumothoraces) were highly prevalent (i.e., enriched) in the false negative class.
+ As a result, pneumothorax subclass labels for ``chest drain'' and ``no chest drain'' were provided by a board-certified radiologist (XXX) for each element of the test set.  
  Due to higher prevalence of scans with chest drains in the dataset, clear discriminative features of a chest drain, and high label quality for the scans with chest drains, we hypothesize that a model trained on the CXR-14 dataset will attain higher performance on the pneumothorax subclass with chest drains than that without chest drains.  
  
  %\begin{table}[]
@@ -395,30 +407,28 @@ During error auditing of pretrained model results, it was observed that the mode
 %\vspace{-4mm}
 %\end{table}
 
-We present ROC curves for each subclass in Figure \ref{fig:rocs}(b).  
-We find that while the ROC-AUC of the pretrained model closely matched that reported in the literature at 0.87, the model achieved an ROC-AUC value of 0.94 on the subclass with chest drains, but only 0.77 on the subclass without chest drains.  
-We further find that 80\% of the pneumothorax examples in the test set contained a test drain, and that positive predictive value on this subset was 30\% higher (0.90) than on those without a chest drain (0.60).  
- These results demonstrate that hospital process variables can create subclasses with obvious features that form a majority of the pneumothorax superclass, substantially lowering performance on identifying the clinically important subclass of pneumothoraces without chest drains.  
- Note that while we present results obtained from a pretrained model, analysis using a model trained from scratch yielded equivalent results. 
+We present ROC curves for each pneumothorax subclass in Figure \ref{fig:rocs}(b).  
+While overall pneumothorax ROC-AUC closely matches that reported in Rajpurkar et al.~\citep{rajpurkar2017chexnet} at 0.87, pneumothorax ROC-AUC was 0.94 on the subclass with chest drains, but only 0.77 on the subclass without chest drains.  
+We also find that 80\% of pneumothoraces in the test set contained a chest drain, and that positive predictive value on this subset was 30\% higher (0.90) than on those with no chest drain (0.60).  
 
 \subsection{Algorithmic Approaches: Unsupervised Clustering}
 
-While schema completion and error auditing have allowed us to identify hidden stratification problems in multiple medical machine learning datasets, each of these investigations required substantial labeling effort from clinicians.
+While schema completion and error auditing have allowed us to identify hidden stratification problems in multiple medical machine learning datasets, these approaches required substantial labeling effort from clinicians.
 Further, in the case of error auditing, there is no guarantee that any given auditor will recognize an underlying pattern in the examples the model gets right and wrong.
 In this context, unsupervised learning techniques can be valuable tools in automatically identifying hidden stratification.
-Here, we show that even a simple k-means clustering scheme can be useful in detecting many of the hidden subsets identified above via time-consuming human review and annotation.
+We show that even a simple k-means clustering scheme can be useful in detecting many of the hidden subsets identified above via time-consuming human review and annotation.
 
 Our procedure is as follows.  
 For each superclass, we apply k-means clustering to the pre-softmax feature vector of all test set examples within that superclass using $k \in \{2,3,4,5\}$.
 For each value of $k$, we measure the distance between the two clusters with greater than 100 constituent points that have highest and lowest average error rates.
 Finally, we return the pair of high and low error clusters that have the largest difference between their error rates.
-Ideally, examining these high and low error clusters would enable a human analyst to identify salient stratifications in the data.
-Note that hyperparameters in our clustering scheme were only coarsely tuned, and could likely be improved in practice.
+Ideally, examining these high and low error clusters would enable human analysts to identify salient stratifications in the data.
+Note that our clustering hyperparameters were only coarsely tuned, and could likely be improved in practice.
 
 To demonstrate the potential utility of this approach, we apply it to several datasets analyzed above, and report results in Table \ref{tab:clustercifar-1}.  
 We find that while this simple k-means clustering approach does not always yield meaningful separation (e.g. on MURA), it does produce clusters with a high proportion of drains on CXR-14 and a high proportion of various high-error classes (bears, forest, lamp) on CIFAR-100.  
  In practice, such an approach could be used both to assist human auditors in identifying salient stratifications in the data and to confirm that schema completion has been successful.
- In the latter case, we would only expect to find distinct clusters for models where hidden stratification is minimal.
+ In the latter case, we would only expect to find distinct clusters when hidden stratification is minimal.
 
  \begin{table}[]
  \centering
@@ -434,7 +444,7 @@ We find that while this simple k-means clustering approach does not always yield
  MURA-Abnormal (Degenerative) & 0.04 (0.12, 0.08) \\
  \hline
 \end{tabular}
-\caption{ Subclass prevalence in high and low error clusters. \textcolor{red}{These numbers should be normalized by the baseline prevalence!}}
+\caption{ Subclass prevalence in high and low error clusters. \textcolor{red}{Add prevalence column.}}
 \label{tab:clustercifar-1}
 \vspace{- 8 mm}
 \end{table}
@@ -526,16 +536,16 @@ We find that while this simple k-means clustering approach does not always yield
 
 \section{Discussion}
 
-Our results show that hidden stratification can lead to markedly different primary task and subclass performance, both when the labels for the subclasses have different levels of accuracy and when the subclasses are imbalanced.  
+Our results show that hidden stratification can lead to markedly different primary task and subclass performance when the labels for the subclasses have different levels of accuracy, when the subclasses are imbalanced, or when discriminative visual features are subtle.
 We observe this to be the case in both a controlled CIFAR-100 environment and on multiple clinical datasets.
 We also find evidence in our clinical results that spurious correlates like chest drains can have a similar effect.
 
 The clinical implications of hidden stratification will vary by task. 
 Our MURA results, for instance, are unlikely to be clinically relevant, because degenerative disease is rarely a significant or unexpected finding, nor are rapid complications likely. 
-We can hypothesise that labels derived from clinical practice are likely to demonstrate this phenomenon; that irrelevant or unimportant findings are often elided by radiologists because they are unimportant, leading to reduced label quality for the less significant findings.
+We hypothesise that labels derived from clinical practice are likely to demonstrate this phenomenon; that irrelevant or unimportant findings are often elided by radiologists, leading to reduced label quality for less significant findings.
 
 The findings in the CXR14 task are far more concerning. 
-The majority of x-rays in the dataset contain chest drains, the presence of which is in effect a hospital process variable that is not causally linked to pneumothorax diagnosis.
+The majority of x-rays in the dataset contain chest drains, the presence of which is in effect a healthcare process variable that is not causally linked to pneumothorax diagnosis.
  Importantly, the presence of a chest drain means these pneumothorax cases are already treated and are therefore at almost no risk of pneumothorax-related harm. 
  In this experiment, we see that the performance in the clinically important subclass of cases without chest drains is far worse than the primary task results would suggest. 
  We could easily imagine a situation where a model is justified for clinical use or regulatory approval with the results from the primary task alone, as the images used for testing simply reflect the clinical set of patients with pneumothoraces.
@@ -551,24 +561,24 @@ While our understanding of what types of visual features are more learnable than
 Similarly, chest drains are highly recognisable in pneumothorax imaging, and small untreated pneumothoraces are subtle enough to be commonly missed by radiologists. 
 It is possible that this effect exaggerates the discrepancy in performance on the pneumothorax detection task, beyond the effect of subclass imbalance alone.
 
-Our simple unsupervised approach to identify unrecognised subclasses often produces clusters that contain very different proportions of cases from the hidden subclasses our analysis had previously identified. 
+We show that a simple unsupervised approach to identify unrecognised subclasses often produces clusters that contain very different proportions of cases from the hidden subclasses our analysis had previously identified. 
 These results support other findings that demonstrate the utility of hidden-state clustering in deep learning model development \citep{Liu2019-qt}.
 Importantly, however, this technique should be considered only a first attempt at automated identification of hidden stratification effects. 
-Indeed, it remains to be seen if these automatically produced clusters can be useful in practice, either for finding clinical important subclasses or for use in retraining image analysis models for improved subclass performance. 
+Indeed, it remains to be seen if these automatically produced clusters can be useful in practice, either for finding clinical important subclasses or for use in retraining image analysis models for improved subclass performance, particularly given the failure of this method in the detection of clinically relevant subclasses in the MURA task.. 
 More advanced methods such as those of Chen et al. \citep{chen2019slicing} may ultimately be required to tackle this problem, or it may be the case that unsupervised or semi-supervised approaches are unable to contribute substantially, leaving us reliant on time-consuming methodical human review.
-Importantly, our experiments do not explore the full range of medical image analysis tasks, and as such the results will have variable applicability to any given scenario.
-The findings presented here are intended to highlight the largely unrecognised problem of hidden stratification in clinical imaging datasets, suggesting that awareness of hidden stratification is important and should be considered (even if to be dismissed) when planning, building, and regulating clinical image analysis systems.
+Importantly, our experiments are limited in that they do not explore the full range of medical image analysis tasks, so the results will have variable applicability to any given scenario.
+The findings presented here are intended to highlight the largely unrecognised problem of hidden stratification in clinical imaging datasets, suggesting that awareness of hidden stratification is important and should be considered (even if to be dismissed) when planning, building, evaluating, and regulating clinical image analysis systems.
  
 \section{Conclusion}
 
 Hidden stratification in medical image datasets appears to be a significant and under-appreciated problem. 
 Not only can the unrecognised presence of visual subclasses lead to impaired subclass performance, but this may even result in unexpected negative clinical outcomes in situations where image analysis models silently fail to learn serious but rare, noisy, or subtle visual subclasses.
 Acknowledging the presence of visual variation within class labels is likely to be important when building and evaluating medical image analysis systems.
-Indeed, our results suggest that models should not be certified for deployment by regulators unless rigorous testing for hidden stratification has been performed.
-While this will take substantial effort on the part of the community, such bodies as professional organizations, academic institutions, and national standards boards have a role to play in ensuring that we can leverage the enormous potential of machine learning in medical imaging without causing patients harm as a result of hidden stratification effects in our models.
+Indeed, our results suggest that models should not be certified for deployment by regulators unless careful testing for hidden stratification has been performed.
+While this will take substantial effort on the part of the community, bodies such as professional organizations, academic institutions, and national standards boards have a role to play in ensuring that we can leverage the enormous potential of machine learning in medical imaging without causing patients harm as a result of hidden stratification effects in our models.
 
-\section*{Acknowledgments}
-TBD
+%\section*{Acknowledgments}
+%TBD
 
 \bibliographystyle{plain}
 \bibliography{mi-subsets.bib}
