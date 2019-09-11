@@ -258,10 +258,11 @@ When feasible, even partial schema completion represents a powerful method for a
 
  \begin{figure}[htb!]
  \centering
-\includegraphics[width=4in]{Superclass-Subclass-CIFAR-100-Correct-Val-v5.png}
+ \vspace{-2mm}
+\includegraphics[width=3.5in]{Superclass-Subclass-CIFAR-100-Correct-Val-v5.png}
 \caption{Performance of ResNeXt-29, 8x64d on CIFAR-100 superclasses by subclass.  Most superclasses contain subclasses where performance is far lower than that on the aggregate superclass.}
 \label{fig:cifar}
-\vspace{-2mm}
+\vspace{-3mm}
 \end{figure}
 
 \textbf{CIFAR-100}: The benchmark CIFAR-100 dataset from computer vision represents an excellent testbed on which to demonstrate the effect of hidden stratification in a well-characterized environment \citep{Krizhevsky2009-tq}.  
@@ -295,9 +296,9 @@ Such stratification of label quality by pathology is highly likely to occur in m
  Mountain & 0.87 & 0.90  & 0.82 & 0.71 & 0.82 & 0.73  \\
  \hline
 \end{tabular}
-\caption{Accuracy of ResNeXt-29, 8x64d trained using the full CIFAR-100 dataset (``Baseline'') and two synthetic experiments with altered datasets. (``Subsample'') drops 25\% of the Dolphin and Mountain subclasses from the training dataset, and (``Whiten'') replaces 25\% of the examples in the Dolphin and Mountain subclasses with a random superclass label.  All results reported are with respect to the superclass label.}
+\caption{Accuracy of ResNeXt-29, 8x64d trained using the full CIFAR-100 dataset (``Baseline'') and two synthetic experiments with altered datasets. (``Subsample'') drops 75\% of the Dolphin and Mountain subclasses from the training dataset, and (``Whiten'') replaces 25\% of Dolphin and Mountain subclass examples with a random superclass label.  All results reported are on the validation set with respect to the superclass label.}
 \label{tab:cifar1}
-\vspace{-4mm}
+\vspace{-8mm}
 \end{table}
 
 %Example: The MURA experiments in this study were relabeled with a consensus schema produced by a team of radiologists (unpublished). This schema focused on diagnostic (ie fracture, arthritis) and hospital process (ie metalwork) categories, and did not cover descriptive or location based categories (ie displaced fracture, radiocarpal arthritis).
@@ -355,7 +356,7 @@ While this schema remains incomplete, even partial schema completion demonstrate
 \end{tabular}
 \caption{MURA ``abnormal'' label prevalence and sensitivity for the subclasses of ``fracture,'' ``metalwork,'' and ``degenerative joint disease.'' The degenerative disease subclass labels have the highest prevalence but the lowest sensitivity with respect to review by a board-certified radiologist.}
 \label{tab:mura2}
-\vspace{-6mm}
+\vspace{-8mm}
 \end{table}
 
 We hypothesize that the label quality and subtle image features that characterise the degenerative disease subclass will result in reduced performance, and that the visually obvious metalwork subclass will have high performance (despite low prevalence).
@@ -441,14 +442,14 @@ We find that while this simple k-means clustering approach does not always yield
  Dataset-Superclass (Subclass) & \makecell{Difference in Subclass Prevalence \\ (High Error Cluster, Low Error Cluster)}  & \makecell{Dataset Subclass \\ Prevalence} \\
  \hline
  CXR14-Pneumothorax (Drains) & 0.68 (0.17, 0.84) & 0.80\\
- CIFAR-Carnivores (Bears) & 0.30 (0.36, 0.06) & 0.2\\
- CIFAR-Outdoor (Forest) & 0.28 (0.36, 0.08) & 0.2\\
- CIFAR-Household (Lamp) & 0.16 (0.28, 0.12) & 0.2\\
+ CIFAR-Carnivores (Bears) & 0.30 (0.36, 0.06) & 0.20\\
+ CIFAR-Outdoor (Forest) & 0.28 (0.36, 0.08) & 0.20\\
+ CIFAR-Household (Lamp) & 0.16 (0.28, 0.12) & 0.20\\
  MURA-Abnormal (Hardware) & 0.03 (0.29, 0.26) & 0.11\\
  MURA-Abnormal (Degenerative) & 0.04 (0.12, 0.08) & 0.43\\
  \hline
 \end{tabular}
-\caption{ Subclass prevalence in high and low error clusters. \textcolor{red}{Add prevalence column.}}
+\caption{ Subclass prevalence in high and low error clusters.}
 \label{tab:clustercifar-1}
 \vspace{- 9 mm}
 \end{table}
@@ -578,7 +579,7 @@ Hidden stratification in medical image datasets appears to be a significant and 
 Not only can the unrecognised presence of hidden subclasses lead to impaired subclass performance, but this may even result in unexpected negative clinical outcomes in situations where image analysis models silently fail to learn serious but rare, noisy, or subtle visual subclasses.
 Acknowledging the presence of visual variation within class labels is likely to be important when building and evaluating the next generation of medical image analysis systems.
 Indeed, our results suggest that models should not be certified for deployment by regulators unless careful testing for hidden stratification has been performed.
-While this will take substantial effort on the part of the community, bodies such as professional organizations, academic institutions, and national standards boards have a role to play in ensuring that we can leverage the enormous potential of machine learning in medical imaging without causing patients harm as a result of hidden stratification effects in our models.
+While this will require substantial effort from the community, bodies such as professional organizations, academic institutions, and national standards boards can help ensure that we can leverage the enormous potential of machine learning in medical imaging without causing patients harm as a result of hidden stratification effects in our models.
 
 %\section*{Acknowledgments}
 %TBD
