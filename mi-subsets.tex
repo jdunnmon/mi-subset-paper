@@ -218,7 +218,7 @@ Each of these methods is applied to the test dataset, allowing for analysis and 
 \textbf{Schema Completion}: In schema completion, the schema author prospectively prescribes a more complete set of subclasses need to be labeled, and provides these labels on test data. 
 %Any report of model performance (e.g. for regulatory approval) would include both aggregate superclass and by-subclass performance results. 
 Schema completion has many advantages, such as the ability to prospectively arrive at consensus on subclass definitions (e.g. a professional body could produce standards describing reporting expectations) to both enable accurate reporting and guide model development.
-However, schema completion is fundamentally limited by the knowledge of the schema author; if important subclasses are omitted, schema completion does not protect against important clinical failures.
+However, schema completion is fundamentally limited by the understanding of the schema author; if important but unrecognised or unrecognisable (\textit{cryptic}) subclasses are omitted, schema completion does not protect against important clinical failures.
 Further, it can be time consuming (or practically impossible!) to exhaustively label all possible subclasses, which in a clinical setting might include subsets of varying diagnostic, demographic, clinical, and descriptive characteristics.
 Finally, a variety of factors including the visual artifacts of new treatments and previously unseen pathologies can render existing schema obsolete at any time.
 
@@ -227,7 +227,7 @@ Advantages of error auditing include that it is not limited by predefined expect
 Rather than having to enumerate every possible subset, only subsets observed to be concerning are measured.
 While more labor-efficient than schema completion, error auditing is critically dependent on the ability of the auditor to visually recognise differences in the distribution of model outputs.
 It is therefore more likely that the non-exhaustive nature of audit could limit certainty that all important strata were analyzed.
-Of particular concern is the ability of error auditing to identify low-prevalence, high discordance subsets that may rarely occur, but be clinically salient.
+Of particular concern is the ability of error auditing to identify low-prevalence, high discordance subsets that may rarely occur but are clinically salient.
 
 %Example: The CXR14 experiments were performed by analysing the model predictions, where it was discovered that the false negative pneumothorax cases were far less likely to contain chest drains than the
 \textbf{Algorithmic Measurement}: In algorithmic measurement approaches, the algorithm developer designs a method to search for subclasses automatically. 
@@ -268,52 +268,36 @@ When feasible, even partial schema completion represents a powerful method for a
 The CIFAR-100 dataset consists of 60,000 images binned into 20 ``superclasses,'' which each contain five distinct ``subclasses.'' 
  Each subclass is represented in the dataset with equal frequency.  
  We hypothesize that by training models only on superclass labels, and assessing superclass performance within each subclass, we will commonly observe subclasses on which performance is substantially inferior to that of the overall superclass.  
-  We further expect that subclass performance will degrade if that subclass is subsampled or if noise is added to superclass labels for that subclass.  
+  We further expect that subclass performance will degrade if that subclass is subsampled or if noise is added to superclass labels for that subclass, simulating stratification with low subclass prevalence or reduced label accuracy.
  While we do not explicitly evaluate the effect of visually similar subclasses or spurious correlates on CIFAR-100, we expect that similar effects would be observed \citep{Selbst2017-gz}.  
- For the purposes of this experiment, we assume that the CIFAR-100 subclasses represent a reasonably comprehensive schema, and implement schema completion by measuring superclass accuracy within each subclass.
+ For the purposes of this experiment, we assume that the CIFAR-100 subclasses represent a reasonable attempt at schema completion, and implement measure superclass accuracy within each subclass.
  
  Figure \ref{fig:cifar} presents the performance of a ResNeXt-29, 8x64d CNN trained on the 20 CIFAR-100 superclasses using the training schedule reported in Xie et al. \citep{Xie2016-ip} and the implementation provided by Yang \citep{Yang_undated-bt}.  
 In each superclass, the five constituent subclasses exhibit substantial performance variation, and the worst-performing subclass can underperform the aggregate superclass by over 30 accuracy points.  
 This same phenomenon in medical imaging would lead to massively different outcomes for different subsets of the population, be these demographically or pathologically determined. 
 
- Table \ref{tab:cifar1} shows classification results on randomly selected subclasses and superclasses when 75\% of the examples in a subclass are dropped from the training set.  
+ Table \ref{tab:cifar1} shows classification results on randomly selected subclasses ("dolphin" and "mountain") and superclasses ("marine mammals" and "large outdoor scene") when 75\% of the examples in a subclass are dropped from the training set, simulating a subclass with reduced prevalence.  
  While the overall marine mammals superclass performance drops by only 4 accuracy points when the dolphin subclass is subsampled, performance on the dolphin subclass drops by 14 points from 0.78 to 0.64.  
  Similar trends are observed for the mountain subclass.  
  Clearly, unmeasured subclass underrepresentation can lead to substantially worse performance on that subclass, even when superclass performance is only modestly affected.
  
-Table \ref{tab:cifar2} shows a similar trend when noise is added to a given subclass by replacing the true superclass label with a random incorrect label.  
+We show a similar trend when noise is added to the labels of a given subclass by replacing the true superclass label with a random incorrect label, simulating a subclass with reduced label accuracy.
 Performance on both dolphin and mountain subclasses drops substantially when label accuracy decreases.  
 Such stratification of label quality by pathology is highly likely to occur in medical datasets, where certain pathologies are easier to identify than others.
 
 \begin{table}[]
 \centering
-\begin{tabular}{|c|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|c|c|c|}
 \hline
- Subclass & \makecell{Baseline \\ Superclass} & \makecell{Baseline \\ Subclass}   &  \makecell{25\% Subsample \\ Superclass}    & \makecell{25\% Subsample \\ Subclass}   \\
+ Subclass & \makecell{Baseline \\ Superclass} & \makecell{Baseline \\ Subclass}   &  \makecell{25\% Subsample \\ Superclass}    & \makecell{25\% Subsample \\ Subclass}  &  \makecell{25\% Whiten \\ Superclass}    & \makecell{25\% Whiten \\ Subclass} \\
  \hline
- Dolphin & 0.69 & 0.78  & 0.65  & 0.64  \\
- Mountain & 0.87 & 0.90  & 0.82 & 0.71  \\
+ Dolphin & 0.69 & 0.78  & 0.65  & 0.64 & 0.65  & 0.64   \\
+ Mountain & 0.87 & 0.90  & 0.82 & 0.71 & 0.82 & 0.71  \\
  \hline
 \end{tabular}
-\caption{Accuracy of ResNeXt-29, 8x64d trained using the full CIFAR-100 dataset (``Baseline'') and a modified dataset (``Subsample'') where 75\% of the Dolphin and Mountain subclasses were dropped from the training dataset.  All results reported are with respect to the superclass label.}
+\caption{Accuracy of ResNeXt-29, 8x64d trained using the full CIFAR-100 dataset (``Baseline'') and two synthetic experiments with altered datasets. (``Subsample'') drops 75\% of the Dolphin and Mountain subclasses from the training dataset, and (``Whiten'') replaces 25\% of the examples in the Dolphin and Mountain subclasses with a random superclass label.  All results reported are with respect to the superclass label.}
 \label{tab:cifar1}
 \vspace{-4mm}
-\end{table}
-
-\begin{table}[]
-\centering
-\begin{tabular}{|c|c|c|c|c|}
- \hline
- Subclass & \makecell{Baseline \\ Superclass} & \makecell{Baseline \\ Subclass}   &  \makecell{25\% Whiten \\ Superclass}    & \makecell{25\% Whiten \\ Subclass}   \\
- \hline 
- Dolphin & 0.69 & 0.78  & 0.65  & 0.64  \\
- Mountain & 0.87 & 0.90  & 0.82 & 0.71  \\
- \hline
-\end{tabular}
-\caption{Accuracy of ResNeXt-29, 8x64d trained using the full CIFAR-100 dataset (``Baseline'') and a modified dataset (``Whiten'') where 25\% of the examples in the Dolphin and Mountain subclasses were assigned a random superclass label.  All results reported are with respect to the superclass label.
-}
-\label{tab:cifar2}
-\vspace{-8mm}
 \end{table}
 
 %Example: The MURA experiments in this study were relabeled with a consensus schema produced by a team of radiologists (unpublished). This schema focused on diagnostic (ie fracture, arthritis) and hospital process (ie metalwork) categories, and did not cover descriptive or location based categories (ie displaced fracture, radiocarpal arthritis).
@@ -356,7 +340,7 @@ These results support the hypothesis that low prevalence and subtle discriminati
 These labels were produced by radiologists in the course of their normal work, and include visually distinct abnormalities including fractures, implanted metal, bone tumours, and degenerative joint disease. 
 These binary labels have been previously investigated and relabelled with subclass identifiers by a board certified radiologist \citep{Oakden-Rayner2019-yi}, showing substantial differences in both the prevalence and sensitivity of the labels within each subclass (see Table \ref{tab:mura2}). 
 %We are able to use schema completion in this case because radiologists have a good understanding of what important subsets may exist in extremity radiographs.
-While this schema likely remains incomplete, even partial schema completion demonstrates substantial hidden stratification in this dataset.
+While this schema remains incomplete, even partial schema completion demonstrates substantial hidden stratification in this dataset.
 
 \begin{table}[]
 \centering
@@ -374,7 +358,7 @@ While this schema likely remains incomplete, even partial schema completion demo
 \vspace{-6mm}
 \end{table}
 
-We hypothesize that the label quality for the degenerative disease subclass will have reduced performance, and that the visually obvious metalwork subclass will have high performance (despite low prevalence).
+We hypothesize that the label quality and subtle image features that characterise the degenerative disease subclass will result in reduced performance, and that the visually obvious metalwork subclass will have high performance (despite low prevalence).
  We train a DenseNet-169 on the normal/abnormal labels, with 13,942 cases used for training and 714 cases held-out for testing \citep{Rajpurkar2017-rc}.  
 % The distribution of these subclasses and sensitivity of the original normal-abnormal labels on each are shown in Table \ref{tab:mura2}.
  In Fig.~\ref{fig:rocs}(a) below, we present ROC curves and AUC values for each subclass and in aggregate.  
@@ -396,7 +380,7 @@ We hypothesize that the label quality for the degenerative disease subclass will
 
 \subsection{Error Auditing}
 
-We next use error auditing to show that the clinical utility of a common model for classifying the CXR-14 dataset is substantially reduced by existing hidden stratification effects.
+We next use error auditing to show that the clinical utility of a common model for classifying the CXR-14 dataset is substantially reduced by existing hidden stratification effects in the pneumothorax class, particularly the presence of spurious correlates.
 
 \textbf{CXR-14}: The CXR-14 dataset is a large-scale dataset for pathology detection in chest radiographs \citep{Wang2017-vm}. 
 This dataset was released in 2017 and updated later the same year, containing 112,120 frontal chest films from 30,805 unique patients. 
@@ -404,9 +388,11 @@ This dataset was released in 2017 and updated later the same year, containing 11
 Each image was labeled for one of 14 different thoracic pathologies.  
 In our analysis, we leverage a pretrained Densenet-121 model provided by Zech \citep{Zech_undated-cw} which reproduces the procedure and results of Rajpurkar et al. \citep{Rajpurkar2018-gc} on this dataset.  
 
-During error auditing, where examples of false positive and false negative predictions from the pretrained model were visually reviewed by a board certified radiologist (XXX),
-it was observed that pneumothorax cases without chest drains (a visual finding in \textit{treated} pneumothoraces) were highly prevalent (i.e., enriched) in the false negative class.
- As a result, pneumothorax subclass labels for ``chest drain'' and ``no chest drain'' were provided by a board-certified radiologist (XXX) for each element of the test set.  
+During error auditing, where examples of false positive and false negative predictions from the pretrained model were visually reviewed by a board certified radiologist \citep{Oakden-Rayner2019-yi},
+it was observed that pneumothorax cases without chest drains were highly prevalent (i.e., enriched) in the false negative class.
+A chest drain is a non-causal image feature in the setting of pneumothorax, as this device is the common form of treatment for the condition. 
+As such, not only does this reflect a spurious correlate, but the correlation is in fact highly clinically relevant; untreated pneumothoraces are life-threatening while treated pneumothoraces are benign.
+ To explore this audit-detected stratification, pneumothorax subclass labels for ``chest drain'' and ``no chest drain'' were provided by a board-certified radiologist (XXX) for each element of the test set.  
  Due to higher prevalence of scans with chest drains in the dataset, clear discriminative features of a chest drain, and high label quality for the scans with chest drains, we hypothesize that a model trained on the CXR-14 dataset will attain higher performance on the pneumothorax subclass with chest drains than that without chest drains.  
  
  %\begin{table}[]
@@ -438,8 +424,8 @@ We show that even simple k-means clustering can detect several of the hidden sub
 
 Our procedure is as follows.  
 For each superclass, we apply k-means clustering to the pre-softmax feature vector of all test set examples within that superclass using $k \in \{2,3,4,5\}$.
-For each value of $k$, we measure the distance between the two clusters with greater than 100 constituent points that have highest and lowest average error rates.
-Finally, we return the pair of high and low error clusters that have the largest Euclidean difference between their error rates.
+For each value of $k$, we select the two clusters with greater than 100 constituent points that have the largest difference in error rates (to select a "high error cluster" and "low error cluster" for each $k$).
+Finally, we return the pair of high and low error clusters that have the largest Euclidean distance between their centroids.
 Ideally, examining these high and low error clusters would enable human analysts to identify salient stratifications in the data.
 Note that our clustering hyperparameters were only coarsely tuned, and could likely be improved in practice.
 
@@ -450,16 +436,16 @@ We find that while this simple k-means clustering approach does not always yield
 
  \begin{table}[]
  \centering
-\begin{tabular}{|c|c|c|c|}
+\begin{tabular}{|c|c|c|}
 \hline
- Dataset-Superclass (Subclass) & \makecell{Difference in Subclass Prevalence \\ (High Error Cluster, Low Error Cluster)} \\
+ Dataset-Superclass (Subclass) & \makecell{Difference in Subclass Prevalence \\ (High Error Cluster, Low Error Cluster)}  & \makecell{Dataset Subclass Prevalence} \\
  \hline
- CXR14-Pneumothorax (Drains) & 0.68 (0.17, 0.84) \\
- CIFAR-Carnivores (Bears) & 0.30 (0.36, 0.06) \\
- CIFAR-Outdoor (Forest) & 0.28 (0.36, 0.08) \\
- CIFAR-Household (Lamp) & 0.16 (0.28, 0.12) \\
- MURA-Abnormal (Hardware) & 0.03 (0.29, 0.26) \\
- MURA-Abnormal (Degenerative) & 0.04 (0.12, 0.08) \\
+ CXR14-Pneumothorax (Drains) & 0.68 (0.17, 0.84) & 0.80\\
+ CIFAR-Carnivores (Bears) & 0.30 (0.36, 0.06) & 0.2\\
+ CIFAR-Outdoor (Forest) & 0.28 (0.36, 0.08) & 0.2\\
+ CIFAR-Household (Lamp) & 0.16 (0.28, 0.12) & 0.2\\
+ MURA-Abnormal (Hardware) & 0.03 (0.29, 0.26) & 0.11\\
+ MURA-Abnormal (Degenerative) & 0.04 (0.12, 0.08) & 0.43\\
  \hline
 \end{tabular}
 \caption{ Subclass prevalence in high and low error clusters. \textcolor{red}{Add prevalence column.}}
@@ -554,9 +540,8 @@ We find that while this simple k-means clustering approach does not always yield
 
 \section{Discussion}
 
-Our results show that hidden stratification can lead to markedly different primary task and subclass performance when the labels for the subclasses have different levels of accuracy, when the subclasses are imbalanced, or when discriminative visual features are subtle.
+Our results show that hidden stratification can lead to markedly different primary task and subclass performance when the labels for the subclasses have different levels of accuracy, when the subclasses are imbalanced, when discriminative visual features are subtle, or when spurious correlates such as chest drains are present.
 We observe this to be the case in both a controlled CIFAR-100 environment and on multiple clinical datasets.
-We also find evidence in our clinical results that spurious correlates like chest drains can have a similar effect.
 
 The clinical implications of hidden stratification will vary by task. 
 Our MURA results, for instance, are unlikely to be clinically relevant, because degenerative disease is rarely a significant or unexpected finding, nor are rapid complications likely. 
@@ -573,7 +558,7 @@ These results suggest that image analysis systems that appear to perform well on
 This behavior is particularly concerning when comparing these systems to human experts, who focus a great deal of effort on specifically learning to identify rare, dangerous, and subtle disease variants.
 
 The performance of medical image analysis systems is unlikely to be fully explained by the prevalence and accuracy of the labels, or even the dataset size. 
-In the MURA experiment, the detection of metalwork is vastly more accurate than the detection of fractures or degenerative change, despite this subclass being both smaller and less accurately labelled than fractures. 
+In the MURA experiment (see Figure 2), the detection of metalwork is vastly more accurate than the detection of fractures or degenerative change, despite this subclass being both smaller and less accurately labelled than fractures. 
 We hypothesise that the nature of the visual features is important as well; metalwork is highly visible and discrete, as metal is significantly more dense (with higher pixel values) than any other material on x-ray. 
 While our understanding of what types of visual features are more learnable than others is limited, it is not unreasonable to assume that detecting metal in an x-ray is far easier for a deep learning model than identifying a subtle fracture (and particularly on downsampled images).
 Similarly, chest drains are highly recognisable in pneumothorax imaging, and small untreated pneumothoraces are subtle enough to be commonly missed by radiologists. 
