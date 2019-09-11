@@ -289,13 +289,13 @@ Such stratification of label quality by pathology is highly likely to occur in m
 \centering
 \begin{tabular}{|c|c|c|c|c|c|c|}
 \hline
- Subclass & \makecell{Baseline \\ Superclass} & \makecell{Baseline \\ Subclass}   &  \makecell{25\% Subsample \\ Superclass}    & \makecell{25\% Subsample \\ Subclass}  &  \makecell{25\% Whiten \\ Superclass}    & \makecell{25\% Whiten \\ Subclass} \\
+ Subclass & \makecell{Baseline \\ Superclass} & \makecell{Baseline \\ Subclass}   &  \makecell{Subsample \\ Superclass}    & \makecell{Subsample \\ Subclass}  &  \makecell{Whiten \\ Superclass}    & \makecell{Whiten \\ Subclass} \\
  \hline
  Dolphin & 0.69 & 0.78  & 0.65  & 0.64 & 0.65  & 0.64   \\
  Mountain & 0.87 & 0.90  & 0.82 & 0.71 & 0.82 & 0.71  \\
  \hline
 \end{tabular}
-\caption{Accuracy of ResNeXt-29, 8x64d trained using the full CIFAR-100 dataset (``Baseline'') and two synthetic experiments with altered datasets. (``Subsample'') drops 75\% of the Dolphin and Mountain subclasses from the training dataset, and (``Whiten'') replaces 25\% of the examples in the Dolphin and Mountain subclasses with a random superclass label.  All results reported are with respect to the superclass label.}
+\caption{Accuracy of ResNeXt-29, 8x64d trained using the full CIFAR-100 dataset (``Baseline'') and two synthetic experiments with altered datasets. (``Subsample'') drops 25\% of the Dolphin and Mountain subclasses from the training dataset, and (``Whiten'') replaces 25\% of the examples in the Dolphin and Mountain subclasses with a random superclass label.  All results reported are with respect to the superclass label.}
 \label{tab:cifar1}
 \vspace{-4mm}
 \end{table}
@@ -438,7 +438,7 @@ We find that while this simple k-means clustering approach does not always yield
  \centering
 \begin{tabular}{|c|c|c|}
 \hline
- Dataset-Superclass (Subclass) & \makecell{Difference in Subclass Prevalence \\ (High Error Cluster, Low Error Cluster)}  & \makecell{Dataset Subclass Prevalence} \\
+ Dataset-Superclass (Subclass) & \makecell{Difference in Subclass Prevalence \\ (High Error Cluster, Low Error Cluster)}  & \makecell{Dataset Subclass \\ Prevalence} \\
  \hline
  CXR14-Pneumothorax (Drains) & 0.68 (0.17, 0.84) & 0.80\\
  CIFAR-Carnivores (Bears) & 0.30 (0.36, 0.06) & 0.2\\
