@@ -26,7 +26,7 @@
 
 @article{rajpurkar2017chexnet,
   title={Chexnet: Radiologist-level pneumonia detection on chest x-rays with deep learning},
-  author={Rajpurkar, Pranav and Irvin, Jeremy and Zhu, Kaylie and Yang, Brandon and Mehta, Hershel and Duan, Tony and Ding, Daisy and Bagul, Aarti and Langlotz, Curtis and Shpanskaya, Katie and others},
+  author={Rajpurkar, Pranav and Irvin, Jeremy and Zhu, Kaylie and Yang, Brandon and Mehta, Hershel and Duan, Tony and Ding, Daisy and Bagul, Aarti and Langlotz, Curtis and Shpanskaya, Katie and Lungren, Matthew and Ng, Andrew},
   journal={arXiv preprint arXiv:1711.05225},
   year={2017}
 }
@@ -43,7 +43,7 @@
 @article{cardon2003population,
   title={Population stratification and spurious allelic association},
   author={Cardon, Lon R and Palmer, Lyle J},
-  journal={The Lancet},
+  journal={Lancet},
   volume={361},
   number={9357},
   pages={598--604},
@@ -195,6 +195,7 @@
   month         =  jul,
   year          =  2018,
   archivePrefix = "arXiv",
+  journal = "arXiv preprint arXiv:1807.00431" 
   primaryClass  = "cs.CV",
   eprint        = "1807.00431"
 }
@@ -219,7 +220,8 @@
   author      = "Zech, John",
   abstract    = "Reproduce CheXNet. Contribute to jrzech/reproduce-chexnet
                  development by creating an account on GitHub.",
-  institution = "Github"
+  institution = "Github",
+  year = 2019
 }
 
 @ARTICLE{Selbst2017-gz,
@@ -264,7 +266,7 @@
   language = "en"
 }
 
-@MISC{Winkler2019-fw,
+@article{Winkler2019-fw,
   title   = "Association Between Surgical Skin Markings in Dermoscopic Images
              and Diagnostic Performance of a Deep Learning Convolutional Neural
              Network for Melanoma Recognition",
@@ -377,7 +379,7 @@
 @ARTICLE{Oakden-Rayner2019-yi,
   title   = "Exploring large scale public medical image datasets",
   author  = "Oakden-Rayner, Luke",
-  journal = "arXiv",
+  journal = "arXiv preprint arXiv:1907.12720",
   month   =  jul,
   year    =  2019
 }
@@ -390,43 +392,11 @@ month=jul,
 year = 2019
 }
 
-@ARTICLE{Rajpurkar2017-rc,
-  title         = "{MURA}: Large Dataset for Abnormality Detection in
-                   Musculoskeletal Radiographs",
-  author        = "Rajpurkar, Pranav and Irvin, Jeremy and Bagul, Aarti and
-                   Ding, Daisy and Duan, Tony and Mehta, Hershel and Yang,
-                   Brandon and Zhu, Kaylie and Laird, Dillon and Ball, Robyn L
-                   and Langlotz, Curtis and Shpanskaya, Katie and Lungren,
-                   Matthew P and Ng, Andrew Y",
-  abstract      = "We introduce MURA, a large dataset of musculoskeletal
-                   radiographs containing 40,561 images from 14,863 studies,
-                   where each study is manually labeled by radiologists as
-                   either normal or abnormal. To evaluate models robustly and
-                   to get an estimate of radiologist performance, we collect
-                   additional labels from six board-certified Stanford
-                   radiologists on the test set, consisting of 207
-                   musculoskeletal studies. On this test set, the majority vote
-                   of a group of three radiologists serves as gold standard. We
-                   train a 169-layer DenseNet baseline model to detect and
-                   localize abnormalities. Our model achieves an AUROC of
-                   0.929, with an operating point of 0.815 sensitivity and
-                   0.887 specificity. We compare our model and radiologists on
-                   the Cohen's kappa statistic, which expresses the agreement
-                   of our model and of each radiologist with the gold standard.
-                   Model performance is comparable to the best radiologist
-                   performance in detecting abnormalities on finger and wrist
-                   studies. However, model performance is lower than best
-                   radiologist performance in detecting abnormalities on elbow,
-                   forearm, hand, humerus, and shoulder studies. We believe
-                   that the task is a good challenge for future research. To
-                   encourage advances, we have made our dataset freely
-                   available at
-                   https://stanfordmlgroup.github.io/competitions/mura .",
-  month         =  dec,
-  year          =  2017,
-  archivePrefix = "arXiv",
-  primaryClass  = "physics.med-ph",
-  eprint        = "1712.06957"
+@article{Rajpurkar2017-rc,
+  title={Mura: Large dataset for abnormality detection in musculoskeletal radiographs},
+  author={Rajpurkar, Pranav and Irvin, Jeremy and Bagul, Aarti and Ding, Daisy and Duan, Tony and Mehta, Hershel and Yang, Brandon and Zhu, Kaylie and Laird, Dillon and Ball, Robyn L and others},
+  journal={arXiv preprint arXiv:1712.06957},
+  year={2017}
 }
 
 @ARTICLE{Agniel2018-qp,
@@ -576,6 +546,7 @@ year = 2019
                    models in medicine.",
   month         =  mar,
   year          =  2019,
+  journal = {arXiv preprint arXiv: 1903.11101}
   archivePrefix = "arXiv",
   primaryClass  = "cs.LG",
   eprint        = "1903.11101"
@@ -744,13 +715,14 @@ year = 2019
                    available online.",
   month         =  nov,
   year          =  2016,
+  journal = {arXiv preprint arXiv:1611.05431}
   archivePrefix = "arXiv",
   primaryClass  = "cs.CV",
   eprint        = "1611.05431"
 }
 
 @article{recht2018cifar,
-  title={Do CIFAR-10 classifiers generalize to CIFAR-10?},
+  title={Do {CIFAR-10} classifiers generalize to {CIFAR-10}?},
   author={Recht, Benjamin and Roelofs, Rebecca and Schmidt, Ludwig and Shankar, Vaishaal},
   journal={arXiv preprint arXiv:1806.00451},
   year={2018}
@@ -777,7 +749,7 @@ year = 2019
   publisher={Elsevier}
 }
 
-@ARTICLE{Badgeley2019-zi,
+@article{Badgeley2019-zi,
   title    = "Deep learning predicts hip fracture using confounding patient and
               healthcare variables",
   author   = "Badgeley, Marcus A and Zech, John R and Oakden-Rayner, Luke and
@@ -826,14 +798,14 @@ year = 2019
   language = "en"
 }
 
-@MISC{Campanella2019-qs,
+@article{Campanella2019-qs,
   title   = "Clinical-grade computational pathology using weakly supervised
              deep learning on whole slide images",
   author  = "Campanella, Gabriele and Hanna, Matthew G and Geneslaw, Luke and
              Miraflor, Allen and Silva, Vitor Werneck Krauss and Busam, Klaus J
              and Brogi, Edi and Reuter, Victor E and Klimstra, David S and
              Fuchs, Thomas J",
-  journal = "Nature Medicine",
+  journal = "Nature {M}edicine",
   volume  =  25,
   number  =  8,
   pages   = "1301--1309",
@@ -916,7 +888,7 @@ year = 2019
   title   = "Detecting hip fractures with radiologist-level performance using
              deep neural networks",
   author  = "{Gale W, Oakden-Rayner L, Carneiro G, Bradley AP, Palmer LJ}",
-  journal = "arXiv",
+  journal = "arXiv preprint arXiv:1711.06504 ",
   year    =  2017
 }
 
@@ -958,13 +930,13 @@ year = 2019
 @inproceedings{chen2019slicing,
   title={Slice-based Learning: A Programming Model for Residual Learning in Critical Data Slices},
   author={Chen, Vincent S and Wu, Sen and Weng, Zhenzhen and Ratner, Alexander and R{\'e}, Christopher},
-  booktitle={NeurIPS},
+  booktitle={Advances in Neural Information Processing Systems},
   year={2019},
   pdf={https://vincentsc.com/papers/chen2019slice.pdf}
 }
 
 
-@MISC{Liu2019-qt,
+@article{Liu2019-qt,
   title   = "A {Semi-Supervised} {CNN} Learning Method with Pseudo-class Labels
              for Atherosclerotic Vascular Calcification Detection",
   author  = "Liu, Jiamin and Yao, Jianhua and Bagheri, Mohammadhadi and
@@ -980,7 +952,8 @@ year = 2019
   abstract    = "Classification with PyTorch. Contribute to
                  bearpaw/pytorch-classification development by creating an
                  account on GitHub.",
-  institution = "Github"
+  institution = "Github",
+  year = 2019
 }
 
 @ARTICLE{Krizhevsky2009-tq,

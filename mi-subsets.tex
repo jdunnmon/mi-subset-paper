@@ -1,4 +1,6 @@
 \documentclass{article}
+\pdfoutput=1
+%auto-ignore
 
 % if you need to pass options to natbib, use, e.g.:
 %     \PassOptionsToPackage{numbers, compress}{natbib}
@@ -12,7 +14,7 @@
 %     \usepackage[preprint]{neurips_2019}
 
 % to compile a camera-ready version, add the [final] option, e.g.:
-     \usepackage[final]{neurips_2019}
+     \usepackage[preprint]{neurips_2019}
 
 % to avoid loading the natbib package, add option nonatbib:
 %     \usepackage[nonatbib]{neurips_2019}
@@ -26,7 +28,7 @@
 \usepackage{nicefrac}       % compact symbols for 1/2, etc.
 \usepackage{microtype}      % microtypography
 \usepackage{graphicx}
-\usepackage{natbib}
+%\usepackage{natbib}
 \usepackage{makecell}
 \usepackage{xcolor}
 \usepackage{subfig}
@@ -42,31 +44,31 @@
 % authors names on the first line, and the last on the second line, try using
 % \AND instead of \And before the third author name.
 
+%\author{%
+%Anonymous Authors
+%}
 \author{%
-Anonymous Authors
-}
-%\author{%
-  %Luke Oakden-Rayner,\thanks{Equal Contribution} $ $ Gustavo Carneiro\\
+  Luke Oakden-Rayner,\thanks{Equal Contribution} $ $ Gustavo Carneiro\\
   %\thanks{Use footnote for providing further information
     %about author (webpage, alternative address)---\emph{not} for acknowledging
     %funding agencies.} \\
- % Australian Institute for Machine Learning\\
-  %University of Adelaide\\
- % Adelaide, SA 5000 \\
-  %\texttt{\{luke.oakden-rayner,gustavo.carneiro\}} \\
-  %\texttt{@adelaide.edu.au} \\
-  %\And
+  Australian Institute for Machine Learning\\
+  University of Adelaide\\
+  Adelaide, SA 5000 \\
+  \texttt{\{luke.oakden-rayner,gustavo.carneiro\}} \\
+  \texttt{@adelaide.edu.au} \\
+  \And
 %\author{%
-  %  Jared Dunnmon,$^*$ Christopher R\'{e}\\
+    Jared Dunnmon,$^*$ Christopher R\'{e}\\
   %\thanks{Use footnote for providing further information
     %about author (webpage, alternative address)---\emph{not} for acknowledging
     %funding agencies.} \\
- % Department of Computer Science\\
- % Stanford University\\
-  %Stanford, CA 94305 \\
-  %\texttt{\{jdunnmon,chrismre\}} \\
-  %\texttt{@stanford.edu} 
-  %}
+  Department of Computer Science\\
+  Stanford University\\
+  Stanford, CA 94305 \\
+  \texttt{\{jdunnmon,chrismre\}} \\
+  \texttt{@stanford.edu} 
+  }
   %\And
   %Christopher R\'{e}\\
   %\thanks{Use footnote for providing further information
@@ -176,7 +178,7 @@ We examine the clinical implications of these findings, and argue that measureme
 %In this article, we demonstrate that hidden stratification is a fundamental technical problem that should be considered when applying machine learning algorithms to medical imaging analysis.  
 \section{Related Work}
 
-Problems similar to hidden stratification have been observed or postulated in many domains, including traditional computer vision \citep{recht2018cifar}, fine-grained image recognition \citep{yao2011combining}, genomics \citep{cardon2003population}, and epidemiology (often termed "spectrum effects") \citep{mulherin2002spectrum}.
+Problems similar to hidden stratification have been observed or postulated in many domains, including traditional computer vision \citep{recht2018cifar}, fine-grained image recognition \citep{yao2011combining}, genomics \citep{cardon2003population}, and epidemiology (often termed ``spectrum effects'') \citep{mulherin2002spectrum}.
 The difficulty of the hidden stratification problem fundamentally relates to the challenge of obtaining labelled training data.  
 Were fine-grained labels available for every important variant that could be distinguished via a given data modality, discriminative model performance on important subsets could be improved by training and evaluating models using this information.  
 Thus, typical approaches to observed stratification and dataset imbalance in medical machine learning often center on gathering more data on underperforming subsets, either via additional labelling, selective data augmentation, or oversampling \citep{Mazurowski2008-cq}.  
@@ -199,7 +201,7 @@ Non-causal confounding features such as healthcare process quantities can also c
 Instead of analyzing subsets defined \textit{a priori}, Mahajan et al. \citep{Mahajan2019-yi} describe algorithmic audits, where detailed examinations of model errors can lead to model improvements.
  Several recent studies perform error audits, where specific failure modes such as small volume cancers, disease mimics, and treatment-related features are observed \citep{Campanella2019-qs, Wang2019-jr}; such analyses may be helpful in identifying error modes via human review, but do not characterize the full space of subset performance \citep{Selbst2017-gz}.  
  Of course, there also exist multiple studies that do not directly address the effects of hidden stratification \citep{Haenssle2018-vw, Bien2018-ae}. 
- Esteva et al. \citep{Esteva2017-if} is particularly notable, as this dataset is labelled for more than 2,000 diagnostic subclasses but the results presented only consider "top-level" diagnostic categories. 
+ Esteva et al. \citep{Esteva2017-if} is particularly notable, as this dataset is labelled for more than 2,000 diagnostic subclasses but the results presented only consider ``top-level'' diagnostic categories. 
  Analysis of these effects would improve the community's ability to assess the real-world clinical utility of these models. 
  
 %Perhaps the most well-developed literature describing methods that address problems similar to hidden stratification is that describing fairness and bias in machine learning systems. 
@@ -310,7 +312,7 @@ Such stratification of label quality by pathology is highly likely to occur in m
  A Densenet model previously trained on this dataset to identify hip fractures achieved extremely high performance (AUC = 0.994) \citep{Gale_W_Oakden-Rayner_L_Carneiro_G_Bradley_AP_Palmer_LJ2017-tl}. 
  %This previously trained binary hip fracture detection model predicted the presence or absence of a fracture on the validation and test sets, using the threshold defined in Gale et al. \citep{Gale_W_Oakden-Rayner_L_Carneiro_G_Bradley_AP_Palmer_LJ2017-tl}.  
   We hypothesize that reduced subclass performance will occur even in models with high overall superclass performance, particularly in subclasses characterised by subtle visual features or low subclass prevalence.  
- The distribution of the location and description subclasses is shown in Table \ref{tab:hip1}, with subclass labels produced by a board-certified radiologist (XXX).  
+ The distribution of the location and description subclasses is shown in Table \ref{tab:hip1}, with subclass labels produced by a board-certified radiologist (LOR).  
  %Again, because this particular diagnostic is clinically well-characterized, we use schema completion to measure the effects of hidden stratification.  
  %We assess sensitivity values for the model on each subclass and in aggregate as a proxy for model performance at detecting fractures.  
  We indeed find that sensitivity on both subtle fractures and low-prevalence cervical fractures is significantly lower (p$<$0.01) than that on the overall task.
@@ -396,7 +398,7 @@ During error auditing, where examples of false positive and false negative predi
 it was observed that pneumothorax cases without chest drains were highly prevalent (i.e., enriched) in the false negative class.
 A chest drain is a non-causal image feature in the setting of pneumothorax, as this device is the common form of treatment for the condition. 
 As such, not only does this reflect a spurious correlate, but the correlation is in fact highly clinically relevant; untreated pneumothoraces are life-threatening while treated pneumothoraces are benign.
- To explore this audit-detected stratification, pneumothorax subclass labels for ``chest drain'' and ``no chest drain'' were provided by a board-certified radiologist (XXX) for each element of the test set.  
+ To explore this audit-detected stratification, pneumothorax subclass labels for ``chest drain'' and ``no chest drain'' were provided by a board-certified radiologist (LOR) for each element of the test set.  
  Due to higher prevalence of scans with chest drains in the dataset, clear discriminative features of a chest drain, and high label quality for the scans with chest drains, we hypothesize that a model trained on the CXR-14 dataset will attain higher performance on the pneumothorax subclass with chest drains than that without chest drains.  
  
  %\begin{table}[]
@@ -433,7 +435,7 @@ Ideally, examining these high and low error clusters would help human analysts i
 Note that our clustering hyperparameters were coarsely tuned, and could likely be improved in practice.
 
 To demonstrate the potential utility of this approach, we apply it to several datasets analyzed above, and report results in Table \ref{tab:clustercifar-1}.  
-We find that while this simple $k$-means clustering approach does not always yield meaningful separation (e.g. on MURA), it does produce clusters with a high proportion of drains on CXR-14 and a high proportion of various high-error classes (bear, forest, lamp) on CIFAR-100.  
+We find that while this simple k-means clustering approach does not always yield meaningful separation (e.g. on MURA), it does produce clusters with a high proportion of drains on CXR-14 and a high proportion of various high-error classes (bear, forest, lamp) on CIFAR-100.  
  In practice, such an approach could be used both to assist human auditors in identifying salient stratifications in the data and to confirm that schema completion has been successful.
  In the latter case, we would only expect to find distinct clusters when hidden stratification is minimal.
 
