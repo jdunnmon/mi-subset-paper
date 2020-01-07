@@ -1,0 +1,639 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{40}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{}, \showDOI{}, and \showURL{}.  The latter two
+%%% do not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showDOI}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showDOI #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showDOI      \undefined \def \showDOI       #1{#1}\fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       {\relax}        \fi
+% The following commands are used for tagged output and should be
+% invisible to TeX
+\providecommand\bibfield[2]{#2}
+\providecommand\bibinfo[2]{#2}
+\providecommand\natexlab[1]{#1}
+\providecommand\showeprint[2][]{arXiv:#2}
+
+\bibitem[\protect\citeauthoryear{Agniel, Kohane, and Weber}{Agniel
+  et~al\mbox{.}}{2018}]%
+        {Agniel2018-qp}
+\bibfield{author}{\bibinfo{person}{Denis Agniel}, \bibinfo{person}{Isaac~S
+  Kohane}, {and} \bibinfo{person}{Griffin~M Weber}.}
+  \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{Biases in electronic health record data due to
+  processes within the healthcare system: retrospective observational study}.
+\newblock \bibinfo{journal}{\emph{BMJ}}  \bibinfo{volume}{361}
+  (\bibinfo{date}{April} \bibinfo{year}{2018}), \bibinfo{pages}{k1479}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Badgeley, Zech, Oakden-Rayner, Glicksberg,
+  Liu, Gale, McConnell, Percha, Snyder, and Dudley}{Badgeley
+  et~al\mbox{.}}{2019}]%
+        {Badgeley2019-zi}
+\bibfield{author}{\bibinfo{person}{Marcus~A Badgeley}, \bibinfo{person}{John~R
+  Zech}, \bibinfo{person}{Luke Oakden-Rayner}, \bibinfo{person}{Benjamin~S
+  Glicksberg}, \bibinfo{person}{Manway Liu}, \bibinfo{person}{William Gale},
+  \bibinfo{person}{Michael~V McConnell}, \bibinfo{person}{Bethany Percha},
+  \bibinfo{person}{Thomas~M Snyder}, {and} \bibinfo{person}{Joel~T Dudley}.}
+  \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{Deep learning predicts hip fracture using
+  confounding patient and healthcare variables}.
+\newblock \bibinfo{journal}{\emph{NPJ Digit Med}}  \bibinfo{volume}{2}
+  (\bibinfo{date}{April} \bibinfo{year}{2019}), \bibinfo{pages}{31}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Bien, Rajpurkar, Ball, Irvin, Park, Jones,
+  Bereket, Patel, Yeom, Shpanskaya, Halabi, Zucker, Fanton, Amanatullah,
+  Beaulieu, Riley, Stewart, Blankenberg, Larson, Jones, Langlotz, Ng, and
+  Lungren}{Bien et~al\mbox{.}}{2018}]%
+        {Bien2018-ae}
+\bibfield{author}{\bibinfo{person}{Nicholas Bien}, \bibinfo{person}{Pranav
+  Rajpurkar}, \bibinfo{person}{Robyn~L Ball}, \bibinfo{person}{Jeremy Irvin},
+  \bibinfo{person}{Allison Park}, \bibinfo{person}{Erik Jones},
+  \bibinfo{person}{Michael Bereket}, \bibinfo{person}{Bhavik~N Patel},
+  \bibinfo{person}{Kristen~W Yeom}, \bibinfo{person}{Katie Shpanskaya},
+  \bibinfo{person}{Safwan Halabi}, \bibinfo{person}{Evan Zucker},
+  \bibinfo{person}{Gary Fanton}, \bibinfo{person}{Derek~F Amanatullah},
+  \bibinfo{person}{Christopher~F Beaulieu}, \bibinfo{person}{Geoffrey~M Riley},
+  \bibinfo{person}{Russell~J Stewart}, \bibinfo{person}{Francis~G Blankenberg},
+  \bibinfo{person}{David~B Larson}, \bibinfo{person}{Ricky~H Jones},
+  \bibinfo{person}{Curtis~P Langlotz}, \bibinfo{person}{Andrew~Y Ng}, {and}
+  \bibinfo{person}{Matthew~P Lungren}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{Deep-learning-assisted diagnosis for knee magnetic
+  resonance imaging: Development and retrospective validation of {MRNet}}.
+\newblock \bibinfo{journal}{\emph{PLoS Med.}} \bibinfo{volume}{15},
+  \bibinfo{number}{11} (\bibinfo{date}{Nov.} \bibinfo{year}{2018}),
+  \bibinfo{pages}{e1002699}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Buda, Maki, and Mazurowski}{Buda
+  et~al\mbox{.}}{2018}]%
+        {Buda2018-ab}
+\bibfield{author}{\bibinfo{person}{Mateusz Buda}, \bibinfo{person}{Atsuto
+  Maki}, {and} \bibinfo{person}{Maciej~A Mazurowski}.}
+  \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{A systematic study of the class imbalance problem
+  in convolutional neural networks}.
+\newblock \bibinfo{journal}{\emph{Neural Netw.}}  \bibinfo{volume}{106}
+  (\bibinfo{date}{Oct.} \bibinfo{year}{2018}), \bibinfo{pages}{249--259}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Cali{\'n}ski and Harabasz}{Cali{\'n}ski and
+  Harabasz}{1974}]%
+        {calinski1974dendrite}
+\bibfield{author}{\bibinfo{person}{Tadeusz Cali{\'n}ski} {and}
+  \bibinfo{person}{Jerzy Harabasz}.} \bibinfo{year}{1974}\natexlab{}.
+\newblock \showarticletitle{A dendrite method for cluster analysis}.
+\newblock \bibinfo{journal}{\emph{Communications in Statistics-theory and
+  Methods}} \bibinfo{volume}{3}, \bibinfo{number}{1} (\bibinfo{year}{1974}),
+  \bibinfo{pages}{1--27}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Campanella, Hanna, Geneslaw, Miraflor, Silva,
+  Busam, Brogi, Reuter, Klimstra, and Fuchs}{Campanella et~al\mbox{.}}{2019}]%
+        {Campanella2019-qs}
+\bibfield{author}{\bibinfo{person}{Gabriele Campanella},
+  \bibinfo{person}{Matthew~G Hanna}, \bibinfo{person}{Luke Geneslaw},
+  \bibinfo{person}{Allen Miraflor}, \bibinfo{person}{Vitor Werneck~Krauss
+  Silva}, \bibinfo{person}{Klaus~J Busam}, \bibinfo{person}{Edi Brogi},
+  \bibinfo{person}{Victor~E Reuter}, \bibinfo{person}{David~S Klimstra}, {and}
+  \bibinfo{person}{Thomas~J Fuchs}.} \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{Clinical-grade computational pathology using weakly
+  supervised deep learning on whole slide images}.
+\newblock \bibinfo{journal}{\emph{Nature {M}edicine}} \bibinfo{volume}{25},
+  \bibinfo{number}{8} (\bibinfo{year}{2019}), \bibinfo{pages}{1301--1309}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Cardon and Palmer}{Cardon and Palmer}{2003}]%
+        {cardon2003population}
+\bibfield{author}{\bibinfo{person}{Lon~R Cardon} {and} \bibinfo{person}{Lyle~J
+  Palmer}.} \bibinfo{year}{2003}\natexlab{}.
+\newblock \showarticletitle{Population stratification and spurious allelic
+  association}.
+\newblock \bibinfo{journal}{\emph{Lancet}} \bibinfo{volume}{361},
+  \bibinfo{number}{9357} (\bibinfo{year}{2003}), \bibinfo{pages}{598--604}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Chen, Wu, Weng, Ratner, and R{\'e}}{Chen
+  et~al\mbox{.}}{2019}]%
+        {chen2019slicing}
+\bibfield{author}{\bibinfo{person}{Vincent~S Chen}, \bibinfo{person}{Sen Wu},
+  \bibinfo{person}{Zhenzhen Weng}, \bibinfo{person}{Alexander Ratner}, {and}
+  \bibinfo{person}{Christopher R{\'e}}.} \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{Slice-based Learning: A Programming Model for
+  Residual Learning in Critical Data Slices}. In
+  \bibinfo{booktitle}{\emph{Advances in Neural Information Processing
+  Systems}}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Chilamkurthy, Ghosh, Tanamala, Biviji,
+  Campeau, Venugopal, Mahajan, Rao, and Warier}{Chilamkurthy
+  et~al\mbox{.}}{2018}]%
+        {Chilamkurthy2018-op}
+\bibfield{author}{\bibinfo{person}{Sasank Chilamkurthy}, \bibinfo{person}{Rohit
+  Ghosh}, \bibinfo{person}{Swetha Tanamala}, \bibinfo{person}{Mustafa Biviji},
+  \bibinfo{person}{Norbert~G Campeau}, \bibinfo{person}{Vasantha~Kumar
+  Venugopal}, \bibinfo{person}{Vidur Mahajan}, \bibinfo{person}{Pooja Rao},
+  {and} \bibinfo{person}{Prashant Warier}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{Deep learning algorithms for detection of critical
+  findings in head {CT} scans: a retrospective study}.
+\newblock \bibinfo{journal}{\emph{Lancet}} \bibinfo{volume}{392},
+  \bibinfo{number}{10162} (\bibinfo{date}{Dec.} \bibinfo{year}{2018}),
+  \bibinfo{pages}{2388--2396}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Dunnmon, Ratner, Khandwala, Saab, Markert,
+  Sagreiya, Goldman, Lee-Messer, Lungren, Rubin, and R{\'e}}{Dunnmon
+  et~al\mbox{.}}{2019a}]%
+        {Dunnmon2019-zw}
+\bibfield{author}{\bibinfo{person}{Jared Dunnmon}, \bibinfo{person}{Alexander
+  Ratner}, \bibinfo{person}{Nishith Khandwala}, \bibinfo{person}{Khaled Saab},
+  \bibinfo{person}{Matthew Markert}, \bibinfo{person}{Hersh Sagreiya},
+  \bibinfo{person}{Roger Goldman}, \bibinfo{person}{Christopher Lee-Messer},
+  \bibinfo{person}{Matthew Lungren}, \bibinfo{person}{Daniel Rubin}, {and}
+  \bibinfo{person}{Christopher R{\'e}}.} \bibinfo{year}{2019}\natexlab{a}.
+\newblock \showarticletitle{{Cross-Modal} Data Programming Enables Rapid
+  Medical Machine Learning}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv: 1903.11101}}
+  (\bibinfo{date}{March} \bibinfo{year}{2019}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Dunnmon, Yi, Langlotz, R{\'e}, Rubin, and
+  Lungren}{Dunnmon et~al\mbox{.}}{2019b}]%
+        {Dunnmon2019-rr}
+\bibfield{author}{\bibinfo{person}{Jared~A Dunnmon}, \bibinfo{person}{Darvin
+  Yi}, \bibinfo{person}{Curtis~P Langlotz}, \bibinfo{person}{Christopher
+  R{\'e}}, \bibinfo{person}{Daniel~L Rubin}, {and} \bibinfo{person}{Matthew~P
+  Lungren}.} \bibinfo{year}{2019}\natexlab{b}.
+\newblock \showarticletitle{Assessment of Convolutional Neural Networks for
+  Automated Classification of Chest Radiographs}.
+\newblock \bibinfo{journal}{\emph{Radiology}} \bibinfo{volume}{290},
+  \bibinfo{number}{2} (\bibinfo{date}{Feb.} \bibinfo{year}{2019}),
+  \bibinfo{pages}{537--544}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Esteva, Kuprel, Novoa, Ko, Swetter, Blau, and
+  Thrun}{Esteva et~al\mbox{.}}{2017}]%
+        {Esteva2017-if}
+\bibfield{author}{\bibinfo{person}{Andre Esteva}, \bibinfo{person}{Brett
+  Kuprel}, \bibinfo{person}{Roberto~A Novoa}, \bibinfo{person}{Justin Ko},
+  \bibinfo{person}{Susan~M Swetter}, \bibinfo{person}{Helen~M Blau}, {and}
+  \bibinfo{person}{Sebastian Thrun}.} \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{Dermatologist-level classification of skin cancer
+  with deep neural networks}.
+\newblock \bibinfo{journal}{\emph{Nature}} \bibinfo{volume}{542},
+  \bibinfo{number}{7639} (\bibinfo{date}{Feb.} \bibinfo{year}{2017}),
+  \bibinfo{pages}{115--118}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Esteva, Robicquet, Ramsundar, Kuleshov,
+  DePristo, Chou, Cui, Corrado, Thrun, and Dean}{Esteva et~al\mbox{.}}{2019}]%
+        {esteva2019guide}
+\bibfield{author}{\bibinfo{person}{Andre Esteva}, \bibinfo{person}{Alexandre
+  Robicquet}, \bibinfo{person}{Bharath Ramsundar}, \bibinfo{person}{Volodymyr
+  Kuleshov}, \bibinfo{person}{Mark DePristo}, \bibinfo{person}{Katherine Chou},
+  \bibinfo{person}{Claire Cui}, \bibinfo{person}{Greg Corrado},
+  \bibinfo{person}{Sebastian Thrun}, {and} \bibinfo{person}{Jeff Dean}.}
+  \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{A guide to deep learning in healthcare}.
+\newblock \bibinfo{journal}{\emph{Nature medicine}} \bibinfo{volume}{25},
+  \bibinfo{number}{1} (\bibinfo{year}{2019}), \bibinfo{pages}{24}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Fries, Varma, Chen, Xiao, Tejeda, Saha,
+  Dunnmon, Chubb, Maskatia, Fiterau, Delp, Ashley, R{\'e}, and Priest}{Fries
+  et~al\mbox{.}}{2019}]%
+        {Fries2019-ze}
+\bibfield{author}{\bibinfo{person}{Jason~A Fries}, \bibinfo{person}{Paroma
+  Varma}, \bibinfo{person}{Vincent~S Chen}, \bibinfo{person}{Ke Xiao},
+  \bibinfo{person}{Heliodoro Tejeda}, \bibinfo{person}{Priyanka Saha},
+  \bibinfo{person}{Jared Dunnmon}, \bibinfo{person}{Henry Chubb},
+  \bibinfo{person}{Shiraz Maskatia}, \bibinfo{person}{Madalina Fiterau},
+  \bibinfo{person}{Scott Delp}, \bibinfo{person}{Euan Ashley},
+  \bibinfo{person}{Christopher R{\'e}}, {and} \bibinfo{person}{James~R
+  Priest}.} \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{Weakly supervised classification of aortic valve
+  malformations using unlabeled cardiac {MRI} sequences}.
+\newblock \bibinfo{journal}{\emph{Nat. Commun.}} \bibinfo{volume}{10},
+  \bibinfo{number}{1} (\bibinfo{date}{July} \bibinfo{year}{2019}),
+  \bibinfo{pages}{3111}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{{Gale W, Oakden-Rayner L, Carneiro G, Bradley
+  AP, Palmer LJ}}{{Gale W, Oakden-Rayner L, Carneiro G, Bradley AP, Palmer
+  LJ}}{2017}]%
+        {Gale_W_Oakden-Rayner_L_Carneiro_G_Bradley_AP_Palmer_LJ2017-tl}
+\bibfield{author}{\bibinfo{person}{{Gale W, Oakden-Rayner L, Carneiro G,
+  Bradley AP, Palmer LJ}}.} \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{Detecting hip fractures with radiologist-level
+  performance using deep neural networks}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:1711.06504}}
+  (\bibinfo{year}{2017}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Gulshan, Peng, Coram, Stumpe, Wu,
+  Narayanaswamy, Venugopalan, Widner, Madams, Cuadros, Kim, Raman, Nelson,
+  Mega, and Webster}{Gulshan et~al\mbox{.}}{2016}]%
+        {Gulshan2016-we}
+\bibfield{author}{\bibinfo{person}{Varun Gulshan}, \bibinfo{person}{Lily Peng},
+  \bibinfo{person}{Marc Coram}, \bibinfo{person}{Martin~C Stumpe},
+  \bibinfo{person}{Derek Wu}, \bibinfo{person}{Arunachalam Narayanaswamy},
+  \bibinfo{person}{Subhashini Venugopalan}, \bibinfo{person}{Kasumi Widner},
+  \bibinfo{person}{Tom Madams}, \bibinfo{person}{Jorge Cuadros},
+  \bibinfo{person}{Ramasamy Kim}, \bibinfo{person}{Rajiv Raman},
+  \bibinfo{person}{Philip~C Nelson}, \bibinfo{person}{Jessica~L Mega}, {and}
+  \bibinfo{person}{Dale~R Webster}.} \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{Development and Validation of a Deep Learning
+  Algorithm for Detection of Diabetic Retinopathy in Retinal Fundus
+  Photographs}.
+\newblock \bibinfo{journal}{\emph{JAMA}} \bibinfo{volume}{316},
+  \bibinfo{number}{22} (\bibinfo{date}{Dec.} \bibinfo{year}{2016}),
+  \bibinfo{pages}{2402--2410}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Haenssle, Fink, Schneiderbauer, Toberer, Buhl,
+  Blum, Kalloo, Hassen, Thomas, Enk, and {Others}}{Haenssle
+  et~al\mbox{.}}{2018}]%
+        {Haenssle2018-vw}
+\bibfield{author}{\bibinfo{person}{Holger~A Haenssle},
+  \bibinfo{person}{Christine Fink}, \bibinfo{person}{R Schneiderbauer},
+  \bibinfo{person}{Ferdinand Toberer}, \bibinfo{person}{Timo Buhl},
+  \bibinfo{person}{A Blum}, \bibinfo{person}{A Kalloo},
+  \bibinfo{person}{A~Ben~Hadj Hassen}, \bibinfo{person}{L Thomas},
+  \bibinfo{person}{A Enk}, {and} \bibinfo{person}{{Others}}.}
+  \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{Man against machine: diagnostic performance of a
+  deep learning convolutional neural network for dermoscopic melanoma
+  recognition in comparison to 58 dermatologists}.
+\newblock \bibinfo{journal}{\emph{Ann. Oncol.}} \bibinfo{volume}{29},
+  \bibinfo{number}{8} (\bibinfo{year}{2018}), \bibinfo{pages}{1836--1842}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Irvin, Rajpurkar, Ko, Yu, Ciurea-Ilcus, Chute,
+  Marklund, Haghgoo, Ball, Shpanskaya, and {Others}}{Irvin
+  et~al\mbox{.}}{2019}]%
+        {Irvin2019-ho}
+\bibfield{author}{\bibinfo{person}{Jeremy Irvin}, \bibinfo{person}{Pranav
+  Rajpurkar}, \bibinfo{person}{Michael Ko}, \bibinfo{person}{Yifan Yu},
+  \bibinfo{person}{Silviana Ciurea-Ilcus}, \bibinfo{person}{Chris Chute},
+  \bibinfo{person}{Henrik Marklund}, \bibinfo{person}{Behzad Haghgoo},
+  \bibinfo{person}{Robyn Ball}, \bibinfo{person}{Katie Shpanskaya}, {and}
+  \bibinfo{person}{{Others}}.} \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{Chexpert: A large chest radiograph dataset with
+  uncertainty labels and expert comparison}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:1901. 07031}}
+  (\bibinfo{year}{2019}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Krizhevsky, Nair, and Hinton}{Krizhevsky
+  et~al\mbox{.}}{2009}]%
+        {Krizhevsky2009-tq}
+\bibfield{author}{\bibinfo{person}{Alex Krizhevsky}, \bibinfo{person}{Vinod
+  Nair}, {and} \bibinfo{person}{Geoffrey Hinton}.}
+  \bibinfo{year}{2009}\natexlab{}.
+\newblock \showarticletitle{Cifar-10 and cifar-100 datasets}.
+\newblock \bibinfo{journal}{\emph{URl: https://www. cs. toronto.
+  edu/kriz/cifar. html}}  \bibinfo{volume}{6} (\bibinfo{year}{2009}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Liu, Yao, Bagheri, Sandfort, and Summers}{Liu
+  et~al\mbox{.}}{2019}]%
+        {Liu2019-qt}
+\bibfield{author}{\bibinfo{person}{Jiamin Liu}, \bibinfo{person}{Jianhua Yao},
+  \bibinfo{person}{Mohammadhadi Bagheri}, \bibinfo{person}{Veit Sandfort},
+  {and} \bibinfo{person}{Ronald~M Summers}.} \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{A {Semi-Supervised} {CNN} Learning Method with
+  Pseudo-class Labels for Atherosclerotic Vascular Calcification Detection}.
+\newblock \bibinfo{journal}{\emph{2019 IEEE 16th International Symposium on
+  Biomedical Imaging (ISBI 2019)}} (\bibinfo{year}{2019}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Mahajan, Venugopal, Gaur, Gupta, Murugavel,
+  and Mahajan}{Mahajan et~al\mbox{.}}{2019}]%
+        {Mahajan2019-yi}
+\bibfield{author}{\bibinfo{person}{Vidur Mahajan},
+  \bibinfo{person}{Vasanthakumar Venugopal}, \bibinfo{person}{Saumya Gaur},
+  \bibinfo{person}{Salil Gupta}, \bibinfo{person}{Murali Murugavel}, {and}
+  \bibinfo{person}{Harsh Mahajan}.} \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{The Algorithmic Audit: Working with Vendors to
+  Validate Radiology-AI Algorithms - How We Do It}.
+\newblock \bibinfo{journal}{\emph{viXra}} (\bibinfo{date}{July}
+  \bibinfo{year}{2019}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Mazurowski, Habas, Zurada, Lo, Baker, and
+  Tourassi}{Mazurowski et~al\mbox{.}}{2008}]%
+        {Mazurowski2008-cq}
+\bibfield{author}{\bibinfo{person}{Maciej~A Mazurowski},
+  \bibinfo{person}{Piotr~A Habas}, \bibinfo{person}{Jacek~M Zurada},
+  \bibinfo{person}{Joseph~Y Lo}, \bibinfo{person}{Jay~A Baker}, {and}
+  \bibinfo{person}{Georgia~D Tourassi}.} \bibinfo{year}{2008}\natexlab{}.
+\newblock \showarticletitle{Training neural network classifiers for medical
+  decision making: the effects of imbalanced datasets on classification
+  performance}.
+\newblock \bibinfo{journal}{\emph{Neural Netw.}} \bibinfo{volume}{21},
+  \bibinfo{number}{2-3} (\bibinfo{date}{March} \bibinfo{year}{2008}),
+  \bibinfo{pages}{427--436}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Mulherin and Miller}{Mulherin and
+  Miller}{2002}]%
+        {mulherin2002spectrum}
+\bibfield{author}{\bibinfo{person}{Stephanie~A Mulherin} {and}
+  \bibinfo{person}{William~C Miller}.} \bibinfo{year}{2002}\natexlab{}.
+\newblock \showarticletitle{Spectrum bias or spectrum effect? Subgroup
+  variation in diagnostic test evaluation}.
+\newblock \bibinfo{journal}{\emph{Annals of Internal Medicine}}
+  \bibinfo{volume}{137}, \bibinfo{number}{7} (\bibinfo{year}{2002}),
+  \bibinfo{pages}{598--602}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Oakden-Rayner}{Oakden-Rayner}{2019}]%
+        {Oakden-Rayner2019-yi}
+\bibfield{author}{\bibinfo{person}{Luke Oakden-Rayner}.}
+  \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{Exploring large scale public medical image
+  datasets}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:1907.12720}}
+  (\bibinfo{date}{July} \bibinfo{year}{2019}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Rajpurkar, Irvin, Bagul, Ding, Duan, Mehta,
+  Yang, Zhu, Laird, Ball, et~al\mbox{.}}{Rajpurkar et~al\mbox{.}}{2017a}]%
+        {Rajpurkar2017-rc}
+\bibfield{author}{\bibinfo{person}{Pranav Rajpurkar}, \bibinfo{person}{Jeremy
+  Irvin}, \bibinfo{person}{Aarti Bagul}, \bibinfo{person}{Daisy Ding},
+  \bibinfo{person}{Tony Duan}, \bibinfo{person}{Hershel Mehta},
+  \bibinfo{person}{Brandon Yang}, \bibinfo{person}{Kaylie Zhu},
+  \bibinfo{person}{Dillon Laird}, \bibinfo{person}{Robyn~L Ball},
+  {et~al\mbox{.}}} \bibinfo{year}{2017}\natexlab{a}.
+\newblock \showarticletitle{Mura: Large dataset for abnormality detection in
+  musculoskeletal radiographs}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:1712.06957}}
+  (\bibinfo{year}{2017}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Rajpurkar, Irvin, Ball, Zhu, Yang, Mehta,
+  Duan, Ding, Bagul, Langlotz, Patel, Yeom, Shpanskaya, Blankenberg, Seekins,
+  Amrhein, Mong, Halabi, Zucker, Ng, and Lungren}{Rajpurkar
+  et~al\mbox{.}}{2018}]%
+        {Rajpurkar2018-gc}
+\bibfield{author}{\bibinfo{person}{Pranav Rajpurkar}, \bibinfo{person}{Jeremy
+  Irvin}, \bibinfo{person}{Robyn~L Ball}, \bibinfo{person}{Kaylie Zhu},
+  \bibinfo{person}{Brandon Yang}, \bibinfo{person}{Hershel Mehta},
+  \bibinfo{person}{Tony Duan}, \bibinfo{person}{Daisy Ding},
+  \bibinfo{person}{Aarti Bagul}, \bibinfo{person}{Curtis~P Langlotz},
+  \bibinfo{person}{Bhavik~N Patel}, \bibinfo{person}{Kristen~W Yeom},
+  \bibinfo{person}{Katie Shpanskaya}, \bibinfo{person}{Francis~G Blankenberg},
+  \bibinfo{person}{Jayne Seekins}, \bibinfo{person}{Timothy~J Amrhein},
+  \bibinfo{person}{David~A Mong}, \bibinfo{person}{Safwan~S Halabi},
+  \bibinfo{person}{Evan~J Zucker}, \bibinfo{person}{Andrew~Y Ng}, {and}
+  \bibinfo{person}{Matthew~P Lungren}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{Deep learning for chest radiograph diagnosis: A
+  retrospective comparison of the {CheXNeXt} algorithm to practicing
+  radiologists}.
+\newblock \bibinfo{journal}{\emph{PLoS Med.}} \bibinfo{volume}{15},
+  \bibinfo{number}{11} (\bibinfo{date}{Nov.} \bibinfo{year}{2018}),
+  \bibinfo{pages}{e1002686}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Rajpurkar, Irvin, Zhu, Yang, Mehta, Duan,
+  Ding, Bagul, Langlotz, Shpanskaya, Lungren, and Ng}{Rajpurkar
+  et~al\mbox{.}}{2017b}]%
+        {rajpurkar2017chexnet}
+\bibfield{author}{\bibinfo{person}{Pranav Rajpurkar}, \bibinfo{person}{Jeremy
+  Irvin}, \bibinfo{person}{Kaylie Zhu}, \bibinfo{person}{Brandon Yang},
+  \bibinfo{person}{Hershel Mehta}, \bibinfo{person}{Tony Duan},
+  \bibinfo{person}{Daisy Ding}, \bibinfo{person}{Aarti Bagul},
+  \bibinfo{person}{Curtis Langlotz}, \bibinfo{person}{Katie Shpanskaya},
+  \bibinfo{person}{Matthew Lungren}, {and} \bibinfo{person}{Andrew Ng}.}
+  \bibinfo{year}{2017}\natexlab{b}.
+\newblock \showarticletitle{Chexnet: Radiologist-level pneumonia detection on
+  chest x-rays with deep learning}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:1711.05225}}
+  (\bibinfo{year}{2017}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Ratner, Ehrenberg, Hussain, Dunnmon, and
+  R{\'e}}{Ratner et~al\mbox{.}}{2017}]%
+        {Ratner2017-td}
+\bibfield{author}{\bibinfo{person}{Alexander~J Ratner}, \bibinfo{person}{Henry
+  Ehrenberg}, \bibinfo{person}{Zeshan Hussain}, \bibinfo{person}{Jared
+  Dunnmon}, {and} \bibinfo{person}{Christopher R{\'e}}.}
+  \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{Learning to Compose {Domain-Specific}
+  Transformations for Data Augmentation}.
+\newblock In \bibinfo{booktitle}{\emph{Advances in Neural Information
+  Processing Systems 30}}, \bibfield{editor}{\bibinfo{person}{I~Guyon},
+  \bibinfo{person}{U~V Luxburg}, \bibinfo{person}{S~Bengio},
+  \bibinfo{person}{H~Wallach}, \bibinfo{person}{R~Fergus},
+  \bibinfo{person}{S~Vishwanathan}, {and} \bibinfo{person}{R~Garnett}} (Eds.).
+  \bibinfo{publisher}{Curran Associates, Inc.}, \bibinfo{pages}{3236--3246}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Recht, Roelofs, Schmidt, and Shankar}{Recht
+  et~al\mbox{.}}{2018}]%
+        {recht2018cifar}
+\bibfield{author}{\bibinfo{person}{Benjamin Recht}, \bibinfo{person}{Rebecca
+  Roelofs}, \bibinfo{person}{Ludwig Schmidt}, {and} \bibinfo{person}{Vaishaal
+  Shankar}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{Do {CIFAR-10} classifiers generalize to
+  {CIFAR-10}?}
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:1806.00451}}
+  (\bibinfo{year}{2018}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Ribeiro, Singh, and Guestrin}{Ribeiro
+  et~al\mbox{.}}{2016}]%
+        {ribeiro2016should}
+\bibfield{author}{\bibinfo{person}{Marco~Tulio Ribeiro},
+  \bibinfo{person}{Sameer Singh}, {and} \bibinfo{person}{Carlos Guestrin}.}
+  \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{Why should i trust you?: Explaining the predictions
+  of any classifier}. In \bibinfo{booktitle}{\emph{Proceedings of the 22nd ACM
+  SIGKDD international conference on knowledge discovery and data mining}}.
+  ACM, \bibinfo{pages}{1135--1144}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Rousseeuw}{Rousseeuw}{1987}]%
+        {rousseeuw1987silhouettes}
+\bibfield{author}{\bibinfo{person}{Peter~J Rousseeuw}.}
+  \bibinfo{year}{1987}\natexlab{}.
+\newblock \showarticletitle{Silhouettes: a graphical aid to the interpretation
+  and validation of cluster analysis}.
+\newblock \bibinfo{journal}{\emph{Journal of computational and applied
+  mathematics}}  \bibinfo{volume}{20} (\bibinfo{year}{1987}),
+  \bibinfo{pages}{53--65}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Selbst}{Selbst}{2017}]%
+        {Selbst2017-gz}
+\bibfield{author}{\bibinfo{person}{Andrew~D Selbst}.}
+  \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{Disparate impact in big data policing}.
+\newblock \bibinfo{journal}{\emph{Ga. L. Rev.}}  \bibinfo{volume}{52}
+  (\bibinfo{year}{2017}), \bibinfo{pages}{109}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Wang, Berzin, Glissen~Brown, Bharadwaj, Becq,
+  Xiao, Liu, Li, Song, Zhang, Li, Xu, Tu, and Liu}{Wang et~al\mbox{.}}{2019}]%
+        {Wang2019-jr}
+\bibfield{author}{\bibinfo{person}{Pu Wang}, \bibinfo{person}{Tyler~M Berzin},
+  \bibinfo{person}{Jeremy~Romek Glissen~Brown}, \bibinfo{person}{Shishira
+  Bharadwaj}, \bibinfo{person}{Aymeric Becq}, \bibinfo{person}{Xun Xiao},
+  \bibinfo{person}{Peixi Liu}, \bibinfo{person}{Liangping Li},
+  \bibinfo{person}{Yan Song}, \bibinfo{person}{Di Zhang}, \bibinfo{person}{Yi
+  Li}, \bibinfo{person}{Guangre Xu}, \bibinfo{person}{Mengtian Tu}, {and}
+  \bibinfo{person}{Xiaogang Liu}.} \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{Real-time automatic detection system increases
+  colonoscopic polyp and adenoma detection rates: a prospective randomised
+  controlled study}.
+\newblock \bibinfo{journal}{\emph{Gut}} (\bibinfo{date}{Feb.}
+  \bibinfo{year}{2019}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Wang, Peng, Lu, Lu, Bagheri, and Summers}{Wang
+  et~al\mbox{.}}{2017}]%
+        {Wang2017-vm}
+\bibfield{author}{\bibinfo{person}{Xiaosong Wang}, \bibinfo{person}{Yifan
+  Peng}, \bibinfo{person}{Le Lu}, \bibinfo{person}{Zhiyong Lu},
+  \bibinfo{person}{Mohammadhadi Bagheri}, {and} \bibinfo{person}{Ronald~M
+  Summers}.} \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{Chestx-ray8: Hospital-scale chest x-ray database
+  and benchmarks on weakly-supervised classification and localization of common
+  thorax diseases}. In \bibinfo{booktitle}{\emph{Computer Vision and Pattern
+  Recognition ({CVPR)}, 2017 {IEEE} Conference on}}.
+  \bibinfo{pages}{3462--3471}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Winkler, Fink, Toberer, Enk, Deinlein,
+  Hofmann-Wellenhof, Thomas, Lallas, Blum, Stolz, and Haenssle}{Winkler
+  et~al\mbox{.}}{2019}]%
+        {Winkler2019-fw}
+\bibfield{author}{\bibinfo{person}{Julia~K Winkler}, \bibinfo{person}{Christine
+  Fink}, \bibinfo{person}{Ferdinand Toberer}, \bibinfo{person}{Alexander Enk},
+  \bibinfo{person}{Teresa Deinlein}, \bibinfo{person}{Rainer
+  Hofmann-Wellenhof}, \bibinfo{person}{Luc Thomas}, \bibinfo{person}{Aimilios
+  Lallas}, \bibinfo{person}{Andreas Blum}, \bibinfo{person}{Wilhelm Stolz},
+  {and} \bibinfo{person}{Holger~A Haenssle}.} \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{Association Between Surgical Skin Markings in
+  Dermoscopic Images and Diagnostic Performance of a Deep Learning
+  Convolutional Neural Network for Melanoma Recognition}.
+\newblock \bibinfo{journal}{\emph{JAMA Dermatology}} (\bibinfo{year}{2019}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Xie, Girshick, Doll{\'a}r, Tu, and He}{Xie
+  et~al\mbox{.}}{2016}]%
+        {Xie2016-ip}
+\bibfield{author}{\bibinfo{person}{Saining Xie}, \bibinfo{person}{Ross
+  Girshick}, \bibinfo{person}{Piotr Doll{\'a}r}, \bibinfo{person}{Zhuowen Tu},
+  {and} \bibinfo{person}{Kaiming He}.} \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{Aggregated Residual Transformations for Deep Neural
+  Networks}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:1611.05431}}
+  (\bibinfo{date}{Nov.} \bibinfo{year}{2016}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Yang}{Yang}{2019}]%
+        {Yang_undated-bt}
+\bibfield{author}{\bibinfo{person}{Wei Yang}.} \bibinfo{year}{2019}\natexlab{}.
+\newblock \bibinfo{title}{pytorch-classification}.
+\newblock
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Yao, Khosla, and Fei-Fei}{Yao
+  et~al\mbox{.}}{2011}]%
+        {yao2011combining}
+\bibfield{author}{\bibinfo{person}{Bangpeng Yao}, \bibinfo{person}{Aditya
+  Khosla}, {and} \bibinfo{person}{Li Fei-Fei}.}
+  \bibinfo{year}{2011}\natexlab{}.
+\newblock \showarticletitle{Combining randomization and discrimination for
+  fine-grained image categorization}. In \bibinfo{booktitle}{\emph{CVPR 2011}}.
+  IEEE, \bibinfo{pages}{1577--1584}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Zech}{Zech}{2019}]%
+        {Zech_undated-cw}
+\bibfield{author}{\bibinfo{person}{John Zech}.}
+  \bibinfo{year}{2019}\natexlab{}.
+\newblock \bibinfo{title}{reproduce-chexnet}.
+\newblock
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Zech, Badgeley, Liu, Costa, Titano, and
+  Oermann}{Zech et~al\mbox{.}}{2018}]%
+        {Zech2018-xq}
+\bibfield{author}{\bibinfo{person}{John~R Zech}, \bibinfo{person}{Marcus~A
+  Badgeley}, \bibinfo{person}{Manway Liu}, \bibinfo{person}{Anthony~B Costa},
+  \bibinfo{person}{Joseph~J Titano}, {and} \bibinfo{person}{Eric~K Oermann}.}
+  \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{Confounding variables can degrade generalization
+  performance of radiological deep learning models}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:1807.00431}}
+  (\bibinfo{date}{July} \bibinfo{year}{2018}).
+\newblock
+
+
+\end{thebibliography}

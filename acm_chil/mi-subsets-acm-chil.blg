@@ -1,0 +1,107 @@
+This is BibTeX, Version 0.99d (TeX Live 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: mi-subsets-acm-chil.aux
+The style file: ACM-Reference-Format.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: ../mi-subsets.bib
+I was expecting a `,' or a `}'---line 199 of file ../mi-subsets.bib
+ :   
+ :   primaryClass  = "cs.CV",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 550 of file ../mi-subsets.bib
+ :   
+ :   archivePrefix = "arXiv",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 719 of file ../mi-subsets.bib
+ :   
+ :   archivePrefix = "arXiv",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "Lamport:LaTeX"
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--empty publisher in chen2019slicing
+Warning--empty address in chen2019slicing
+Warning--page numbers missing in both pages and numpages fields in chen2019slicing
+Warning--no number and no volume in Dunnmon2019-zw
+Warning--page numbers missing in both pages and numpages fields in Dunnmon2019-zw
+Warning--no number and no volume in Gale_W_Oakden-Rayner_L_Carneiro_G_Bradley_AP_Palmer_LJ2017-tl
+Warning--page numbers missing in both pages and numpages fields in Gale_W_Oakden-Rayner_L_Carneiro_G_Bradley_AP_Palmer_LJ2017-tl
+Warning--no number and no volume in Irvin2019-ho
+Warning--page numbers missing in both pages and numpages fields in Irvin2019-ho
+Warning--page numbers missing in both pages and numpages fields in Krizhevsky2009-tq
+Warning--no number and no volume in Liu2019-qt
+Warning--page numbers missing in both pages and numpages fields in Liu2019-qt
+Warning--no number and no volume in Mahajan2019-yi
+Warning--page numbers missing in both pages and numpages fields in Mahajan2019-yi
+Warning--no number and no volume in Oakden-Rayner2019-yi
+Warning--page numbers missing in both pages and numpages fields in Oakden-Rayner2019-yi
+Warning--no number and no volume in Rajpurkar2017-rc
+Warning--page numbers missing in both pages and numpages fields in Rajpurkar2017-rc
+Warning--no number and no volume in rajpurkar2017chexnet
+Warning--page numbers missing in both pages and numpages fields in rajpurkar2017chexnet
+Warning--empty address in Ratner2017-td
+Warning--no number and no volume in recht2018cifar
+Warning--page numbers missing in both pages and numpages fields in recht2018cifar
+Warning--empty publisher in ribeiro2016should
+Warning--empty address in ribeiro2016should
+Warning--no number and no volume in Wang2019-jr
+Warning--page numbers missing in both pages and numpages fields in Wang2019-jr
+Warning--empty publisher in Wang2017-vm
+Warning--empty address in Wang2017-vm
+Warning--no number and no volume in Winkler2019-fw
+Warning--page numbers missing in both pages and numpages fields in Winkler2019-fw
+Warning--no number and no volume in Xie2016-ip
+Warning--page numbers missing in both pages and numpages fields in Xie2016-ip
+Warning--empty publisher in yao2011combining
+Warning--empty address in yao2011combining
+Warning--no number and no volume in Zech2018-xq
+Warning--page numbers missing in both pages and numpages fields in Zech2018-xq
+You've used 40 entries,
+            5762 wiz_defined-function locations,
+            1552 strings with 25941 characters,
+and the built_in function-call counts, 57230 in all, are:
+= -- 7475
+> -- 3462
+< -- 0
++ -- 1195
+- -- 1179
+* -- 4959
+:= -- 6519
+add.period$ -- 200
+call.type$ -- 40
+change.case$ -- 440
+chr.to.int$ -- 38
+cite$ -- 77
+duplicate$ -- 3899
+empty$ -- 2749
+format.name$ -- 1313
+if$ -- 13775
+int.to.chr$ -- 4
+int.to.str$ -- 1
+missing$ -- 153
+newline$ -- 356
+num.names$ -- 320
+pop$ -- 1595
+preamble$ -- 1
+purify$ -- 796
+quote$ -- 0
+skip$ -- 1291
+stack$ -- 0
+substring$ -- 3263
+swap$ -- 408
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 732
+warning$ -- 37
+while$ -- 252
+width$ -- 0
+write$ -- 701
+(There were 3 error messages)
