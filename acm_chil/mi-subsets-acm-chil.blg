@@ -20,7 +20,6 @@ I was expecting a `,' or a `}'---line 719 of file ../mi-subsets.bib
  :   archivePrefix = "arXiv",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "Lamport:LaTeX"
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=20001) to 20 items from 10.
@@ -65,32 +64,32 @@ Warning--no number and no volume in Zech2018-xq
 Warning--page numbers missing in both pages and numpages fields in Zech2018-xq
 You've used 40 entries,
             5762 wiz_defined-function locations,
-            1552 strings with 25941 characters,
-and the built_in function-call counts, 57230 in all, are:
-= -- 7475
-> -- 3462
+            1550 strings with 25955 characters,
+and the built_in function-call counts, 57473 in all, are:
+= -- 7490
+> -- 3505
 < -- 0
-+ -- 1195
-- -- 1179
-* -- 4959
-:= -- 6519
++ -- 1211
+- -- 1191
+* -- 5006
+:= -- 6559
 add.period$ -- 200
 call.type$ -- 40
-change.case$ -- 440
+change.case$ -- 444
 chr.to.int$ -- 38
 cite$ -- 77
 duplicate$ -- 3899
 empty$ -- 2749
-format.name$ -- 1313
-if$ -- 13775
+format.name$ -- 1329
+if$ -- 13821
 int.to.chr$ -- 4
 int.to.str$ -- 1
 missing$ -- 153
 newline$ -- 356
 num.names$ -- 320
-pop$ -- 1595
+pop$ -- 1599
 preamble$ -- 1
-purify$ -- 796
+purify$ -- 800
 quote$ -- 0
 skip$ -- 1291
 stack$ -- 0
@@ -101,7 +100,7 @@ text.prefix$ -- 0
 top$ -- 0
 type$ -- 732
 warning$ -- 37
-while$ -- 252
+while$ -- 248
 width$ -- 0
 write$ -- 701
 (There were 3 error messages)

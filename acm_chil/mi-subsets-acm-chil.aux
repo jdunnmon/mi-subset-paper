@@ -60,22 +60,25 @@
 \citation{Rajpurkar2017-rc}
 \citation{Oakden-Rayner2019-yi}
 \citation{Rajpurkar2017-rc}
+\citation{Gale_W_Oakden-Rayner_L_Carneiro_G_Bradley_AP_Palmer_LJ2017-tl}
+\citation{Gale_W_Oakden-Rayner_L_Carneiro_G_Bradley_AP_Palmer_LJ2017-tl}
 \citation{Wang2017-vm}
 \citation{Zech_undated-cw}
 \citation{Rajpurkar2018-gc}
 \citation{Oakden-Rayner2019-yi}
 \@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Accuracy of a ResNeXt-29, 8x64d trained using the full CIFAR-100 dataset (``Baseline'') and two synthetic experiments with altered datasets. (``Subsample'') drops 75\% of the dolphin and mountain subclasses from the training dataset, and (``Random Noise'') assigns 25\% of examples from these subclasses a random superclass label. Results reported are on superclass labels for the validation set.\relax }}{5}{table.caption.6}}
 \newlabel{tab:cifar1}{{1}{5}{Accuracy of a ResNeXt-29, 8x64d trained using the full CIFAR-100 dataset (``Baseline'') and two synthetic experiments with altered datasets. (``Subsample'') drops 75\% of the dolphin and mountain subclasses from the training dataset, and (``Random Noise'') assigns 25\% of examples from these subclasses a random superclass label. Results reported are on superclass labels for the validation set.\relax }{table.caption.6}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Superclass and subclass performance for hip fracture detection from frontal pelvic x-rays. Bolded subclasses show significantly worse performance than that on the overall task.\relax }}{5}{table.caption.7}}
-\newlabel{tab:hip1}{{2}{5}{Superclass and subclass performance for hip fracture detection from frontal pelvic x-rays. Bolded subclasses show significantly worse performance than that on the overall task.\relax }{table.caption.7}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Superclass and subclass performance for hip fracture detection from frontal pelvic x-rays. Bolded subclasses show significantly worse performance (p$<$0.01) than that on the overall task.\relax }}{5}{table.caption.7}}
+\newlabel{tab:hip1}{{2}{5}{Superclass and subclass performance for hip fracture detection from frontal pelvic x-rays. Bolded subclasses show significantly worse performance (p$<$0.01) than that on the overall task.\relax }{table.caption.7}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces MURA ``abnormal'' label prevalence and sensitivity for the subclasses of ``fracture,'' ``metalwork,'' and ``degenerative joint disease (DJD).'' The degenerative joint disease subclass labels have the highest prevalence but the lowest sensitivity with respect to review by a board-certified radiologist.\relax }}{5}{table.caption.8}}
 \newlabel{tab:mura2}{{3}{5}{MURA ``abnormal'' label prevalence and sensitivity for the subclasses of ``fracture,'' ``metalwork,'' and ``degenerative joint disease (DJD).'' The degenerative joint disease subclass labels have the highest prevalence but the lowest sensitivity with respect to review by a board-certified radiologist.\relax }{table.caption.8}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Error Auditing}{5}{subsection.4.2}}
 \citation{rajpurkar2017chexnet}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces ROCs for subclasses of the (a) abnormal MURA superclass and (b) pneumothorax CXR14 superclass. All subclass AUCs are significantly different than the overall task (DeLong p$<$0.05). For MURA, sensitivities at 0.50 specificity are 0.93 (All), 1.00 (Hardware), 0.89 (Fracture), 0.80 (Degenerative). For CXR14, sensitivities at 0.50 specificity are 0.94 (All), 0.99 (Drain), and 0.85 (No Drain).\relax }}{6}{figure.caption.9}}
-\newlabel{fig:rocs}{{2}{6}{ROCs for subclasses of the (a) abnormal MURA superclass and (b) pneumothorax CXR14 superclass. All subclass AUCs are significantly different than the overall task (DeLong p$<$0.05). For MURA, sensitivities at 0.50 specificity are 0.93 (All), 1.00 (Hardware), 0.89 (Fracture), 0.80 (Degenerative). For CXR14, sensitivities at 0.50 specificity are 0.94 (All), 0.99 (Drain), and 0.85 (No Drain).\relax }{figure.caption.9}{}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{6}{subfigure.2.1}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{6}{subfigure.2.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces ROCs for subclasses of the (a) abnormal MURA superclass (b) pneumothorax CXR14 superclass and (c) abnormal hip fracture superclass. All subclass AUCs are significantly different than the overall task (DeLong p$<$0.05) for MURA and CXR14. For hip fracture, the AUCs themselves are not statistically different via a two-sided test (DeLong p$>$0.05), but the sensitivities are statistically different (p$<$0.01) at the relevant operating point \citep  {Gale_W_Oakden-Rayner_L_Carneiro_G_Bradley_AP_Palmer_LJ2017-tl}. For MURA, sensitivities at 0.50 specificity are 0.93 (All), 1.00 (Hardware), 0.89 (Fracture), 0.80 (Degenerative). For CXR14, sensitivities at 0.50 specificity are 0.94 (All), 0.99 (Drain), and 0.85 (No Drain). For hip fracture, sensitivities at 0.50 specificity are 1.00 (All), 1.00 (Cervical), and 0.95 (Subtle)\relax }}{6}{figure.caption.9}}
+\newlabel{fig:rocs}{{2}{6}{ROCs for subclasses of the (a) abnormal MURA superclass (b) pneumothorax CXR14 superclass and (c) abnormal hip fracture superclass. All subclass AUCs are significantly different than the overall task (DeLong p$<$0.05) for MURA and CXR14. For hip fracture, the AUCs themselves are not statistically different via a two-sided test (DeLong p$>$0.05), but the sensitivities are statistically different (p$<$0.01) at the relevant operating point \citep {Gale_W_Oakden-Rayner_L_Carneiro_G_Bradley_AP_Palmer_LJ2017-tl}. For MURA, sensitivities at 0.50 specificity are 0.93 (All), 1.00 (Hardware), 0.89 (Fracture), 0.80 (Degenerative). For CXR14, sensitivities at 0.50 specificity are 0.94 (All), 0.99 (Drain), and 0.85 (No Drain). For hip fracture, sensitivities at 0.50 specificity are 1.00 (All), 1.00 (Cervical), and 0.95 (Subtle)\relax }{figure.caption.9}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {MURA Abnormal}}}{6}{subfigure.2.1}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {CXR14 Pneumothorax}}}{6}{subfigure.2.2}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {Adelaide Hip Abnormal}}}{6}{subfigure.2.3}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Algorithmic Approaches: Unsupervised Clustering}{6}{subsection.4.3}}
 \@writefile{toc}{\contentsline {section}{\numberline {5}Discussion}{6}{section.5}}
 \citation{Liu2019-qt}
@@ -100,7 +103,7 @@
 \bibcite{Esteva2017-if}{{12}{2017}{{Esteva et~al\unhbox \voidb@x \hbox {.}}}{{Esteva, Kuprel, Novoa, Ko, Swetter, Blau, and Thrun}}}
 \bibcite{esteva2019guide}{{13}{2019}{{Esteva et~al\unhbox \voidb@x \hbox {.}}}{{Esteva, Robicquet, Ramsundar, Kuleshov, DePristo, Chou, Cui, Corrado, Thrun, and Dean}}}
 \bibcite{Fries2019-ze}{{14}{2019}{{Fries et~al\unhbox \voidb@x \hbox {.}}}{{Fries, Varma, Chen, Xiao, Tejeda, Saha, Dunnmon, Chubb, Maskatia, Fiterau, Delp, Ashley, R{\'e}, and Priest}}}
-\bibcite{Gale_W_Oakden-Rayner_L_Carneiro_G_Bradley_AP_Palmer_LJ2017-tl}{{15}{2017}{{{Gale W, Oakden-Rayner L, Carneiro G, Bradley AP, Palmer LJ}}}{{{Gale W, Oakden-Rayner L, Carneiro G, Bradley AP, Palmer LJ}}}}
+\bibcite{Gale_W_Oakden-Rayner_L_Carneiro_G_Bradley_AP_Palmer_LJ2017-tl}{{15}{2017}{{Gale et~al\unhbox \voidb@x \hbox {.}}}{{Gale, Oakden-Rayner, Carneiro, Bradley, and Palmer}}}
 \bibcite{Gulshan2016-we}{{16}{2016}{{Gulshan et~al\unhbox \voidb@x \hbox {.}}}{{Gulshan, Peng, Coram, Stumpe, Wu, Narayanaswamy, Venugopalan, Widner, Madams, Cuadros, Kim, Raman, Nelson, Mega, and Webster}}}
 \bibcite{Haenssle2018-vw}{{17}{2018}{{Haenssle et~al\unhbox \voidb@x \hbox {.}}}{{Haenssle, Fink, Schneiderbauer, Toberer, Buhl, Blum, Kalloo, Hassen, Thomas, Enk, and {Others}}}}
 \bibcite{Irvin2019-ho}{{18}{2019}{{Irvin et~al\unhbox \voidb@x \hbox {.}}}{{Irvin, Rajpurkar, Ko, Yu, Ciurea-Ilcus, Chute, Marklund, Haghgoo, Ball, Shpanskaya, and {Others}}}}
@@ -117,9 +120,6 @@
 \bibcite{recht2018cifar}{{29}{2018}{{Recht et~al\unhbox \voidb@x \hbox {.}}}{{Recht, Roelofs, Schmidt, and Shankar}}}
 \bibcite{ribeiro2016should}{{30}{2016}{{Ribeiro et~al\unhbox \voidb@x \hbox {.}}}{{Ribeiro, Singh, and Guestrin}}}
 \bibcite{rousseeuw1987silhouettes}{{31}{1987}{{Rousseeuw}}{{Rousseeuw}}}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Appendices}{8}{section.7}}
-\@writefile{toc}{\contentsline {section}{Acknowledgments}{8}{section*.12}}
-\@writefile{toc}{\contentsline {section}{References}{8}{section*.14}}
 \bibcite{Selbst2017-gz}{{32}{2017}{{Selbst}}{{Selbst}}}
 \bibcite{Wang2019-jr}{{33}{2019}{{Wang et~al\unhbox \voidb@x \hbox {.}}}{{Wang, Berzin, Glissen~Brown, Bharadwaj, Becq, Xiao, Liu, Li, Song, Zhang, Li, Xu, Tu, and Liu}}}
 \bibcite{Wang2017-vm}{{34}{2017}{{Wang et~al\unhbox \voidb@x \hbox {.}}}{{Wang, Peng, Lu, Lu, Bagheri, and Summers}}}
@@ -128,10 +128,11 @@
 \bibcite{Yang_undated-bt}{{37}{2019}{{Yang}}{{Yang}}}
 \bibcite{yao2011combining}{{38}{2011}{{Yao et~al\unhbox \voidb@x \hbox {.}}}{{Yao, Khosla, and Fei-Fei}}}
 \bibcite{Zech_undated-cw}{{39}{2019}{{Zech}}{{Zech}}}
+\@writefile{toc}{\contentsline {section}{References}{8}{section*.12}}
 \bibcite{Zech2018-xq}{{40}{2018}{{Zech et~al\unhbox \voidb@x \hbox {.}}}{{Zech, Badgeley, Liu, Costa, Titano, and Oermann}}}
 \newlabel{tocindent-1}{0pt}
 \newlabel{tocindent0}{0pt}
-\newlabel{tocindent1}{6.25499pt}
-\newlabel{tocindent2}{11.45699pt}
+\newlabel{tocindent1}{4.185pt}
+\newlabel{tocindent2}{10.34999pt}
 \newlabel{tocindent3}{0pt}
 \newlabel{TotPages}{{9}{9}{}{page.9}{}}

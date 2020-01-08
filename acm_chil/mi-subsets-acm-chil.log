@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  7 JAN 2020 19:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  8 JAN 2020 02:40
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1112,7 +1112,7 @@ LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-<../Superclass-Subclass-CIFAR-100-Correct-Val-Sorted-v1.png, id=203, 722.7pt x 
+<../Superclass-Subclass-CIFAR-100-Correct-Val-Sorted-v1.png, id=187, 722.7pt x 
 722.7pt>
 File: ../Superclass-Subclass-CIFAR-100-Correct-Val-Sorted-v1.png Graphic file (
 type png)
@@ -1123,7 +1123,7 @@ Package pdftex.def Info: ../Superclass-Subclass-CIFAR-100-Correct-Val-Sorted-v1
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
 (Font)              scaled to size 7.0pt on input line 386.
 
-<../Superclass-Subclass-CIFAR-100-Correct-Val-Rand-Perm-v1.png, id=205, 722.7pt
+<../Superclass-Subclass-CIFAR-100-Correct-Val-Rand-Perm-v1.png, id=189, 722.7pt
  x 722.7pt>
 File: ../Superclass-Subclass-CIFAR-100-Correct-Val-Rand-Perm-v1.png Graphic fil
 e (type png)
@@ -1137,7 +1137,7 @@ Package pdftex.def Info: ../Superclass-Subclass-CIFAR-100-Correct-Val-Rand-Perm
 Class acmart Warning: A possible image without description on input line 391.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 3049) has occurred while \output is active []
 
  [3.3]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1173,13 +1173,13 @@ Package epstopdf Info: Source file: <../MURA-ROC.eps>
 o.pdf ../MURA-ROC.eps>
 (epstopdf)             \includegraphics on input line 503.
 Package epstopdf Info: Output file is already uptodate.
-<../MURA-ROC-eps-converted-to.pdf, id=253, 433.62pt x 433.62pt>
+<../MURA-ROC-eps-converted-to.pdf, id=233, 433.62pt x 433.62pt>
 File: ../MURA-ROC-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ../MURA-ROC-eps-converted-to.pdf>
 Package pdftex.def Info: ../MURA-ROC-eps-converted-to.pdf used on input line 50
 3.
-(pdftex.def)             Requested size: 180.67499pt x 174.335pt.
+(pdftex.def)             Requested size: 162.6075pt x 156.89851pt.
 Package epstopdf Info: Source file: <../Pneumo-ROC.eps>
 (epstopdf)                    date: 2019-08-29 02:15:13
 (epstopdf)                    size: 125647 bytes
@@ -1191,65 +1191,65 @@ Package epstopdf Info: Source file: <../Pneumo-ROC.eps>
 (epstopdf)             \includegraphics on input line 504.
 Package epstopdf Info: Output file is already uptodate.
 
-<../Pneumo-ROC-eps-converted-to.pdf, id=255, 433.62pt x 433.62pt>
+<../Pneumo-ROC-eps-converted-to.pdf, id=235, 433.62pt x 433.62pt>
 File: ../Pneumo-ROC-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ../Pneumo-ROC-eps-converted-to.pdf>
 Package pdftex.def Info: ../Pneumo-ROC-eps-converted-to.pdf used on input line 
 504.
-(pdftex.def)             Requested size: 180.67499pt x 174.335pt.
+(pdftex.def)             Requested size: 162.6075pt x 156.89851pt.
+Package epstopdf Info: Source file: <../HIPS-ROC.eps>
+(epstopdf)                    date: 2020-01-08 02:22:38
+(epstopdf)                    size: 25945 bytes
+(epstopdf)             Output file: <../HIPS-ROC-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-01-08 02:30:44
+(epstopdf)                    size: 13215 bytes
+(epstopdf)             Command: <epstopdf --outfile=../HIPS-ROC-eps-converted-t
+o.pdf ../HIPS-ROC.eps>
+(epstopdf)             \includegraphics on input line 505.
+Package epstopdf Info: Output file is already uptodate.
+
+<../HIPS-ROC-eps-converted-to.pdf, id=237, 433.62pt x 433.62pt>
+File: ../HIPS-ROC-eps-converted-to.pdf Graphic file (type pdf)
+
+<use ../HIPS-ROC-eps-converted-to.pdf>
+Package pdftex.def Info: ../HIPS-ROC-eps-converted-to.pdf used on input line 50
+5.
+(pdftex.def)             Requested size: 162.6075pt x 156.89851pt.
 
 
-Class acmart Warning: A possible image without description on input line 508.
+Class acmart Warning: A possible image without description on input line 509.
 
 [5.5]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 566.
+               Default added (so using `tbp') on input line 567.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [6.6 <../MURA-ROC-eps-converted-to.pdf> <../Pneumo-ROC-eps-converted-to.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
+ [6.6 <../MURA-ROC-eps-converted-to.pdf> <../Pneumo-ROC-eps-converted-to.pdf> <
+../HIPS-ROC-eps-converted-to.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7.7]
-LaTeX Font Info:    Try loading font information for T1+zi4 on input line 735.
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/inconsolata/t1zi4.fd
-File: t1zi4.fd 2016/12/29 T1/zi4 (Inconsolata)
-)
-LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 9.0pt on input line 735.
-Package microtype Info: Loading generic settings for font family
-(microtype)             `zi4' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-Package microtype Info: Character `textendash ' is missing
-(microtype)             in font `T1/zi4/m/n/9'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textemdash ' is missing
-(microtype)             in font `T1/zi4/m/n/9'.
-(microtype)             Ignoring protrusion settings for this character.
-
-Processing 'acks' comment.
-\openout4 = `comment.cut'.
-
- Comment 'acks' writing to comment.cut.
-Straight input of comment.cut. (./comment.cut) (./mi-subsets-acm-chil.bbl
-[8.8])
+(./mi-subsets-acm-chil.bbl [8.8])
 
 Class acmart Warning: Some images may lack descriptions.
 
-[9.9]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 945.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 945.
- (./mi-subsets-acm-chil.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 945.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 945.
+
+Overfull \vbox (1.152pt too high) has occurred while \output is active []
+
+ [9.9]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 947.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 947.
+
+(./mi-subsets-acm-chil.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 947.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 947.
 
 
 Package rerunfilecheck Warning: File `mi-subsets-acm-chil.out' has changed.
@@ -1257,50 +1257,42 @@ Package rerunfilecheck Warning: File `mi-subsets-acm-chil.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `mi-subsets-acm-chil.out':
-(rerunfilecheck)             Before: DCDFD93BEEAF4E5170FB30BC9C51D02F;2561
-(rerunfilecheck)             After:  5DC69978184CC92892BED28B47865AD6;1895.
+(rerunfilecheck)             Before: 5DC69978184CC92892BED28B47865AD6;1895
+(rerunfilecheck)             After:  D2651CAAAF206F7E3C0E60A3C3444510;1667.
  ) 
 Here is how much of TeX's memory you used:
- 18943 strings out of 492995
- 290847 string characters out of 6132704
- 421972 words of memory out of 5000000
- 21517 multiletter control sequences out of 15000+600000
- 206613 words of font info for 409 fonts, out of 8000000 for 9000
+ 18915 strings out of 492995
+ 290485 string characters out of 6132704
+ 429379 words of memory out of 5000000
+ 21501 multiletter control sequences out of 15000+600000
+ 206314 words of font info for 408 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 60i,17n,94p,810b,759s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{subsection.B.2} has been referenced but does not 
-exist, replaced by a fixed one
+ 60i,17n,94p,976b,772s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{section*.14} has been referenced but does not exi
+st, replaced by a fixed one
 
-pdfTeX warning (dest): name{subsection.B.1} has been referenced but does not ex
-ist, replaced by a fixed one
+pdfTeX warning (dest): name{section.7} has been referenced but does not exist, 
+replaced by a fixed one
 
-pdfTeX warning (dest): name{appendix.B} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{appendix.A} has been referenced but does not exist,
- replaced by a fixed one
-
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-4.enc}{/u
-sr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_oexx6f.enc}{/us
-r/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive
-/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc}{/usr/local/texlive/
-2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.enc}{/usr/local/texlive/2
-017/texmf-dist/fonts/enc/dvips/libertine/lbtn_nh77jq.enc}{/usr/local/texlive/20
-17/texmf-dist/fonts/enc/dvips/libertine/lbtn_naooyc.enc}{/usr/local/texlive/201
-7/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}</usr/local/texlive/2017
-/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/local/tex
-live/2017/texmf-dist/fonts/type1/public/libertine/LinBiolinumT.pfb></usr/local/
-texlive/2017/texmf-dist/fonts/type1/public/libertine/LinBiolinumTB.pfb></usr/lo
-cal/texlive/2017/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb></us
-r/local/texlive/2017/texmf-dist/fonts/type1/public/libertine/LinLibertineTB.pfb
-></usr/local/texlive/2017/texmf-dist/fonts/type1/public/libertine/LinLibertineT
-I.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb>
-</usr/local/texlive/2017/texmf-dist/fonts/type1/public/newtx/txsys.pfb></usr/lo
-cal/texlive/2017/texmf-dist/fonts/type1/public/newtx/zxlri.pfb>
-Output written on mi-subsets-acm-chil.pdf (9 pages, 4177044 bytes).
+{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_oexx6f.enc}{
+/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texl
+ive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc}{/usr/local/texli
+ve/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.enc}{/usr/local/texliv
+e/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_nh77jq.enc}{/usr/local/texlive
+/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_naooyc.enc}{/usr/local/texlive/
+2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}</usr/local/texlive/2
+017/texmf-dist/fonts/type1/public/libertine/LinBiolinumT.pfb></usr/local/texliv
+e/2017/texmf-dist/fonts/type1/public/libertine/LinBiolinumTB.pfb></usr/local/te
+xlive/2017/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb></usr/loca
+l/texlive/2017/texmf-dist/fonts/type1/public/libertine/LinLibertineTB.pfb></usr
+/local/texlive/2017/texmf-dist/fonts/type1/public/libertine/LinLibertineTI.pfb>
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/
+local/texlive/2017/texmf-dist/fonts/type1/public/newtx/txsys.pfb></usr/local/te
+xlive/2017/texmf-dist/fonts/type1/public/newtx/zxlri.pfb>
+Output written on mi-subsets-acm-chil.pdf (9 pages, 4170208 bytes).
 PDF statistics:
- 465 PDF objects out of 1000 (max. 8388607)
- 361 compressed objects within 4 object streams
- 82 named destinations out of 1000 (max. 500000)
- 56501 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 467 PDF objects out of 1000 (max. 8388607)
+ 336 compressed objects within 4 object streams
+ 78 named destinations out of 1000 (max. 500000)
+ 55968 words of extra memory for PDF output out of 61914 (max. 10000000)
 

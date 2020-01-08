@@ -461,7 +461,7 @@ These results support the hypothesis that both subtle discriminative features an
  Comminuted & 0.26 (169) & 1.000 \\ 
  \toprule
 \end{tabular}
-\caption{Superclass and subclass performance for hip fracture detection from frontal pelvic x-rays. Bolded subclasses show significantly worse performance than that on the overall task.}
+\caption{Superclass and subclass performance for hip fracture detection from frontal pelvic x-rays. Bolded subclasses show significantly worse performance (p$<$0.01) than that on the overall task.}
 \label{tab:hip1}
 %\vspace{-6mm}
 \end{table}
@@ -500,9 +500,10 @@ We hypothesize that the low label quality and subtle image features that charact
  \begin{figure*}[htb!]%
  %\vspace{-6mm}
 \centering
-\subfloat[]{\includegraphics[trim={0 0 1cm 1.5cm}, clip, width=2.5in]{../MURA-ROC.eps}}%
-\subfloat[]{\includegraphics[trim={0 0 1cm 1.5cm}, clip, width=2.5in]{../Pneumo-ROC.eps}}
-\caption{ROCs for subclasses of the (a) abnormal MURA superclass and (b) pneumothorax CXR14 superclass. All subclass AUCs are significantly different than the overall task (DeLong p$<$0.05).  For MURA, sensitivities at 0.50 specificity are 0.93 (All), 1.00 (Hardware), 0.89 (Fracture), 0.80 (Degenerative).  For CXR14, sensitivities at 0.50 specificity are 0.94 (All), 0.99 (Drain), and 0.85 (No Drain).}
+\subfloat[MURA Abnormal]{\includegraphics[trim={0 0 1cm 1.5cm}, clip, width=2.25in]{../MURA-ROC.eps}}%
+\subfloat[CXR14 Pneumothorax]{\includegraphics[trim={0 0 1cm 1.5cm}, clip, width=2.25in]{../Pneumo-ROC.eps}}%
+\subfloat[Adelaide Hip Abnormal]{\includegraphics[trim={0 0 1cm 1.5cm}, clip, width=2.25in]{../HIPS-ROC.eps}}%
+\caption{ROCs for subclasses of the (a) abnormal MURA superclass (b) pneumothorax CXR14 superclass and (c) abnormal hip fracture superclass. All subclass AUCs are significantly different than the overall task (DeLong p$<$0.05) for MURA and CXR14.  For hip fracture, the AUCs themselves are not statistically different via a two-sided test (DeLong p$>$0.05), but the sensitivities are statistically different (p$<$0.01) at the relevant operating point \citep{Gale_W_Oakden-Rayner_L_Carneiro_G_Bradley_AP_Palmer_LJ2017-tl}. For MURA, sensitivities at 0.50 specificity are 0.93 (All), 1.00 (Hardware), 0.89 (Fracture), 0.80 (Degenerative).  For CXR14, sensitivities at 0.50 specificity are 0.94 (All), 0.99 (Drain), and 0.85 (No Drain).  For hip fracture, sensitivities at 0.50 specificity are 1.00 (All), 1.00 (Cervical), and 0.95 (Subtle)}
 \label{fig:rocs}
 %\vspace{-6 mm}
 \end{figure*}
@@ -729,19 +730,19 @@ While this will require substantial effort from the community, bodies such as pr
 %
 %Authors should not prepare this section as a numbered or unnumbered {\verb|\section|}; please use the ``{\verb|acks|}'' environment.
 %
-\section{Appendices}
+%\section{Appendices}
 
-If your work needs an appendix, add it before the
-``\verb|\end{document}|'' command at the conclusion of your source
-document.
+%If your work needs an appendix, add it before the
+%``\verb|\end{document}|'' command at the conclusion of your source
+%document.
 
-Start the appendix with the ``\verb|appendix|'' command:
-\begin{verbatim}
-  \appendix
-\end{verbatim}
-and note that in the appendix, sections are lettered, not
-numbered. This document has two appendices, demonstrating the section
-and subsection identification method.
+%Start the appendix with the ``\verb|appendix|'' command:
+%\begin{verbatim}
+ % \appendix
+%\end{verbatim}
+%and note that in the appendix, sections are lettered, not
+%numbered. This document has two appendices, demonstrating the section
+%and subsection identification method.
 
 %\section{SIGCHI Extended Abstracts}
 %
@@ -761,9 +762,10 @@ and subsection identification method.
 %% (and NOT an unnumbered section). This ensures the proper
 %% identification of the section in the article metadata, and the
 %% consistent spelling of the heading.
-\begin{acks}
- Acknowledgments go here.
-\end{acks}
+
+%\begin{acks}
+ %Acknowledgments go here.
+%\end{acks}
 
 %%
 %% The next two lines define the bibliography style to be used, and
@@ -946,3 +948,36 @@ and subsection identification method.
 \endinput
 %%
 %% End of file `sample-authordraft.tex'.
+
+
+% P-values
+%Delong for overall vs hardware
+%(2.964718943811703e-11, 0.9097316704459562, 0.984646962233169)
+%Delong for overall vs fracture
+%(0.0480806838324928, 0.9097316704459562, 0.860343481654957)
+%Delong for overall vs joint_dz
+%R[write to console]: Setting levels: control = 0, case = 1
+%
+%R[write to console]: Setting direction: controls < cases
+%
+%R[write to console]: Setting levels: control = 0, case = 1
+%
+%R[write to console]: Setting direction: controls < cases
+%
+%R[write to console]: Setting levels: control = 0, case = 1
+%
+%(7.686263371407003e-05, 0.9097316704459562, 0.7561172161172162)
+%Delong for overall vs pneumo_drain
+%R[write to console]: Setting direction: controls < cases
+%
+%R[write to console]: Setting levels: control = 0, case = 1
+%
+%R[write to console]: Setting direction: controls < cases
+%
+%R[write to console]: Setting levels: control = 0, case = 1
+%
+%R[write to console]: Setting direction: controls < cases
+%
+%(4.711284673133964e-22, 0.8739462913171514, 0.9403859035883845)
+%Delong for overall vs pneumo_no_drain
+%(9.286782949626998e-18, 0.8739462913171514, 0.766348158552935)
