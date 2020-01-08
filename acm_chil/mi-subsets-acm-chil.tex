@@ -22,7 +22,7 @@
 %% in the same archive or directory.)
 %%
 %% The first command in your LaTeX source must be the \documentclass command.
-\documentclass[acmconf|,authordraft,screen]{acmart}
+\documentclass[sigconf,authordraft,screen]{acmart}
 %\documentclass[acmconf|,anonymous,review,]{acmart}
 
 %%
@@ -378,16 +378,17 @@ Finally, we show that a simple unsupervised clustering algorithm can provide val
 \subsection{Schema Completion}
 
 We first use schema completion to measure the effects of hidden stratification on CIFAR-100 \citep{Krizhevsky2009-tq}, MURA \citep{Rajpurkar2017-rc}, and Adelaide Hip Fracture datasets \citep{Gale_W_Oakden-Rayner_L_Carneiro_G_Bradley_AP_Palmer_LJ2017-tl}.
-When feasible, even partial schema completion represents a powerful method for assessing hidden stratification.
+When feasible, even partial schema completion can be useful for assessing hidden stratification.
 
- \begin{figure}[htb!]
+ \begin{figure*}[htb!]
  \centering
- \vspace{-2mm}
-\includegraphics[width=3.5in]{../Superclass-Subclass-CIFAR-100-Correct-Val-v5.png}
-\caption{Performance of a ResNeXt-29, 8x64d on CIFAR-100 superclasses by subclass.  Most superclasses contain subclasses where performance is far lower than that on the aggregate superclass.}
+ %\vspace{-2mm}
+\subfloat[True (Semantic) Subclasses]{\includegraphics[width=3.25in]{../Superclass-Subclass-CIFAR-100-Correct-Val-Sorted-v1.png}}%
+\subfloat[Random Subclasses]{\includegraphics[width=3.25in]{../Superclass-Subclass-CIFAR-100-Correct-Val-Rand-Perm-v1.png}}
+\caption{Performance of a ResNeXt-29, 8x64d on CIFAR-100 superclasses by (a) true (semantic) CIFAR-100 subclass and (b) random CIFAR-100 subclasses.  Random subclasses were assigned by randomly permuting the subclass label assignments within each superclass.  Most superclasses contain true subclasses where performance is far lower than that on the aggregate superclass.  Intra-subclass performance variance on random subclasses is on average 66\% lower than on the true (semantic) subclasses, indicating that the stratification observed in practice is substantially higher than would be expected from randomness alone.}
 \label{fig:cifar}
-\vspace{-3mm}
-\end{figure}
+%\vspace{-3mm}
+\end{figure*}
 
 \textbf{CIFAR-100}: The benchmark CIFAR-100 dataset from computer vision represents an excellent testbed on which to demonstrate the effect of hidden stratification in a well-characterized environment \citep{Krizhevsky2009-tq}.  
 The CIFAR-100 dataset consists of 60,000 images binned into 20 ``superclasses,'' which each contain five distinct ``subclasses.'' 
@@ -397,33 +398,36 @@ The CIFAR-100 dataset consists of 60,000 images binned into 20 ``superclasses,''
  %While we do not explicitly evaluate the effect of visually similar subclasses or spurious correlates on CIFAR-100, we expect that similar effects would be observed \citep{Selbst2017-gz}.  
  For the purposes of this experiment, we assume that the CIFAR-100 subclasses represent a reasonable attempt at schema completion, and measure superclass accuracy within each subclass.
  
- Figure \ref{fig:cifar} presents the performance of a ResNeXt-29, 8x64d CNN trained on the 20 CIFAR-100 superclasses using the training schedule reported in Xie et al. \citep{Xie2016-ip} and the implementation provided by Yang \citep{Yang_undated-bt}.  
+ Figure \ref{fig:cifar}(a) presents the performance of a ResNeXt-29, 8x64d CNN trained on the 20 CIFAR-100 superclasses using the training schedule reported in Xie et al. \citep{Xie2016-ip} and the implementation provided by Yang \citep{Yang_undated-bt}.  
 In each superclass, the five constituent subclasses exhibit substantial performance variation, and the worst-performing subclass can underperform the aggregate superclass by over 30 accuracy points.  
-This same phenomenon in medical imaging would lead to massively different outcomes for different subsets of the population, be these demographically or pathologically determined. 
+This same phenomenon in medical imaging would lead to massively different outcomes for different subsets of the population, be these demographically or pathologically determined.
+To confirm that these large differences in subclass performance do not result from random variation within each superclass, we randomly permute the subclass labels within each superclass and evaluate our model on these random subclasses.
+If random variation was the cause of the stratification observed in Fig. \ref{fig:cifar}(a), we would expect the intra-subclass performance variation to remain unchanged in this experiment.
+ Instead, we find that average inter-subclass performance variation is reduced by an average of 66\% across all superclasses when the subclasses are randomly rather than semantically assigned, indicating that the performance stratification observed in Fig. \ref{fig:cifar}(a) cannot be attributed to random variation.
 
  Table \ref{tab:cifar1} shows classification results on randomly selected subclasses (``dolphin'' and ``mountain'') when 75\% of the examples in a subclass are dropped from the training set, simulating a subclass with reduced prevalence.  
  While the overall marine mammals superclass performance drops by only 4 accuracy points when the dolphin subclass is subsampled, performance on the dolphin subclass drops by 14 points from 0.78 to 0.64.  
  Similar trends are observed for the mountain subclass.  
  Clearly, unmeasured subclass underrepresentation can lead to substantially worse performance on that subclass, even when superclass performance is only modestly affected.
  
-We show a similar trend when noise is added to the labels of a given subclass by replacing the 25\% of the true superclass labels with a random incorrect label, simulating a subclass with reduced label accuracy.
+We show a similar trend when random noise is added to the labels of a given subclass by replacing the 25\% of the true superclass labels with a random incorrect label, simulating a subclass with reduced label accuracy.
 Performance on both dolphin and mountain subclasses drops substantially when label accuracy decreases.  
 Such stratification of label quality by pathology is highly likely to occur in medical datasets, where certain pathologies are easier to identify than others.
 
-\begin{table}[]
+\begin{table*}[]
 \centering
 \begin{tabular}{ccccccc}
 \toprule
- Subclass & \makecell{Baseline \\ Superclass} & \makecell{Baseline \\ Subclass}   &  \makecell{Subsample \\ Superclass}    & \makecell{Subsample \\ Subclass}  &  \makecell{Whiten \\ Superclass}    & \makecell{Whiten \\ Subclass} \\
+ Subclass & \makecell{Baseline \\ Superclass} & \makecell{Baseline \\ Subclass}   &  \makecell{Subsample \\ Superclass}    & \makecell{Subsample \\ Subclass}  &  \makecell{Random Noise \\ Superclass}    & \makecell{Random Noise \\ Subclass} \\
  \toprule
  Dolphin & 0.69 & 0.78  & 0.65  & 0.64 & 0.67  & 0.73   \\
  Mountain & 0.87 & 0.90  & 0.82 & 0.71 & 0.82 & 0.73  \\
  \toprule
 \end{tabular}
-\caption{Accuracy of a ResNeXt-29, 8x64d trained using the full CIFAR-100 dataset (``Baseline'') and two synthetic experiments with altered datasets. (``Subsample'') drops 75\% of the dolphin and mountain subclasses from the training dataset, and (``Whiten'') assigns 25\% of examples from these subclasses a random superclass label.  Results reported are on  superclass labels for the validation set.}
+\caption{Accuracy of a ResNeXt-29, 8x64d trained using the full CIFAR-100 dataset (``Baseline'') and two synthetic experiments with altered datasets. (``Subsample'') drops 75\% of the dolphin and mountain subclasses from the training dataset, and (``Random Noise'') assigns 25\% of examples from these subclasses a random superclass label.  Results reported are on  superclass labels for the validation set.}
 \label{tab:cifar1}
-\vspace{-8mm}
-\end{table}
+%\vspace{-8mm}
+\end{table*}
 
 %Example: The MURA experiments in this study were relabeled with a consensus schema produced by a team of radiologists (unpublished). This schema focused on diagnostic (ie fracture, arthritis) and hospital process (ie metalwork) categories, and did not cover descriptive or location based categories (ie displaced fracture, radiocarpal arthritis).
 %The hip fracture experiments were relabeled with a schema developed by LOR, including both location (subcapital, cervical etc) and descriptive (mildly displaced, comminuted etc) categories.
@@ -439,7 +443,7 @@ Such stratification of label quality by pathology is highly likely to occur in m
 These results support the hypothesis that both subtle discriminative features and low prevalence can contribute to clinically relevant stratification.  
  
 \begin{table}[htb!]
-\vspace{-2mm}
+%\vspace{-2mm}
 \centering
 \begin{tabular}{ccc}
 \toprule
@@ -459,11 +463,11 @@ These results support the hypothesis that both subtle discriminative features an
 \end{tabular}
 \caption{Superclass and subclass performance for hip fracture detection from frontal pelvic x-rays. Bolded subclasses show significantly worse performance than that on the overall task.}
 \label{tab:hip1}
-\vspace{-6mm}
+%\vspace{-6mm}
 \end{table}
 
 \textbf{MURA}: We next use schema completion to demonstrate the effect of hidden stratification on the MURA musculoskeletal x-ray dataset developed by Rajpurkar et al. \citep{Rajpurkar2017-rc}, which provides labels for a single class, identifying cases that are ``normal'' and ``abnormal.'' 
-These labels were produced by radiologists in the course of their normal work, and include visually distinct abnormalities including fractures, implanted metal, bone tumours, and degenerative joint disease. 
+These labels were produced by radiologists in the course of their normal work, and include visually distinct abnormalities including fractures, implanted metal, bone tumors, and degenerative joint disease. 
 These binary labels have been previously investigated and relabelled with subclass identifiers by a board certified radiologist \citep{Oakden-Rayner2019-yi}, showing substantial differences in both the prevalence and sensitivity of the labels within each subclass (see Table \ref{tab:mura2}). 
 %We are able to use schema completion in this case because radiologists have a good understanding of what important subsets may exist in extremity radiographs.
 While this schema remains incomplete, even partial schema completion demonstrates substantial hidden stratification in this dataset.
@@ -481,10 +485,10 @@ While this schema remains incomplete, even partial schema completion demonstrate
 \end{tabular}
 \caption{MURA ``abnormal'' label prevalence and sensitivity for the subclasses of ``fracture,'' ``metalwork,'' and ``degenerative joint disease (DJD).'' The degenerative joint disease subclass labels have the highest prevalence but the lowest sensitivity with respect to review by a board-certified radiologist.}
 \label{tab:mura2}
-\vspace{-8mm}
+%\vspace{-8mm}
 \end{table}
 
-We hypothesize that the low label quality and subtle image features that characterise the degenerative joint disease subclass will result in reduced performance, and that the visually obvious metalwork subclass will have high performance (despite low prevalence).
+We hypothesize that the low label quality and subtle image features that characterize the degenerative joint disease subclass will result in reduced performance, and that the visually obvious metalwork subclass will have high performance (despite low prevalence).
  We train a DenseNet-169 on the normal/abnormal labels, with 13,942 cases used for training and 714 cases held-out for testing \citep{Rajpurkar2017-rc}.  
 % The distribution of these subclasses and sensitivity of the original normal-abnormal labels on each are shown in Table \ref{tab:mura2}.
  In Fig.~\ref{fig:rocs}(a), we present ROC curves and AUC values for each subclass and in aggregate.  
@@ -493,15 +497,15 @@ We hypothesize that the low label quality and subtle image features that charact
 % These results indicate that clinically meaningful hidden stratification can result from subtle discriminative features and subclass label quality can.
  % In this case, we measure hidden stratification using schema completion, as radiologists have a good understanding of what important subsets may exist in extremity radiographs.
 
- \begin{figure}[htb!]%
- \vspace{-6mm}
+ \begin{figure*}[htb!]%
+ %\vspace{-6mm}
 \centering
 \subfloat[]{\includegraphics[trim={0 0 1cm 1.5cm}, clip, width=2.5in]{../MURA-ROC.eps}}%
 \subfloat[]{\includegraphics[trim={0 0 1cm 1.5cm}, clip, width=2.5in]{../Pneumo-ROC.eps}}
-\caption{ROCs for subclasses of the (a) abnormal MURA superclass and (b) pneumothorax CXR14 superclass. All subclass AUCs are significantly different than the overall task (DeLong p$<$0.05).}
+\caption{ROCs for subclasses of the (a) abnormal MURA superclass and (b) pneumothorax CXR14 superclass. All subclass AUCs are significantly different than the overall task (DeLong p$<$0.05).  For MURA, sensitivities at 0.50 specificity are 0.93 (All), 1.00 (Hardware), 0.89 (Fracture), 0.80 (Degenerative).  For CXR14, sensitivities at 0.50 specificity are 0.94 (All), 0.99 (Drain), and 0.85 (No Drain).}
 \label{fig:rocs}
-\vspace{-6 mm}
-\end{figure}
+%\vspace{-6 mm}
+\end{figure*}
 
 
 \subsection{Error Auditing}
@@ -559,7 +563,7 @@ We find that while this simple k-means clustering approach does not always yield
  In practice, such an approach could be used both to assist human auditors in identifying salient stratifications in the data and to confirm that schema completion has been successful.
  In the latter case, we would only expect to find distinct clusters when hidden stratification is minimal.
 
- \begin{table}[]
+ \begin{table*}[]
  \centering
 \begin{tabular}{ccc}
 \toprule
@@ -575,8 +579,8 @@ We find that while this simple k-means clustering approach does not always yield
 \end{tabular}
 \caption{ Subclass prevalence in high and low error clusters on CIFAR, MURA, and CXR14.}
 \label{tab:clustercifar-1}
-\vspace{- 10mm}
-\end{table}
+%\vspace{- 10mm}
+\end{table*}
 
 
 % \begin{table}[]
@@ -769,9 +773,9 @@ and subsection identification method.
 
 %%
 %% If your work has an appendix, this is the place to put it.
-\appendix
+%\appendix
 
-\section{Research Methods}
+%\section{Research Methods}
 
 %
 %\section{Tables}
@@ -835,50 +839,50 @@ and subsection identification method.
 %  \end{tabular}
 %\end{table*}
 
-\section{Math Equations}
-You may want to display math equations in three distinct styles:
-inline, numbered or non-numbered display.  Each of the three are
-discussed in the next sections.
-
-\subsection{Inline (In-text) Equations}
-A formula that appears in the running text is called an inline or
-in-text formula.  It is produced by the \textbf{math} environment,
-which can be invoked with the usual
-\texttt{{\char'134}begin\,\ldots{\char'134}end} construction or with
-the short form \texttt{\$\,\ldots\$}. You can use any of the symbols
-and structures, from $\alpha$ to $\omega$, available in
-\LaTeX~\cite{Lamport:LaTeX}; this section will simply show a few
-examples of in-text equations in context. Notice how this equation:
-\begin{math}
-  \lim_{n\rightarrow \infty}x=0
-\end{math},
-set here in in-line math style, looks slightly different when
-set in display style.  (See next section).
-
-\subsection{Display Equations}
-A numbered display equation---one set off by vertical space from the
-text and centered horizontally---is produced by the \textbf{equation}
-environment. An unnumbered display equation is produced by the
-\textbf{displaymath} environment.
-
-Again, in either environment, you can use any of the symbols and
-structures available in \LaTeX\@; this section will just give a couple
-of examples of display equations in context.  First, consider the
-equation, shown as an inline equation above:
-\begin{equation}
-  \lim_{n\rightarrow \infty}x=0
-\end{equation}
-Notice how it is formatted somewhat differently in
-the \textbf{displaymath}
-environment.  Now, we'll enter an unnumbered equation:
-\begin{displaymath}
-  \sum_{i=0}^{\infty} x + 1
-\end{displaymath}
-and follow it with another numbered equation:
-\begin{equation}
-  \sum_{i=0}^{\infty}x_i=\int_{0}^{\pi+2} f
-\end{equation}
-just to demonstrate \LaTeX's able handling of numbering.
+%\section{Math Equations}
+%You may want to display math equations in three distinct styles:
+%inline, numbered or non-numbered display.  Each of the three are
+%discussed in the next sections.
+%
+%\subsection{Inline (In-text) Equations}
+%A formula that appears in the running text is called an inline or
+%in-text formula.  It is produced by the \textbf{math} environment,
+%which can be invoked with the usual
+%\texttt{{\char'134}begin\,\ldots{\char'134}end} construction or with
+%the short form \texttt{\$\,\ldots\$}. You can use any of the symbols
+%and structures, from $\alpha$ to $\omega$, available in
+%\LaTeX~\cite{Lamport:LaTeX}; this section will simply show a few
+%examples of in-text equations in context. Notice how this equation:
+%\begin{math}
+%  \lim_{n\rightarrow \infty}x=0
+%\end{math},
+%set here in in-line math style, looks slightly different when
+%set in display style.  (See next section).
+%
+%\subsection{Display Equations}
+%A numbered display equation---one set off by vertical space from the
+%text and centered horizontally---is produced by the \textbf{equation}
+%environment. An unnumbered display equation is produced by the
+%\textbf{displaymath} environment.
+%
+%Again, in either environment, you can use any of the symbols and
+%structures available in \LaTeX\@; this section will just give a couple
+%of examples of display equations in context.  First, consider the
+%equation, shown as an inline equation above:
+%\begin{equation}
+%  \lim_{n\rightarrow \infty}x=0
+%\end{equation}
+%Notice how it is formatted somewhat differently in
+%the \textbf{displaymath}
+%environment.  Now, we'll enter an unnumbered equation:
+%\begin{displaymath}
+%  \sum_{i=0}^{\infty} x + 1
+%\end{displaymath}
+%and follow it with another numbered equation:
+%\begin{equation}
+%  \sum_{i=0}^{\infty}x_i=\int_{0}^{\pi+2} f
+%\end{equation}
+%just to demonstrate \LaTeX's able handling of numbering.
 
 
 %\section{Citations and Bibliographies}
