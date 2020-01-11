@@ -278,7 +278,8 @@ Finally, we explore the clinical implications of our findings, and suggest that 
 Deep learning systems have shown remarkable promise in medical image analysis, often claiming performance rivaling that of human experts \citep{esteva2019guide}. 
  However, performance results reported in the literature may overstate the clinical utility and safety of these models.  
  Specifically, it is well known that machine learning models often make mistakes that humans never would, despite having aggregate error rates comparable to or better than those of human experts. An example of this ``inhuman'' lack of common sense might include a high performance system that calls any canine in the snow a wolf, and one on grass a dog, regardless of appearance \citep{ribeiro2016should}.
-While this property of machine learning models has been underreported in non-medical tasks---possibly because safety is often less of a concern and many errors are roughly equivalent in cost---it likely to be of critical importance in medical practice, where specific types of errors can have serious clinical impacts. 
+This property of machine learning models is likely to be of critical importance in medical practice, where specific types of errors can have serious clinical impacts. 
+%While this property of machine learning models has been underreported in non-medical tasks---possibly because safety is often less of a concern and many errors are roughly equivalent in cost---it likely to be of critical importance in medical practice, where specific types of errors can have serious clinical impacts. 
  
 Of particular concern is the fact that most medical machine learning models are built and tested using an incomplete set of possible labels---or \textit{schema}---and that the training labels therefore only coarsely describe the meaningful variation within the population. 
 Medical images contain dense visual information, and imaging diagnoses are usually identified by recognizing the combination of several different visual features or patterns. 
@@ -325,6 +326,7 @@ Non-causal confounding features such as healthcare process quantities can also c
 
 Instead of analyzing subsets defined \textit{a priori}, Mahajan et al. \citep{Mahajan2019-yi} describe algorithmic audits, where detailed examinations of model errors can lead to model improvements.
  Several recent studies perform error audits, where specific failure modes such as small volume cancers, disease mimics, and treatment-related features are observed \citep{Campanella2019-qs, Wang2019-jr}; such analyses may be helpful in identifying error modes via human review, but do not characterize the full space of subset performance \citep{Selbst2017-gz}.  
+ There has been particular interest in formalizing algorithmic audit methods recently \citep{raji2020closing}, although these initiatives have yet to be tailored to the medical setting. 
  Of course, there also exist multiple studies that do not directly address the effects of hidden stratification \citep{Haenssle2018-vw, Bien2018-ae}. 
  Esteva et al. \citep{Esteva2017-if} is particularly notable, as this dataset is labelled for more than 2,000 diagnostic subclasses but the results presented only consider ``top-level'' diagnostic categories. 
  Analysis of these effects would improve the community's ability to assess the real-world clinical utility of these models. 
@@ -341,7 +343,7 @@ Instead of analyzing subsets defined \textit{a priori}, Mahajan et al. \citep{Ma
   %  Each of these situations can occur in the context of medical imaging systems, and methods developed by such workers as Hardt et al. \citep{Hardt2016-ac} and Zafar et al. \citep{Zafar2017-ec} for addressing the results of these fundamental issues of bias and fairness should be explored further in medical imaging. 
 
 \section{Methods for Measuring Hidden Stratification}
-We examine three possible approaches to measure the clinical risk of hidden stratification: 1) exhaustive prospective human labeling of the data, called \textit{schema completion}, 2) retrospective human analysis of model predictions, called \textit{error auditing}, and 3) \textit{algorithmic methods} to detect hidden strata.  
+We explicitly define and evaluate three possible approaches to measure the clinical risk of hidden stratification: (1) exhaustive prospective human labeling of the data, called \textit{schema completion}, (2) retrospective human analysis of model predictions, called \textit{error auditing}, and (3) \textit{algorithmic methods} to detect hidden strata.  
 Each of these methods is applied to the test dataset, allowing for analysis and reporting (e.g., for regulatory processes) of subclass (i.e. subset) performance.
 
 \textbf{Schema Completion}: In schema completion, the schema author prospectively prescribes a more complete set of subclasses that need to be labeled, and provides these labels on test data. 
@@ -511,7 +513,7 @@ We hypothesize that the low label quality and subtle image features that charact
 \subfloat[MURA Abnormal]{\includegraphics[trim={0 0 1cm 1.5cm}, clip, width=2.25in]{../MURA-ROC.eps}}%
 \subfloat[CXR14 Pneumothorax]{\includegraphics[trim={0 0 1cm 1.5cm}, clip, width=2.25in]{../Pneumo-ROC.eps}}%
 \subfloat[Adelaide Hip Abnormal]{\includegraphics[trim={0 0 1cm 1.5cm}, clip, width=2.25in]{../HIPS-ROC.eps}}%
-\caption{ROCs for subclasses of the (a) abnormal MURA superclass (b) pneumothorax CXR14 superclass and (c) abnormal hip fracture superclass. All subclass AUCs are significantly different than the overall task (DeLong p$<$0.05) for MURA and CXR14.  For hip fracture, the AUCs themselves are not statistically different via a two-sided test (DeLong p$>$0.05), but the sensitivities are statistically different (p$<$0.01) at the relevant operating point \citep{Gale_W_Oakden-Rayner_L_Carneiro_G_Bradley_AP_Palmer_LJ2017-tl}. For MURA, sensitivities at 0.50 specificity are 0.93 (All), 1.00 (Hardware), 0.89 (Fracture), 0.80 (Degenerative).  For CXR14, sensitivities at 0.50 specificity are 0.94 (All), 0.99 (Drain), and 0.85 (No Drain).  For hip fracture, sensitivities at 0.50 specificity are 1.00 (All), 1.00 (Cervical), and 0.95 (Subtle)}
+\caption{ROCs for subclasses of the (a) abnormal MURA superclass (b) pneumothorax CXR14 superclass and (c) abnormal hip fracture superclass. All subclass AUCs are significantly different than the overall task (DeLong p$<$0.05) for MURA and CXR14.  For hip fracture, the AUCs themselves are not statistically different via a two-sided test (DeLong p$>$0.05), but the sensitivities are statistically different (p$<$0.01) at the relevant operating point \citep{Gale_W_Oakden-Rayner_L_Carneiro_G_Bradley_AP_Palmer_LJ2017-tl} -- see Table 2 for details. For MURA, sensitivities at 0.50 specificity are 0.93 (All), 1.00 (Hardware), 0.89 (Fracture), 0.80 (Degenerative).  For CXR14, sensitivities at 0.50 specificity are 0.94 (All), 0.99 (Drain), and 0.85 (No Drain).  For hip fracture, sensitivities at 0.50 specificity are 1.00 (All), 1.00 (Cervical), and 0.95 (Subtle)}
 \label{fig:rocs}
 %\vspace{-6 mm}
 \end{figure*}

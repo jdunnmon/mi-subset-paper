@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{40}
+\begin{thebibliography}{41}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -403,6 +403,22 @@
   datasets}.
 \newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:1907.12720}}
   (\bibinfo{date}{July} \bibinfo{year}{2019}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Raji, Smart, White, Mitchell, Gebru,
+  Hutchinson, Smith-Loud, Theron, and Barnes}{Raji et~al\mbox{.}}{2020}]%
+        {raji2020closing}
+\bibfield{author}{\bibinfo{person}{Inioluwa~Deborah Raji},
+  \bibinfo{person}{Andrew Smart}, \bibinfo{person}{Rebecca~N White},
+  \bibinfo{person}{Margaret Mitchell}, \bibinfo{person}{Timnit Gebru},
+  \bibinfo{person}{Ben Hutchinson}, \bibinfo{person}{Jamila Smith-Loud},
+  \bibinfo{person}{Daniel Theron}, {and} \bibinfo{person}{Parker Barnes}.}
+  \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{Closing the AI Accountability Gap: Defining an
+  End-to-End Framework for Internal Algorithmic Auditing}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:2001.00973}}
+  (\bibinfo{year}{2020}).
 \newblock
 
 
