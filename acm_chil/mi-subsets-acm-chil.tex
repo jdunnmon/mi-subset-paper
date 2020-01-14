@@ -22,7 +22,8 @@
 %% in the same archive or directory.)
 %%
 %% The first command in your LaTeX source must be the \documentclass command.
-\documentclass[sigconf,authordraft,screen]{acmart}
+%\documentclass[sigconf,authordraft,screen]{acmart}
+\documentclass[sigconf,anonymous,screen]{acmart}
 %\documentclass[acmconf|,anonymous,review,]{acmart}
 
 %%
@@ -405,7 +406,7 @@ The CIFAR-100 dataset consists of 60,000 images binned into 20 ``superclasses,''
  %While we do not explicitly evaluate the effect of visually similar subclasses or spurious correlates on CIFAR-100, we expect that similar effects would be observed \citep{Selbst2017-gz}.  
  For the purposes of this experiment, we assume that the CIFAR-100 subclasses represent a reasonable attempt at schema completion, and measure superclass accuracy within each subclass.
  
- Figure \ref{fig:cifar}(a) presents the performance of a ResNeXt-29, 8x64d CNN trained on the 20 CIFAR-100 superclasses using the training schedule reported in Xie et al. \citep{Xie2016-ip} and the implementation provided by Yang \citep{Yang_undated-bt}.  
+ Figure \ref{fig:cifar}(a) presents the performance of a ResNeXt-29, 8x64d Convolutional Neural Network (CNN) trained on the 20 CIFAR-100 superclasses using the training schedule reported in \citep{Xie2016-ip} and the implementation provided by \citep{Yang_undated-bt}.  
 In each superclass, the five constituent subclasses exhibit substantial performance variation, and the worst-performing subclass can underperform the aggregate superclass by over 30 accuracy points.  
 This same phenomenon in medical imaging would lead to massively different outcomes for different subsets of the population, be these demographically or pathologically determined.
 To confirm that these large differences in subclass performance do not result from random variation within each superclass, we randomly permute the subclass labels within each superclass and evaluate our model on these random subclasses.
@@ -685,7 +686,7 @@ We observe these trends on both a controlled CIFAR-100 environment and multiple 
 
 The clinical implications of hidden stratification will vary by task. 
 Our MURA results, for instance, are unlikely to be clinically relevant, because degenerative disease is rarely a significant or unexpected finding, nor are rapid complications likely. 
-We hypothesise that labels derived from clinical practice are likely to demonstrate this phenomenon; that irrelevant or unimportant findings are often elided by radiologists, leading to reduced label quality for less significant findings.
+We hypothesize that labels derived from clinical practice are likely to demonstrate this phenomenon; that irrelevant or unimportant findings are often elided by radiologists, leading to reduced label quality for less significant findings.
 
 The findings in the CXR14 task are far more concerning. 
 The majority of x-rays in the pneumothorax class contain chest drains, the presence of which is a healthcare process variable that is not causally linked to pneumothorax diagnosis.
@@ -708,7 +709,7 @@ This phenomenon points to another important observation---there will likely be s
 We show that a simple unsupervised approach to identify unrecognized subclasses often produces clusters containing different proportions of cases from the hidden subclasses our analysis had previously identified. 
 While these results support other findings that demonstrate the utility of hidden-state clustering in model development \citep{Liu2019-qt}, the relatively unsophisticated technique presented here should be considered only a first attempt at unsupervised identification of hidden stratification \citep{calinski1974dendrite, rousseeuw1987silhouettes}. 
 Indeed, it remains to be seen if these automatically produced clusters can be useful in practice, either for finding clinically important subclasses or for use in retraining image analysis models for improved subclass performance, particularly given the failure of this method in the detection of clinically relevant subclasses in the MURA task. 
-More advanced semi-supervised methods such as those of Chen et al. \citep{chen2019slicing} may ultimately be required to tackle this problem, or it may be the case that both unsupervised and semi-supervised approaches are unable to contribute substantially, leaving us reliant on time-consuming methodical human review.
+More advanced semi-supervised methods such as those of \citep{chen2019slicing} may ultimately be required to tackle this problem, or it may be the case that both unsupervised and semi-supervised approaches are unable to contribute substantially, leaving us reliant on time-consuming methodical human review.
 Importantly, our experiments are limited in that they do not explore the full range of medical image analysis tasks, so the results will have variable applicability to any given scenario.
 The findings presented here are intended specifically to highlight the largely unrecognized problem of hidden stratification in clinical imaging datasets, and to suggest that awareness of hidden stratification is important and should be considered (even if to be dismissed) when planning, building, evaluating, and regulating clinical image analysis systems.
  
