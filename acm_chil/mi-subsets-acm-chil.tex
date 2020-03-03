@@ -415,7 +415,7 @@ The CIFAR-100 dataset consists of 60,000 images binned into 20 ``superclasses,''
 In each superclass, the five constituent subclasses exhibit substantial performance variation, and the worst-performing subclass can underperform the aggregate superclass by over 30 accuracy points.  
 This same phenomenon in medical imaging would lead to massively different outcomes for different subsets of the population, be these demographically or pathologically determined.
 To confirm that these large differences in subclass performance do not result from random variation within each superclass, we randomly permute the subclass labels within each superclass and evaluate our model on these random subclasses.
-If random variation was the cause of the stratification observed in Fig. \ref{fig:cifar}(a), we would expect the intra-subclass performance variance to remain unchanged in this experiment.
+If random variation was the cause of the stratification observed in Fig. \ref{fig:cifar}(a), we would expect the inter-subclass performance variance to remain unchanged in this experiment.
  Instead, we find that average inter-subclass performance variance is reduced by an average of 66\% across all superclasses when the subclasses are randomly rather than semantically assigned, indicating that the performance stratification observed in Fig. \ref{fig:cifar}(a) cannot be attributed to random variation.
 
  Table \ref{tab:cifar1} (middle) shows classification results on randomly selected subclasses (``dolphin'' and ``mountain'') when 75\% of the examples in a subclass are dropped from the training set, simulating a subclass with reduced prevalence.  
@@ -516,10 +516,10 @@ We hypothesize that the low label quality and subtle image features that charact
  \begin{figure*}[htb!]%
  %\vspace{-6mm}
 \centering
-\subfloat[Adelaide Hip Abnormal]{\includegraphics[trim={0 0 1cm 1.5cm}, clip, width=2.25in]{../HIPS-ROC.eps}}%
-\subfloat[MURA Abnormal]{\includegraphics[trim={0 0 1cm 1.5cm}, clip, width=2.25in]{../MURA-ROC.eps}}%
-\subfloat[CXR14 Pneumothorax]{\includegraphics[trim={0 0 1cm 1.5cm}, clip, width=2.25in]{../Pneumo-ROC.eps}}%
-\caption{ROCs for subclasses of the (a) abnormal Adelaide Hip Fracture superclass (b) abnormal MURA superclass and (c) pneumothorax CXR14 superclass.  All subclass AUCs are significantly different than the overall task (DeLong p$<$0.05) for MURA and CXR14.  For hip fracture, the AUCs themselves are not statistically different via a two-sided test (DeLong p$>$0.05), but the sensitivities are statistically different (p$<$0.01) at the relevant operating point \citep{Gale_W_Oakden-Rayner_L_Carneiro_G_Bradley_AP_Palmer_LJ2017-tl}---see Table 2 for details. For MURA, sensitivities at 0.50 specificity are 0.93 (All), 1.00 (Hardware), 0.89 (Fracture), 0.80 (Degenerative).  For CXR14, sensitivities at 0.50 specificity are 0.94 (All), 0.99 (Drain), and 0.85 (No Drain).  For hip fracture, sensitivities at 0.50 specificity are 1.00 (All), 1.00 (Cervical), and 0.95 (Subtle)}
+\subfloat[Adelaide Hip Abnormal]{\includegraphics[trim={0 0 1cm 1.5cm}, clip, width=2.25in]{../HIPS-ROC-leg.eps}}%
+\subfloat[MURA Abnormal]{\includegraphics[trim={0 0 1cm 1.5cm}, clip, width=2.25in]{../MURA-ROC-leg.eps}}%
+\subfloat[CXR14 Pneumothorax]{\includegraphics[trim={0 0 1cm 1.5cm}, clip, width=2.25in]{../Pneumo-ROC-leg.eps}}%
+\caption{ROC curves for subclasses of the (a) abnormal Adelaide Hip Fracture superclass (b) abnormal MURA superclass and (c) pneumothorax CXR14 superclass.  All subclass AUCs are significantly different than the overall task (DeLong p$<$0.05) for MURA and CXR14.  For hip fracture, the AUCs themselves are not statistically different via a two-sided test (DeLong p$>$0.05), but the sensitivities are statistically different (p$<$0.01) at the relevant operating point \citep{Gale_W_Oakden-Rayner_L_Carneiro_G_Bradley_AP_Palmer_LJ2017-tl}---see Table 2 for details. For MURA, sensitivities at 0.50 specificity are 0.93 (All), 1.00 (Hardware), 0.89 (Fracture), 0.80 (Degenerative).  For CXR14, sensitivities at 0.50 specificity are 0.94 (All), 0.99 (Drain), and 0.85 (No Drain).  For hip fracture, sensitivities at 0.50 specificity are 1.00 (All), 1.00 (Cervical), and 0.95 (Subtle)}
 \label{fig:rocs}
 %\vspace{-6 mm}
 \end{figure*}
