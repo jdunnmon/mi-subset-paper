@@ -23,7 +23,7 @@
 %%
 %% The first command in your LaTeX source must be the \documentclass command.
 %\documentclass[sigconf,authordraft,screen]{acmart}
-\documentclass[sigconf,anonymous,review]{acmart}
+\documentclass[sigconf]{acmart}
 %\documentclass[acmconf|,anonymous,review,]{acmart}
 
 %%
@@ -43,7 +43,7 @@
 %\acmDOI{10.1145/1122445.1122456}
 
 %% These commands are for a PROCEEDINGS abstract or paper.
-\acmConference[CHIL '20]{CHIL '20: ACM Conference on Health, Inference, and Learning}{April 02--04, 2020}{Toronto, CA}
+%\acmConference[CHIL '20]{CHIL '20: ACM Conference on Health, Inference, and Learning}{April 02--04, 2020}{Toronto, CA}
 %\acmBooktitle{Woodstock '18: ACM Symposium on Neural Gaze Detection,
   %June 03--05, 2018, Woodstock, NY}
 %\acmPrice{15.00}
@@ -73,6 +73,7 @@
 
 %%
 %% end of the preamble, start of the body of the document source.
+ \setcopyright{rightsretained}
 \begin{document}
 
 %%
@@ -272,6 +273,16 @@ Finally, we discuss the clinical implications of our findings, and suggest that 
 %%
 %% This command processes the author and affiliation and title
 %% information and builds the first part of the formatted document.
+
+\copyrightyear{2020}
+\acmYear{2020}
+%\setcopyright{rightsretained}
+\acmConference[ACM CHIL '20]{ACM Conference on Health, Inference,
+and Learning}{April 2--4, 2020}{Toronto, ON, Canada}
+\acmBooktitle{ACM Conference on Health, Inference, and Learning (ACM
+CHIL '20), April 2--4, 2020, Toronto, ON, Canada}
+\acmDOI{10.1145/3368555.3384468}
+\acmISBN{978-1-4503-7046-2/20/04}
 \maketitle
 
 \section{Introduction}
@@ -386,6 +397,8 @@ We then use this same schema completion technique to evaluate clinically importa
 Each of these datasets has been annotated a priori with labels for important subclasses, and is thus amenable to schema completion.
 We then demonstrate how error auditing can be used to identify hidden stratification in a large public chest radiograph dataset that contains a spurious correlate.
 Finally, we show that a simple unsupervised clustering algorithm can provide value by separating the well-performing and poorly-performing subsets identified by our previous analysis.
+
+Code describing these experiments is available at  \\ \texttt{www.github.com/jdunnmon/mi-subsets}.
 %In the following Discussion section, we analyze the clinical implications of these results and evaluate approaches by which hidden stratification might be measured or addressed within medical imaging workflows.
 
 \subsection{Schema Completion}
@@ -747,32 +760,6 @@ While this will require substantial effort from the community, bodies such as pr
 %
 %Authors should not prepare this section as a numbered or unnumbered {\verb|\section|}; please use the ``{\verb|acks|}'' environment.
 %
-%\section{Appendices}
-
-%If your work needs an appendix, add it before the
-%``\verb|\end{document}|'' command at the conclusion of your source
-%document.
-
-%Start the appendix with the ``\verb|appendix|'' command:
-%\begin{verbatim}
- % \appendix
-%\end{verbatim}
-%and note that in the appendix, sections are lettered, not
-%numbered. This document has two appendices, demonstrating the section
-%and subsection identification method.
-
-%\section{SIGCHI Extended Abstracts}
-%
-%The ``\verb|sigchi-a|'' template style (available only in \LaTeX\ and
-%not in Word) produces a landscape-orientation formatted article, with
-%a wide left margin. Three environments are available for use with the
-%``\verb|sigchi-a|'' template style, and produce formatted output in
-%the margin:
-%\begin{itemize}
-%\item {\verb|sidebar|}:  Place formatted text in the margin.
-%\item {\verb|marginfigure|}: Place a figure in the margin.
-%\item {\verb|margintable|}: Place a table in the margin.
-%\end{itemize}
 
 %%
 %% The acknowledgments section is defined using the "acks" environment
@@ -784,217 +771,10 @@ While this will require substantial effort from the community, bodies such as pr
  %Acknowledgments go here.
 %\end{acks}
 
-%%
 %% The next two lines define the bibliography style to be used, and
 %% the bibliography file.
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{../mi-subsets}
 
-%%
-%% If your work has an appendix, this is the place to put it.
-%\appendix
-
-%\section{Research Methods}
-
-%
-%\section{Tables}
-%
-%The ``\verb|acmart|'' document class includes the ``\verb|booktabs|''
-%package --- \url{https://ctan.org/pkg/booktabs} --- for preparing
-%high-quality tables.
-%
-%Table captions are placed {\itshape above} the table.
-%
-%Because tables cannot be split across pages, the best placement for
-%them is typically the top of the page nearest their initial cite.  To
-%ensure this proper ``floating'' placement of tables, use the
-%environment \textbf{table} to enclose the table's contents and the
-%table caption.  The contents of the table itself must go in the
-%\textbf{tabular} environment, to be aligned properly in rows and
-%columns, with the desired horizontal and vertical rules.  Again,
-%detailed instructions on \textbf{tabular} material are found in the
-%\textit{\LaTeX\ User's Guide}.
-%
-%Immediately following this sentence is the point at which
-%Table~\ref{tab:freq} is included in the input file; compare the
-%placement of the table here with the table in the printed output of
-%this document.
-%
-%\begin{table}
-%  \caption{Frequency of Special Characters}
-%  \label{tab:freq}
-%  \begin{tabular}{ccl}
-%    \toprule
-%    Non-English or Math&Frequency&Comments\\
-%    \midrule
-%    \O & 1 in 1,000& For Swedish names\\
-%    $\pi$ & 1 in 5& Common in math\\
-%    \$ & 4 in 5 & Used in business\\
-%    $\Psi^2_1$ & 1 in 40,000& Unexplained usage\\
-%  \bottomrule
-%\end{tabular}
-%\end{table}
-%
-%To set a wider table, which takes up the whole width of the page's
-%live area, use the environment \textbf{table*} to enclose the table's
-%contents and the table caption.  As with a single-column table, this
-%wide table will ``float'' to a location deemed more
-%desirable. Immediately following this sentence is the point at which
-%Table~\ref{tab:commands} is included in the input file; again, it is
-%instructive to compare the placement of the table here with the table
-%in the printed output of this document.
-%
-%\begin{table*}
-%  \caption{Some Typical Commands}
-%  \label{tab:commands}
-%  \begin{tabular}{ccl}
-%    \toprule
-%    Command &A Number & Comments\\
-%    \midrule
-%    \texttt{{\char'134}author} & 100& Author \\
-%    \texttt{{\char'134}table}& 300 & For tables\\
-%    \texttt{{\char'134}table*}& 400& For wider tables\\
-%    \bottomrule
-%  \end{tabular}
-%\end{table*}
-
-%\section{Math Equations}
-%You may want to display math equations in three distinct styles:
-%inline, numbered or non-numbered display.  Each of the three are
-%discussed in the next sections.
-%
-%\subsection{Inline (In-text) Equations}
-%A formula that appears in the running text is called an inline or
-%in-text formula.  It is produced by the \textbf{math} environment,
-%which can be invoked with the usual
-%\texttt{{\char'134}begin\,\ldots{\char'134}end} construction or with
-%the short form \texttt{\$\,\ldots\$}. You can use any of the symbols
-%and structures, from $\alpha$ to $\omega$, available in
-%\LaTeX~\cite{Lamport:LaTeX}; this section will simply show a few
-%examples of in-text equations in context. Notice how this equation:
-%\begin{math}
-%  \lim_{n\rightarrow \infty}x=0
-%\end{math},
-%set here in in-line math style, looks slightly different when
-%set in display style.  (See next section).
-%
-%\subsection{Display Equations}
-%A numbered display equation---one set off by vertical space from the
-%text and centered horizontally---is produced by the \textbf{equation}
-%environment. An unnumbered display equation is produced by the
-%\textbf{displaymath} environment.
-%
-%Again, in either environment, you can use any of the symbols and
-%structures available in \LaTeX\@; this section will just give a couple
-%of examples of display equations in context.  First, consider the
-%equation, shown as an inline equation above:
-%\begin{equation}
-%  \lim_{n\rightarrow \infty}x=0
-%\end{equation}
-%Notice how it is formatted somewhat differently in
-%the \textbf{displaymath}
-%environment.  Now, we'll enter an unnumbered equation:
-%\begin{displaymath}
-%  \sum_{i=0}^{\infty} x + 1
-%\end{displaymath}
-%and follow it with another numbered equation:
-%\begin{equation}
-%  \sum_{i=0}^{\infty}x_i=\int_{0}^{\pi+2} f
-%\end{equation}
-%just to demonstrate \LaTeX's able handling of numbering.
-
-
-%\section{Citations and Bibliographies}
-%
-%The use of \BibTeX\ for the preparation and formatting of one's
-%references is strongly recommended. Authors' names should be complete
-%--- use full first names (``Donald E. Knuth'') not initials
-%(``D. E. Knuth'') --- and the salient identifying features of a
-%reference should be included: title, year, volume, number, pages,
-%article DOI, etc.
-%
-%The bibliography is included in your source document with these two
-%commands, placed just before the \verb|\end{document}| command:
-%\begin{verbatim}
-%  \bibliographystyle{ACM-Reference-Format}
-%  \bibliography{bibfile}
-%\end{verbatim}
-%where ``\verb|bibfile|'' is the name, without the ``\verb|.bib|''
-%suffix, of the \BibTeX\ file.
-%
-%Citations and references are numbered by default. A small number of
-%ACM publications have citations and references formatted in the
-%``author year'' style; for these exceptions, please include this
-%command in the {\bfseries preamble} (before
-%``\verb|\begin{document}|'') of your \LaTeX\ source:
-%\begin{verbatim}
-%  \citestyle{acmauthoryear}
-%\end{verbatim}
-%
-%  Some examples.  A paginated journal article \cite{Abril07}, an
-%  enumerated journal article \cite{Cohen07}, a reference to an entire
-%  issue \cite{JCohen96}, a monograph (whole book) \cite{Kosiur01}, a
-%  monograph/whole book in a series (see 2a in spec. document)
-%  \cite{Harel79}, a divisible-book such as an anthology or compilation
-%  \cite{Editor00} followed by the same example, however we only output
-%  the series if the volume number is given \cite{Editor00a} (so
-%  Editor00a's series should NOT be present since it has no vol. no.),
-%  a chapter in a divisible book \cite{Spector90}, a chapter in a
-%  divisible book in a series \cite{Douglass98}, a multi-volume work as
-%  book \cite{Knuth97}, an article in a proceedings (of a conference,
-%  symposium, workshop for example) (paginated proceedings article)
-%  \cite{Andler79}, a proceedings article with all possible elements
-%  \cite{Smith10}, an example of an enumerated proceedings article
-%  \cite{VanGundy07}, an informally published work \cite{Harel78}, a
-%  doctoral dissertation \cite{Clarkson85}, a master's thesis:
-%  \cite{anisi03}, an online document / world wide web resource
-%  \cite{Thornburg01, Ablamowicz07, Poker06}, a video game (Case 1)
-%  \cite{Obama08} and (Case 2) \cite{Novak03} and \cite{Lee05} and
-%  (Case 3) a patent \cite{JoeScientist001}, work accepted for
-%  publication \cite{rous08}, 'YYYYb'-test for prolific author
-%  \cite{SaeediMEJ10} and \cite{SaeediJETC10}. Other cites might
-%  contain 'duplicate' DOI and URLs (some SIAM articles)
-%  \cite{Kirschmer:2010:AEI:1958016.1958018}. Boris / Barbara Beeton:
-%  multi-volume works as books \cite{MR781536} and \cite{MR781537}. A
-%  couple of citations with DOIs:
-%  \cite{2004:ITE:1009386.1010128,Kirschmer:2010:AEI:1958016.1958018}. Online
-%  citations: \cite{TUGInstmem, Thornburg01, CTANacmart}. Artifacts:
-%  \cite{R} and \cite{UMassCitations}.
-
 \end{document}
 \endinput
-%%
-%% End of file `sample-authordraft.tex'.
-
-
-% P-values
-%Delong for overall vs hardware
-%(2.964718943811703e-11, 0.9097316704459562, 0.984646962233169)
-%Delong for overall vs fracture
-%(0.0480806838324928, 0.9097316704459562, 0.860343481654957)
-%Delong for overall vs joint_dz
-%R[write to console]: Setting levels: control = 0, case = 1
-%
-%R[write to console]: Setting direction: controls < cases
-%
-%R[write to console]: Setting levels: control = 0, case = 1
-%
-%R[write to console]: Setting direction: controls < cases
-%
-%R[write to console]: Setting levels: control = 0, case = 1
-%
-%(7.686263371407003e-05, 0.9097316704459562, 0.7561172161172162)
-%Delong for overall vs pneumo_drain
-%R[write to console]: Setting direction: controls < cases
-%
-%R[write to console]: Setting levels: control = 0, case = 1
-%
-%R[write to console]: Setting direction: controls < cases
-%
-%R[write to console]: Setting levels: control = 0, case = 1
-%
-%R[write to console]: Setting direction: controls < cases
-%
-%(4.711284673133964e-22, 0.8739462913171514, 0.9403859035883845)
-%Delong for overall vs pneumo_no_drain
-%(9.286782949626998e-18, 0.8739462913171514, 0.766348158552935)
