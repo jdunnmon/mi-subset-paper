@@ -116,7 +116,7 @@
 \authornote{Both authors contributed equally to this research.}
 \email{luke.oakden-rayner@adelaide.edu.au}
 \affiliation{%
-	\institution{Australian Institute for Machine Learning, University of Adelaide}	\streetaddress{University of Adelaide}
+	\institution{Australian Institute for Machine Learning \\ University of Adelaide}	\streetaddress{University of Adelaide}
 	\city{Adelaide}
 	\country{Australia}
 	\postcode{5000}
@@ -127,7 +127,7 @@
 \authornotemark[1]
 \email{jdunnmon@cs.stanford.edu}
 \affiliation{%
-	\institution{Department of Computer Science, Stanford University}
+	\institution{Department of Computer Science \\ Stanford University}
 	\city{Stanford}
 	\state{California}
 	\country{USA}
@@ -137,7 +137,7 @@
 \author{Gustavo Carneiro}
 \email{gustavo.carneiro@adelaide.edu.au}
 \affiliation{%
-	\institution{Australian Institute for Machine Learning, University of Adelaide}
+	\institution{Australian Institute for Machine Learning \\ University of Adelaide}
 	\city{Adelaide}
 	\country{Australia}
 	\postcode{5000}
@@ -146,7 +146,7 @@
 \author{Christopher R\'{e}}
 \email{chrismre@cs.stanford.edu}
 \affiliation{%
-	\institution{Department of Computer Science, Stanford University}
+	\institution{Department of Computer Science \\ Stanford University}
 	\city{Stanford}
 	\state{California}
 	\country{USA}
@@ -398,7 +398,7 @@ Each of these datasets has been annotated a priori with labels for important sub
 We then demonstrate how error auditing can be used to identify hidden stratification in a large public chest radiograph dataset that contains a spurious correlate.
 Finally, we show that a simple unsupervised clustering algorithm can provide value by separating the well-performing and poorly-performing subsets identified by our previous analysis.
 
-Code describing these experiments is available at  \\ \texttt{www.github.com/jdunnmon/mi-subsets}.
+Code describing these experiments is available at  \\ \texttt{https://github.com/HazyResearch/hidden-stratification-mi}.
 %In the following Discussion section, we analyze the clinical implications of these results and evaluate approaches by which hidden stratification might be measured or addressed within medical imaging workflows.
 
 \subsection{Schema Completion}
@@ -416,6 +416,8 @@ When feasible, even partial schema completion can be useful for assessing hidden
 %\vspace{-3mm}
 \end{figure*}
 
+
+
 \textbf{CIFAR-100}: The benchmark CIFAR-100 dataset from computer vision represents an excellent testbed on which to demonstrate the effect of hidden stratification in a well-characterized environment \citep{Krizhevsky2009-tq}.  
 The CIFAR-100 dataset consists of 60,000 images binned into 20 ``superclasses,'' which each contain five distinct ``subclasses.'' 
  Each subclass is represented in the dataset with equal frequency.  
@@ -431,15 +433,6 @@ To confirm that these large differences in subclass performance do not result fr
 If random variation was the cause of the stratification observed in Fig. \ref{fig:cifar}(a), we would expect the inter-subclass performance variance to remain unchanged in this experiment.
  Instead, we find that average inter-subclass performance variance is reduced by an average of 66\% across all superclasses when the subclasses are randomly rather than semantically assigned, indicating that the performance stratification observed in Fig. \ref{fig:cifar}(a) cannot be attributed to random variation.
 
- Table \ref{tab:cifar1} (middle) shows classification results on randomly selected subclasses (``dolphin'' and ``mountain'') when 75\% of the examples in a subclass are dropped from the training set, simulating a subclass with reduced prevalence.  
- While the overall marine mammals superclass performance drops by only 4 accuracy points when the dolphin subclass is subsampled, performance on the dolphin subclass drops by 14 points from 0.78 to 0.64.  
- Similar trends are observed for the mountain subclass, where overall superclass performance drops by 5 accuracy points when the mountain subclass is subsampled, but performance on the mountain subclass itself drops by 19 points.  
- Clearly, unmeasured subclass underrepresentation can lead to substantially worse performance on that subclass, even when superclass performance is only modestly affected.
- 
-We show a similar trend in Table \ref{tab:cifar1} (right) when random noise is added to the labels of a given subclass by replacing the 25\% of the true superclass labels with a random incorrect label, simulating a subclass with reduced label accuracy.
-Performance on both dolphin and mountain subclasses drops substantially when label accuracy decreases; while overall superclass performance in each case drops by less than 5 points, subclass performance decreases by up to 17 points.  
-Such stratification of label quality by pathology is highly likely to occur in medical datasets, where certain pathologies are easier to identify than others.
-
 \begin{table*}[]
 \centering
 \begin{tabular}{ccccccc}
@@ -454,6 +447,17 @@ Such stratification of label quality by pathology is highly likely to occur in m
 \label{tab:cifar1}
 %\vspace{-8mm}
 \end{table*}
+
+ Table \ref{tab:cifar1} (middle) shows classification results on randomly selected subclasses (``dolphin'' and ``mountain'') when 75\% of the examples in a subclass are dropped from the training set, simulating a subclass with reduced prevalence.  
+ While the overall marine mammals superclass performance drops by only 4 accuracy points when the dolphin subclass is subsampled, performance on the dolphin subclass drops by 14 points from 0.78 to 0.64.  
+ Similar trends are observed for the mountain subclass, where overall superclass performance drops by 5 accuracy points when the mountain subclass is subsampled, but performance on the mountain subclass itself drops by 19 points.  
+ Clearly, unmeasured subclass underrepresentation can lead to substantially worse performance on that subclass, even when superclass performance is only modestly affected.
+ 
+We show a similar trend in Table \ref{tab:cifar1} (right) when random noise is added to the labels of a given subclass by replacing the 25\% of the true superclass labels with a random incorrect label, simulating a subclass with reduced label accuracy.
+Performance on both dolphin and mountain subclasses drops substantially when label accuracy decreases; while overall superclass performance in each case drops by less than 5 points, subclass performance decreases by up to 17 points.  
+Such stratification of label quality by pathology is highly likely to occur in medical datasets, where certain pathologies are easier to identify than others.
+
+
 
 %Example: The MURA experiments in this study were relabeled with a consensus schema produced by a team of radiologists (unpublished). This schema focused on diagnostic (ie fracture, arthritis) and hospital process (ie metalwork) categories, and did not cover descriptive or location based categories (ie displaced fracture, radiocarpal arthritis).
 %The hip fracture experiments were relabeled with a schema developed by LOR, including both location (subcapital, cervical etc) and descriptive (mildly displaced, comminuted etc) categories.
@@ -501,7 +505,34 @@ These binary labels have been previously investigated and relabelled with subcla
 %We are able to use schema completion in this case because radiologists have a good understanding of what important subsets may exist in extremity radiographs.
 While this schema remains incomplete, even partial schema completion demonstrates substantial hidden stratification in this dataset.
 
-\begin{table}[]
+We hypothesize that the low label quality and subtle image features that characterize the degenerative joint disease subclass will result in reduced performance, and that the visually obvious metalwork subclass will have high performance (despite low prevalence).
+ We train a DenseNet-169 on the normal/abnormal labels, with 13,942 cases used for training and 714 cases held-out for testing \citep{Rajpurkar2017-rc}.  
+% The distribution of these subclasses and sensitivity of the original normal-abnormal labels on each are shown in Table \ref{tab:mura2}.
+ In Fig.~\ref{fig:rocs}(b), we present ROC curves and AUC values for each subclass and in aggregate.  
+ We find that overall AUC for the easy-to-detect hardware subclass (0.98) is higher than aggregate AUC (0.91), despite the low subclass prevalence.
+ As expected, we also observe degraded AUC for degenerative disease (0.76), which has low-sensitivity superclass labels and subtle visual features (Table \ref{tab:mura2}).  
+% These results indicate that clinically meaningful hidden stratification can result from subtle discriminative features and subclass label quality can.
+ % In this case, we measure hidden stratification using schema completion, as radiologists have a good understanding of what important subsets may exist in extremity radiographs.
+
+
+ \begin{figure*}[!th!]%
+ %\vspace{-6mm}
+\centering
+\subfloat[Adelaide Hip Abnormal]{\includegraphics[trim={0 0 1cm 1.5cm}, clip, width=2.25in]{../HIPS-ROC-leg.eps}}%
+\subfloat[MURA Abnormal]{\includegraphics[trim={0 0 1cm 1.5cm}, clip, width=2.25in]{../MURA-ROC-leg.eps}}%
+\subfloat[CXR14 Pneumothorax]{\includegraphics[trim={0 0 1cm 1.5cm}, clip, width=2.25in]{../Pneumo-ROC-leg.eps}}%
+\caption{ROC curves for subclasses of the (a) abnormal Adelaide Hip Fracture superclass (b) abnormal MURA superclass and (c) pneumothorax CXR14 superclass.  All subclass AUCs are significantly different than the overall task (DeLong p$<$0.05) for MURA and CXR14.  For hip fracture, the AUCs themselves are not statistically different via a two-sided test (DeLong p$>$0.05), but the sensitivities are statistically different (p$<$0.01) at the relevant operating point \citep{Gale_W_Oakden-Rayner_L_Carneiro_G_Bradley_AP_Palmer_LJ2017-tl}---see Table 2 for details. For MURA, sensitivities at 0.50 specificity are 0.93 (All), 1.00 (Hardware), 0.89 (Fracture), 0.80 (Degenerative).  For CXR14, sensitivities at 0.50 specificity are 0.94 (All), 0.99 (Drain), and 0.85 (No Drain).  For hip fracture, sensitivities at 0.50 specificity are 1.00 (All), 1.00 (Cervical), and 0.95 (Subtle)}
+\label{fig:rocs}
+%\vspace{-6 mm}
+\end{figure*}
+
+
+
+\subsection{Error Auditing}
+
+We next use error auditing to show that the clinical utility of a common model for classifying the CXR-14 dataset is substantially reduced by existing hidden stratification effects in the pneumothorax class that result from the presence of a spurious correlate.
+
+ \begin{table}[htb!]
 \centering
 \begin{tabular}{ccc}
  \toprule
@@ -516,31 +547,6 @@ While this schema remains incomplete, even partial schema completion demonstrate
 \label{tab:mura2}
 %\vspace{-8mm}
 \end{table}
-
-We hypothesize that the low label quality and subtle image features that characterize the degenerative joint disease subclass will result in reduced performance, and that the visually obvious metalwork subclass will have high performance (despite low prevalence).
- We train a DenseNet-169 on the normal/abnormal labels, with 13,942 cases used for training and 714 cases held-out for testing \citep{Rajpurkar2017-rc}.  
-% The distribution of these subclasses and sensitivity of the original normal-abnormal labels on each are shown in Table \ref{tab:mura2}.
- In Fig.~\ref{fig:rocs}(b), we present ROC curves and AUC values for each subclass and in aggregate.  
- We find that overall AUC for the easy-to-detect hardware subclass (0.98) is higher than aggregate AUC (0.91), despite the low subclass prevalence.
- As expected, we also observe degraded AUC for degenerative disease (0.76), which has low-sensitivity superclass labels and subtle visual features (Table \ref{tab:mura2}).  
-% These results indicate that clinically meaningful hidden stratification can result from subtle discriminative features and subclass label quality can.
- % In this case, we measure hidden stratification using schema completion, as radiologists have a good understanding of what important subsets may exist in extremity radiographs.
-
- \begin{figure*}[htb!]%
- %\vspace{-6mm}
-\centering
-\subfloat[Adelaide Hip Abnormal]{\includegraphics[trim={0 0 1cm 1.5cm}, clip, width=2.25in]{../HIPS-ROC-leg.eps}}%
-\subfloat[MURA Abnormal]{\includegraphics[trim={0 0 1cm 1.5cm}, clip, width=2.25in]{../MURA-ROC-leg.eps}}%
-\subfloat[CXR14 Pneumothorax]{\includegraphics[trim={0 0 1cm 1.5cm}, clip, width=2.25in]{../Pneumo-ROC-leg.eps}}%
-\caption{ROC curves for subclasses of the (a) abnormal Adelaide Hip Fracture superclass (b) abnormal MURA superclass and (c) pneumothorax CXR14 superclass.  All subclass AUCs are significantly different than the overall task (DeLong p$<$0.05) for MURA and CXR14.  For hip fracture, the AUCs themselves are not statistically different via a two-sided test (DeLong p$>$0.05), but the sensitivities are statistically different (p$<$0.01) at the relevant operating point \citep{Gale_W_Oakden-Rayner_L_Carneiro_G_Bradley_AP_Palmer_LJ2017-tl}---see Table 2 for details. For MURA, sensitivities at 0.50 specificity are 0.93 (All), 1.00 (Hardware), 0.89 (Fracture), 0.80 (Degenerative).  For CXR14, sensitivities at 0.50 specificity are 0.94 (All), 0.99 (Drain), and 0.85 (No Drain).  For hip fracture, sensitivities at 0.50 specificity are 1.00 (All), 1.00 (Cervical), and 0.95 (Subtle)}
-\label{fig:rocs}
-%\vspace{-6 mm}
-\end{figure*}
-
-
-\subsection{Error Auditing}
-
-We next use error auditing to show that the clinical utility of a common model for classifying the CXR-14 dataset is substantially reduced by existing hidden stratification effects in the pneumothorax class that result from the presence of a spurious correlate.
 
 \textbf{CXR-14}: The CXR-14 dataset is a large-scale dataset for pathology detection in chest radiographs \citep{Wang2017-vm}. 
 This dataset was released in 2017 and updated later the same year, containing 112,120 frontal chest films from 30,805 unique patients. 
@@ -570,6 +576,25 @@ As such, not only does this reflect a spurious correlate, but the correlation is
 %\vspace{-4mm}
 %\end{table}
 
+ \begin{table*}[]
+ \centering
+\begin{tabular}{ccc}
+\toprule
+ Dataset-Superclass (Subclass) & \makecell{Difference in Subclass Prevalence \\ (High Error Cluster, Low Error Cluster)}  & \makecell{Overall Subclass \\ Prevalence} \\
+ \toprule
+ CXR14-Pneumothorax (Drains) & 0.68 (0.17, 0.84) & 0.80\\
+ CIFAR-Carnivores (Bears) & 0.30 (0.36, 0.06) & 0.20\\
+ CIFAR-Outdoor (Forest) & 0.28 (0.36, 0.08) & 0.20\\
+ CIFAR-Household (Lamp) & 0.16 (0.28, 0.12) & 0.20\\
+ MURA-Abnormal (Hardware) & 0.03 (0.29, 0.26) & 0.11\\
+ MURA-Abnormal (Degenerative) & 0.04 (0.12, 0.08) & 0.43\\
+ \toprule
+\end{tabular}
+\caption{ Subclass prevalence in high and low error clusters on CIFAR, MURA, and CXR14.}
+\label{tab:clustercifar-1}
+%\vspace{- 10mm}
+\end{table*}
+
 We present ROC curves for each pneumothorax subclass in Fig.~\ref{fig:rocs}(c).  
 While overall pneumothorax ROC-AUC closely matches that reported in Rajpurkar et al.~\citep{rajpurkar2017chexnet} at 0.87, pneumothorax ROC-AUC was 0.94 on the subclass with chest drains, but only 0.77 on the subclass without chest drains.  
 We find that 80\% of pneumothoraces in the test set contained a chest drain, and that positive predictive value on this subset was 30\% higher (0.90) than on those with no chest drain (0.60).  
@@ -592,25 +617,6 @@ To demonstrate the potential utility of this approach, we apply it to several da
 We find that while this simple k-means clustering approach does not always yield meaningful separation (e.g. on MURA), it does produce clusters with a high proportion of drains on CXR-14 and a high proportion of various high-error classes (bear, forest, lamp) on CIFAR-100.  
  In practice, such an approach could be used both to assist human auditors in identifying salient stratifications in the data and to confirm that schema completion has been successful.
  %In the latter case, we would only expect to find distinct clusters when hidden stratification is minimal.
-
- \begin{table*}[]
- \centering
-\begin{tabular}{ccc}
-\toprule
- Dataset-Superclass (Subclass) & \makecell{Difference in Subclass Prevalence \\ (High Error Cluster, Low Error Cluster)}  & \makecell{Overall Subclass \\ Prevalence} \\
- \toprule
- CXR14-Pneumothorax (Drains) & 0.68 (0.17, 0.84) & 0.80\\
- CIFAR-Carnivores (Bears) & 0.30 (0.36, 0.06) & 0.20\\
- CIFAR-Outdoor (Forest) & 0.28 (0.36, 0.08) & 0.20\\
- CIFAR-Household (Lamp) & 0.16 (0.28, 0.12) & 0.20\\
- MURA-Abnormal (Hardware) & 0.03 (0.29, 0.26) & 0.11\\
- MURA-Abnormal (Degenerative) & 0.04 (0.12, 0.08) & 0.43\\
- \toprule
-\end{tabular}
-\caption{ Subclass prevalence in high and low error clusters on CIFAR, MURA, and CXR14.}
-\label{tab:clustercifar-1}
-%\vspace{- 10mm}
-\end{table*}
 
 
 % \begin{table}[]
@@ -774,7 +780,7 @@ While this will require substantial effort from the community, bodies such as pr
 %% The next two lines define the bibliography style to be used, and
 %% the bibliography file.
 \bibliographystyle{ACM-Reference-Format}
-\bibliography{../mi-subsets}
+\bibliography{mi-subsets}
 
 \end{document}
 \endinput

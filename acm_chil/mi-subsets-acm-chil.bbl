@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{41}
+\begin{thebibliography}{40}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -111,7 +111,7 @@
 \bibfield{author}{\bibinfo{person}{Tadeusz Cali{\'n}ski} {and}
   \bibinfo{person}{Jerzy Harabasz}.} \bibinfo{year}{1974}\natexlab{}.
 \newblock \showarticletitle{A dendrite method for cluster analysis}.
-\newblock \bibinfo{journal}{\emph{Communications in Statistics-theory and
+\newblock \bibinfo{journal}{\emph{Communications in Statistics-Theory and
   Methods}} \bibinfo{volume}{3}, \bibinfo{number}{1} (\bibinfo{year}{1974}),
   \bibinfo{pages}{1--27}.
 \newblock
@@ -141,19 +141,6 @@
   association}.
 \newblock \bibinfo{journal}{\emph{Lancet}} \bibinfo{volume}{361},
   \bibinfo{number}{9357} (\bibinfo{year}{2003}), \bibinfo{pages}{598--604}.
-\newblock
-
-
-\bibitem[\protect\citeauthoryear{Chen, Wu, Weng, Ratner, and R{\'e}}{Chen
-  et~al\mbox{.}}{2019}]%
-        {chen2019slicing}
-\bibfield{author}{\bibinfo{person}{Vincent~S Chen}, \bibinfo{person}{Sen Wu},
-  \bibinfo{person}{Zhenzhen Weng}, \bibinfo{person}{Alexander Ratner}, {and}
-  \bibinfo{person}{Christopher R{\'e}}.} \bibinfo{year}{2019}\natexlab{}.
-\newblock \showarticletitle{Slice-based Learning: A Programming Model for
-  Residual Learning in Critical Data Slices}. In
-  \bibinfo{booktitle}{\emph{Advances in Neural Information Processing
-  Systems}}.
 \newblock
 
 
@@ -231,7 +218,7 @@
   \bibinfo{person}{Sebastian Thrun}, {and} \bibinfo{person}{Jeff Dean}.}
   \bibinfo{year}{2019}\natexlab{}.
 \newblock \showarticletitle{A guide to deep learning in healthcare}.
-\newblock \bibinfo{journal}{\emph{Nature medicine}} \bibinfo{volume}{25},
+\newblock \bibinfo{journal}{\emph{Nature {M}edicine}} \bibinfo{volume}{25},
   \bibinfo{number}{1} (\bibinfo{year}{2019}), \bibinfo{pages}{24}.
 \newblock
 
@@ -395,14 +382,14 @@
 \newblock
 
 
-\bibitem[\protect\citeauthoryear{Oakden-Rayner}{Oakden-Rayner}{2019}]%
+\bibitem[\protect\citeauthoryear{Oakden-Rayner}{Oakden-Rayner}{2020}]%
         {Oakden-Rayner2019-yi}
 \bibfield{author}{\bibinfo{person}{Luke Oakden-Rayner}.}
-  \bibinfo{year}{2019}\natexlab{}.
-\newblock \showarticletitle{Exploring large scale public medical image
-  datasets}.
-\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:1907.12720}}
-  (\bibinfo{date}{July} \bibinfo{year}{2019}).
+  \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{Exploring Large-scale Public Medical Image
+  Datasets}.
+\newblock \bibinfo{journal}{\emph{Academic {R}adiology}} \bibinfo{volume}{27},
+  \bibinfo{number}{1} (\bibinfo{year}{2020}), \bibinfo{pages}{106--112}.
 \newblock
 
 
@@ -474,7 +461,7 @@
   \bibinfo{person}{Curtis Langlotz}, \bibinfo{person}{Katie Shpanskaya},
   \bibinfo{person}{Matthew Lungren}, {and} \bibinfo{person}{Andrew Ng}.}
   \bibinfo{year}{2017}\natexlab{b}.
-\newblock \showarticletitle{Chexnet: Radiologist-level pneumonia detection on
+\newblock \showarticletitle{Che{XN}et: Radiologist-level pneumonia detection on
   chest x-rays with deep learning}.
 \newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:1711.05225}}
   (\bibinfo{year}{2017}).
@@ -520,7 +507,7 @@
   \bibinfo{year}{2016}\natexlab{}.
 \newblock \showarticletitle{Why should i trust you?: Explaining the predictions
   of any classifier}. In \bibinfo{booktitle}{\emph{Proceedings of the 22nd ACM
-  SIGKDD international conference on knowledge discovery and data mining}}.
+  SIGKDD International Conference on Knowledge Discovery and Data Mining}}.
   ACM, \bibinfo{pages}{1135--1144}.
 \newblock
 
@@ -531,9 +518,8 @@
   \bibinfo{year}{1987}\natexlab{}.
 \newblock \showarticletitle{Silhouettes: a graphical aid to the interpretation
   and validation of cluster analysis}.
-\newblock \bibinfo{journal}{\emph{Journal of computational and applied
-  mathematics}}  \bibinfo{volume}{20} (\bibinfo{year}{1987}),
-  \bibinfo{pages}{53--65}.
+\newblock \bibinfo{journal}{\emph{J. Comput. Appl. Math.}}
+  \bibinfo{volume}{20} (\bibinfo{year}{1987}), \bibinfo{pages}{53--65}.
 \newblock
 
 
@@ -574,8 +560,8 @@
   Summers}.} \bibinfo{year}{2017}\natexlab{}.
 \newblock \showarticletitle{Chestx-ray8: Hospital-scale chest x-ray database
   and benchmarks on weakly-supervised classification and localization of common
-  thorax diseases}. In \bibinfo{booktitle}{\emph{Computer Vision and Pattern
-  Recognition ({CVPR)}, 2017 {IEEE} Conference on}}.
+  thorax diseases}. In \bibinfo{booktitle}{\emph{{IEEE} Conference on {CVPR},
+  Computer Vision and Pattern Recognition (2017)}}.
   \bibinfo{pages}{3462--3471}.
 \newblock
 
@@ -616,6 +602,10 @@
 \newblock \bibinfo{title}{pytorch-classification}.
 \newblock
 \newblock
+\urldef\tempurl%
+\url{https://github.com/bearpaw/pytorch-classification}
+\showURL{%
+\tempurl}
 
 
 \bibitem[\protect\citeauthoryear{Yao, Khosla, and Fei-Fei}{Yao
@@ -637,6 +627,10 @@
 \newblock \bibinfo{title}{reproduce-chexnet}.
 \newblock
 \newblock
+\urldef\tempurl%
+\url{https://github.com/jrzech/reproduce-chexnet}
+\showURL{%
+\tempurl}
 
 
 \bibitem[\protect\citeauthoryear{Zech, Badgeley, Liu, Costa, Titano, and

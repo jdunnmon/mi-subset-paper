@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  3 MAR 2020 14:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  5 MAR 2020 23:50
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1097,6 +1097,12 @@ Package microtype Info: Character `textemdash ' is missing
 (microtype)             in font `T1/zi4/m/n/9'.
 (microtype)             Ignoring protrusion settings for this character.
 
+Overfull \hbox (11.4069pt too wide) in paragraph at lines 401--403
+\T1/zi4/m/n/9 https://github.com/HazyResearch/hidden-stratification-mi\T1/Linux
+LibertineT-TLF/m/n/9 (-20) . 
+ []
+
+
 <../Superclass-Subclass-CIFAR-100-Correct-Val-Sorted-v1.png, id=140, 722.7pt x 
 722.7pt>
 File: ../Superclass-Subclass-CIFAR-100-Correct-Val-Sorted-v1.png Graphic file (
@@ -1125,25 +1131,17 @@ Class acmart Warning: A possible image without description on input line 417.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 436.
+
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 9.0pt on input line 438.
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [4.4 <../Superclass-Subclass-CIFAR-100-Correct-Val-Sorted-v1.png> <../Supercla
 ss-Subclass-CIFAR-100-Correct-Val-Rand-Perm-v1.png>]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 443.
-
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 445.
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 504.
-
-
-Overfull \hbox (3.7451pt too wide) in paragraph at lines 506--515
- [][] 
- []
-
 Package epstopdf Info: Source file: <../HIPS-ROC-leg.eps>
 (epstopdf)                    date: 2020-01-14 01:52:54
 (epstopdf)                    size: 30244 bytes
@@ -1152,14 +1150,15 @@ Package epstopdf Info: Source file: <../HIPS-ROC-leg.eps>
 (epstopdf)                    size: 15414 bytes
 (epstopdf)             Command: <epstopdf --outfile=../HIPS-ROC-leg-eps-convert
 ed-to.pdf ../HIPS-ROC-leg.eps>
-(epstopdf)             \includegraphics on input line 532.
+(epstopdf)             \includegraphics on input line 521.
 Package epstopdf Info: Output file is already uptodate.
+
 <../HIPS-ROC-leg-eps-converted-to.pdf, id=185, 433.62pt x 433.62pt>
 File: ../HIPS-ROC-leg-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ../HIPS-ROC-leg-eps-converted-to.pdf>
 Package pdftex.def Info: ../HIPS-ROC-leg-eps-converted-to.pdf used on input lin
-e 532.
+e 521.
 (pdftex.def)             Requested size: 162.6075pt x 156.89851pt.
 Package epstopdf Info: Source file: <../MURA-ROC-leg.eps>
 (epstopdf)                    date: 2020-01-14 01:52:54
@@ -1169,7 +1168,7 @@ Package epstopdf Info: Source file: <../MURA-ROC-leg.eps>
 (epstopdf)                    size: 17062 bytes
 (epstopdf)             Command: <epstopdf --outfile=../MURA-ROC-leg-eps-convert
 ed-to.pdf ../MURA-ROC-leg.eps>
-(epstopdf)             \includegraphics on input line 533.
+(epstopdf)             \includegraphics on input line 522.
 Package epstopdf Info: Output file is already uptodate.
 
 <../MURA-ROC-leg-eps-converted-to.pdf, id=187, 433.62pt x 433.62pt>
@@ -1177,7 +1176,7 @@ File: ../MURA-ROC-leg-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ../MURA-ROC-leg-eps-converted-to.pdf>
 Package pdftex.def Info: ../MURA-ROC-leg-eps-converted-to.pdf used on input lin
-e 533.
+e 522.
 (pdftex.def)             Requested size: 162.6075pt x 156.89851pt.
 Package epstopdf Info: Source file: <../Pneumo-ROC-leg.eps>
 (epstopdf)                    date: 2020-01-14 01:52:54
@@ -1187,7 +1186,7 @@ Package epstopdf Info: Source file: <../Pneumo-ROC-leg.eps>
 (epstopdf)                    size: 42504 bytes
 (epstopdf)             Command: <epstopdf --outfile=../Pneumo-ROC-leg-eps-conve
 rted-to.pdf ../Pneumo-ROC-leg.eps>
-(epstopdf)             \includegraphics on input line 534.
+(epstopdf)             \includegraphics on input line 523.
 Package epstopdf Info: Output file is already uptodate.
 
 <../Pneumo-ROC-leg-eps-converted-to.pdf, id=189, 433.62pt x 433.62pt>
@@ -1195,66 +1194,67 @@ File: ../Pneumo-ROC-leg-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ../Pneumo-ROC-leg-eps-converted-to.pdf>
 Package pdftex.def Info: ../Pneumo-ROC-leg-eps-converted-to.pdf used on input l
-ine 534.
+ine 523.
 (pdftex.def)             Requested size: 162.6075pt x 156.89851pt.
 
 
-Class acmart Warning: A possible image without description on input line 538.
+Class acmart Warning: A possible image without description on input line 527.
+
+
+Overfull \hbox (3.7451pt too wide) in paragraph at lines 537--546
+ [][] 
+ []
+
+[5.5]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 579.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Underfull \vbox (badness 4279) has occurred while \output is active []
-
- [5.5]
-
-LaTeX Warning: Text page 6 contains only floats.
-
-
-Underfull \vbox (badness 1242) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [6.6 <../HIPS-ROC-leg-eps-converted-to.pdf> <../MURA-ROC-leg-eps-converted-to.
 pdf> <../Pneumo-ROC-leg-eps-converted-to.pdf>]
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 596.
+Package natbib Warning: Citation `chen2019slicing' on page 7 undefined on input
+ line 737.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-(./mi-subsets-acm-chil.bbl
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7.7]
+(./mi-subsets-acm-chil.bbl
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [8.8])
+ [8.8]
+LaTeX Info: Redefining \tempurl on input line 631.
+)
+
+Package natbib Warning: There were undefined citations.
+
 
 Class acmart Warning: Some images may lack descriptions.
 
-
-Overfull \vbox (1.152pt too high) has occurred while \output is active []
-
- [9.9]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 779.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 779.
-
-(./mi-subsets-acm-chil.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 779.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 779.
+[9.9]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 785.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 785.
+ (./mi-subsets-acm-chil.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 785.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 785.
 Package rerunfilecheck Info: File `mi-subsets-acm-chil.out' has not changed.
 (rerunfilecheck)             Checksum: D2651CAAAF206F7E3C0E60A3C3444510;1667.
  ) 
 Here is how much of TeX's memory you used:
- 18797 strings out of 492995
- 287836 string characters out of 6132704
- 421355 words of memory out of 5000000
+ 18787 strings out of 492995
+ 287557 string characters out of 6132704
+ 418131 words of memory out of 5000000
  21385 multiletter control sequences out of 15000+600000
- 178900 words of font info for 383 fonts, out of 8000000 for 9000
+ 177885 words of font info for 377 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 60i,15n,94p,1017b,613s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,15n,94p,1017b,617s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_oexx6f.enc
 }{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/te
 xlive/2017/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-4.enc}{/usr/local/texli
@@ -1272,10 +1272,10 @@ fb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/libertine/LinLibertin
 eTI.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/txfonts/rtxmi.pf
 b></usr/local/texlive/2017/texmf-dist/fonts/type1/public/newtx/txsys.pfb></usr/
 local/texlive/2017/texmf-dist/fonts/type1/public/newtx/zxlri.pfb>
-Output written on mi-subsets-acm-chil.pdf (9 pages, 4186831 bytes).
+Output written on mi-subsets-acm-chil.pdf (9 pages, 4188597 bytes).
 PDF statistics:
- 429 PDF objects out of 1000 (max. 8388607)
- 281 compressed objects within 3 object streams
- 77 named destinations out of 1000 (max. 500000)
+ 431 PDF objects out of 1000 (max. 8388607)
+ 283 compressed objects within 3 object streams
+ 76 named destinations out of 1000 (max. 500000)
  53392 words of extra memory for PDF output out of 61914 (max. 10000000)
 
