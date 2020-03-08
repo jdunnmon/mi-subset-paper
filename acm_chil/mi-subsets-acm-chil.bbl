@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{40}
+\begin{thebibliography}{41}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -141,6 +141,19 @@
   association}.
 \newblock \bibinfo{journal}{\emph{Lancet}} \bibinfo{volume}{361},
   \bibinfo{number}{9357} (\bibinfo{year}{2003}), \bibinfo{pages}{598--604}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Chen, Wu, Ratner, Weng, and R{\'e}}{Chen
+  et~al\mbox{.}}{2019}]%
+        {chen2019slicing}
+\bibfield{author}{\bibinfo{person}{Vincent Chen}, \bibinfo{person}{Sen Wu},
+  \bibinfo{person}{Alexander~J Ratner}, \bibinfo{person}{Jen Weng}, {and}
+  \bibinfo{person}{Christopher R{\'e}}.} \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{Slice-based learning: A programming model for
+  residual learning in critical data slices}. In
+  \bibinfo{booktitle}{\emph{Advances in neural information processing
+  systems}}. \bibinfo{pages}{9392--9402}.
 \newblock
 
 

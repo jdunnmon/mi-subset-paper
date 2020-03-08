@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  6 MAR 2020 00:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  6 MAR 2020 21:43
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -986,34 +986,34 @@ Package caption Info: End \AtBeginDocument code.
 
 Excluding 'CCSXML' comment.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 17.28pt on input line 285.
+(Font)              scaled to size 17.28pt on input line 175.
 LaTeX Font Info:    Try loading font information for T1+LinuxBiolinumT-TLF on i
-nput line 285.
+nput line 175.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/libertine/T1LinuxBiolinumT-TLF.fd
 File: T1LinuxBiolinumT-TLF.fd 2017/03/20 (autoinst) Font definitions for T1/Lin
 uxBiolinumT-TLF.
 )
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 17.28pt on input line 285.
+(Font)              scaled to size 17.28pt on input line 175.
 Package microtype Info: Loading generic settings for font family
 (microtype)             `LinuxBiolinumT-TLF' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/n' will be
-(Font)              scaled to size 17.28pt on input line 285.
+(Font)              scaled to size 17.28pt on input line 175.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 285.
+(Font)              scaled to size 12.0pt on input line 175.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 285.
+(Font)              scaled to size 12.0pt on input line 175.
 Package microtype Info: Loading generic settings for font family
 (microtype)             `LinuxLibertineT-TLF' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 8.8pt on input line 285.
+(Font)              scaled to size 8.8pt on input line 175.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 6.6pt on input line 285.
+(Font)              scaled to size 6.6pt on input line 175.
  (/usr/local/texlive/2017/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
@@ -1021,7 +1021,7 @@ File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Try loading font information for TS1+LinuxLibertineT-TLF on
- input line 285.
+ input line 175.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/libertine/TS1LinuxLibertineT-TLF.
 fd
@@ -1029,41 +1029,41 @@ File: TS1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for TS1/
 LinuxLibertineT-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 8.8pt on input line 285.
+(Font)              scaled to size 8.8pt on input line 175.
 Package microtype Info: Loading generic settings for font family
 (microtype)             `LinuxLibertineT-TLF' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 285.
+(Font)              scaled to size 10.0pt on input line 175.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 285.
+(Font)              scaled to size 10.0pt on input line 175.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 5.5pt on input line 285.
+(Font)              scaled to size 5.5pt on input line 175.
 LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 5.5pt on input line 285.
+(Font)              scaled to size 5.5pt on input line 175.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 7.0pt on input line 285.
+(Font)              scaled to size 7.0pt on input line 175.
 LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 285.
+(Font)              scaled to size 7.0pt on input line 175.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 9.0pt on input line 285.
+(Font)              scaled to size 9.0pt on input line 175.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 10.95pt on input line 285.
+(Font)              scaled to size 10.95pt on input line 175.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 9.0pt on input line 285.
+(Font)              scaled to size 9.0pt on input line 175.
 LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 285.
+(Font)              scaled to size 9.0pt on input line 175.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 285.
+(Font)              scaled to size 8.0pt on input line 175.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 8.0pt on input line 285.
+(Font)              scaled to size 8.0pt on input line 175.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 8.0pt on input line 285.
+(Font)              scaled to size 8.0pt on input line 175.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 285.
+(Font)              scaled to size 8.0pt on input line 175.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 6.2pt on input line 285.
+(Font)              scaled to size 6.2pt on input line 175.
  [1.1{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
@@ -1073,19 +1073,19 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 344.
+(Font)              scaled to size 9.0pt on input line 232.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 344.
+(Font)              scaled to size 7.0pt on input line 232.
  [2.2]
 Underfull \vbox (badness 4279) has occurred while \output is active []
 
-LaTeX Font Info:    Try loading font information for T1+zi4 on input line 400.
+LaTeX Font Info:    Try loading font information for T1+zi4 on input line 275.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/inconsolata/t1zi4.fd
 File: t1zi4.fd 2016/12/29 T1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 9.0pt on input line 400.
+(Font)              scaled to size 9.0pt on input line 275.
 Package microtype Info: Loading generic settings for font family
 (microtype)             `zi4' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
@@ -1103,10 +1103,10 @@ File: ../Superclass-Subclass-CIFAR-100-Correct-Val-Sorted-v1.png Graphic file (
 type png)
  <use ../Superclass-Subclass-CIFAR-100-Correct-Val-Sorted-v1.png>
 Package pdftex.def Info: ../Superclass-Subclass-CIFAR-100-Correct-Val-Sorted-v1
-.png used on input line 411.
+.png used on input line 284.
 (pdftex.def)             Requested size: 234.87749pt x 234.87471pt.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 7.0pt on input line 411.
+(Font)              scaled to size 7.0pt on input line 284.
 
 <../Superclass-Subclass-CIFAR-100-Correct-Val-Rand-Perm-v1.png, id=142, 722.7pt
  x 722.7pt>
@@ -1115,11 +1115,11 @@ e (type png)
 
 <use ../Superclass-Subclass-CIFAR-100-Correct-Val-Rand-Perm-v1.png>
 Package pdftex.def Info: ../Superclass-Subclass-CIFAR-100-Correct-Val-Rand-Perm
--v1.png used on input line 412.
+-v1.png used on input line 285.
 (pdftex.def)             Requested size: 234.87749pt x 234.87471pt.
 
 
-Class acmart Warning: A possible image without description on input line 416.
+Class acmart Warning: A possible image without description on input line 288.
 
 [3.3]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1127,82 +1127,46 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 435.
+               Default added (so using `tbp') on input line 306.
 
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 437.
+(Font)              scaled to size 9.0pt on input line 308.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [4.4 <../Superclass-Subclass-CIFAR-100-Correct-Val-Sorted-v1.png> <../Supercla
 ss-Subclass-CIFAR-100-Correct-Val-Rand-Perm-v1.png>]
-Package epstopdf Info: Source file: <../HIPS-ROC-leg.eps>
-(epstopdf)                    date: 2020-01-14 01:52:54
-(epstopdf)                    size: 30244 bytes
-(epstopdf)             Output file: <../HIPS-ROC-leg-eps-converted-to.pdf>
-(epstopdf)                    date: 2020-01-14 01:53:43
-(epstopdf)                    size: 15414 bytes
-(epstopdf)             Command: <epstopdf --outfile=../HIPS-ROC-leg-eps-convert
-ed-to.pdf ../HIPS-ROC-leg.eps>
-(epstopdf)             \includegraphics on input line 520.
-Package epstopdf Info: Output file is already uptodate.
-
-<../HIPS-ROC-leg-eps-converted-to.pdf, id=185, 433.62pt x 433.62pt>
-File: ../HIPS-ROC-leg-eps-converted-to.pdf Graphic file (type pdf)
-
-<use ../HIPS-ROC-leg-eps-converted-to.pdf>
-Package pdftex.def Info: ../HIPS-ROC-leg-eps-converted-to.pdf used on input lin
-e 520.
+<../HIPS-ROC-leg.png, id=185, 433.62pt x 433.62pt>
+File: ../HIPS-ROC-leg.png Graphic file (type png)
+ <use ../HIPS-ROC-leg.png>
+Package pdftex.def Info: ../HIPS-ROC-leg.png used on input line 373.
 (pdftex.def)             Requested size: 162.6075pt x 156.89851pt.
-Package epstopdf Info: Source file: <../MURA-ROC-leg.eps>
-(epstopdf)                    date: 2020-01-14 01:52:54
-(epstopdf)                    size: 30977 bytes
-(epstopdf)             Output file: <../MURA-ROC-leg-eps-converted-to.pdf>
-(epstopdf)                    date: 2020-01-14 01:53:43
-(epstopdf)                    size: 17062 bytes
-(epstopdf)             Command: <epstopdf --outfile=../MURA-ROC-leg-eps-convert
-ed-to.pdf ../MURA-ROC-leg.eps>
-(epstopdf)             \includegraphics on input line 521.
-Package epstopdf Info: Output file is already uptodate.
 
-<../MURA-ROC-leg-eps-converted-to.pdf, id=187, 433.62pt x 433.62pt>
-File: ../MURA-ROC-leg-eps-converted-to.pdf Graphic file (type pdf)
-
-<use ../MURA-ROC-leg-eps-converted-to.pdf>
-Package pdftex.def Info: ../MURA-ROC-leg-eps-converted-to.pdf used on input lin
-e 521.
+<../MURA-ROC-leg.png, id=187, 433.62pt x 433.62pt>
+File: ../MURA-ROC-leg.png Graphic file (type png)
+ <use ../MURA-ROC-leg.png>
+Package pdftex.def Info: ../MURA-ROC-leg.png used on input line 374.
 (pdftex.def)             Requested size: 162.6075pt x 156.89851pt.
-Package epstopdf Info: Source file: <../Pneumo-ROC-leg.eps>
-(epstopdf)                    date: 2020-01-14 01:52:54
-(epstopdf)                    size: 129311 bytes
-(epstopdf)             Output file: <../Pneumo-ROC-leg-eps-converted-to.pdf>
-(epstopdf)                    date: 2020-01-14 01:53:43
-(epstopdf)                    size: 42504 bytes
-(epstopdf)             Command: <epstopdf --outfile=../Pneumo-ROC-leg-eps-conve
-rted-to.pdf ../Pneumo-ROC-leg.eps>
-(epstopdf)             \includegraphics on input line 522.
-Package epstopdf Info: Output file is already uptodate.
 
-<../Pneumo-ROC-leg-eps-converted-to.pdf, id=189, 433.62pt x 433.62pt>
-File: ../Pneumo-ROC-leg-eps-converted-to.pdf Graphic file (type pdf)
+<../Pneumo-ROC-leg.png, id=189, 433.62pt x 433.62pt>
+File: ../Pneumo-ROC-leg.png Graphic file (type png)
 
-<use ../Pneumo-ROC-leg-eps-converted-to.pdf>
-Package pdftex.def Info: ../Pneumo-ROC-leg-eps-converted-to.pdf used on input l
-ine 522.
+<use ../Pneumo-ROC-leg.png>
+Package pdftex.def Info: ../Pneumo-ROC-leg.png used on input line 375.
 (pdftex.def)             Requested size: 162.6075pt x 156.89851pt.
 
 
-Class acmart Warning: A possible image without description on input line 526.
+Class acmart Warning: A possible image without description on input line 378.
 
 
-Overfull \hbox (3.7451pt too wide) in paragraph at lines 536--545
+Overfull \hbox (3.7451pt too wide) in paragraph at lines 388--397
  [][] 
  []
 
 [5.5]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 578.
+               Default added (so using `tbp') on input line 415.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1210,13 +1174,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [6.6 <../HIPS-ROC-leg-eps-converted-to.pdf> <../MURA-ROC-leg-eps-converted-to.
-pdf> <../Pneumo-ROC-leg-eps-converted-to.pdf>]
-
-Package natbib Warning: Citation `chen2019slicing' on page 7 undefined on input
- line 736.
-
-
+ [6.6 <../HIPS-ROC-leg.png> <../MURA-ROC-leg.png> <../Pneumo-ROC-leg.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7.7]
@@ -1224,29 +1182,26 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [8.8]
-LaTeX Info: Redefining \tempurl on input line 631.
+LaTeX Info: Redefining \tempurl on input line 644.
 )
-
-Package natbib Warning: There were undefined citations.
-
 
 Class acmart Warning: Some images may lack descriptions.
 
 [9.9]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 784.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 784.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 535.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 535.
  (./mi-subsets-acm-chil.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 784.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 784.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 535.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 535.
 Package rerunfilecheck Info: File `mi-subsets-acm-chil.out' has not changed.
 (rerunfilecheck)             Checksum: D2651CAAAF206F7E3C0E60A3C3444510;1667.
  ) 
 Here is how much of TeX's memory you used:
- 18787 strings out of 492995
- 287557 string characters out of 6132704
- 418114 words of memory out of 5000000
- 21385 multiletter control sequences out of 15000+600000
- 177885 words of font info for 377 fonts, out of 8000000 for 9000
+ 18791 strings out of 492995
+ 287469 string characters out of 6132704
+ 418178 words of memory out of 5000000
+ 21387 multiletter control sequences out of 15000+600000
+ 178093 words of font info for 378 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  60i,15n,94p,1017b,617s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_oexx6f.enc
@@ -1266,10 +1221,10 @@ fb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/libertine/LinLibertin
 eTI.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/txfonts/rtxmi.pf
 b></usr/local/texlive/2017/texmf-dist/fonts/type1/public/newtx/txsys.pfb></usr/
 local/texlive/2017/texmf-dist/fonts/type1/public/newtx/zxlri.pfb>
-Output written on mi-subsets-acm-chil.pdf (9 pages, 4188343 bytes).
+Output written on mi-subsets-acm-chil.pdf (9 pages, 4193165 bytes).
 PDF statistics:
- 431 PDF objects out of 1000 (max. 8388607)
- 283 compressed objects within 3 object streams
- 76 named destinations out of 1000 (max. 500000)
+ 324 PDF objects out of 1000 (max. 8388607)
+ 273 compressed objects within 3 object streams
+ 77 named destinations out of 1000 (max. 500000)
  53392 words of extra memory for PDF output out of 61914 (max. 10000000)
 
